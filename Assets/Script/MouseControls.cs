@@ -8,6 +8,7 @@ public class MouseControls : MonoBehaviour
 
 	[SerializeField] private GameObject hoveredItem;
 
+	/*
 	#region instance
 
 	public static MouseControls instance;
@@ -17,7 +18,7 @@ public class MouseControls : MonoBehaviour
 		instance = this;
 	}
 
-	#endregion
+	#endregion*/
 
 	private void OnEnable()
 	{
@@ -30,10 +31,15 @@ public class MouseControls : MonoBehaviour
 	{
 		mouseClick.performed -= MousePressed;
 		mouseClick.canceled -= MouseCancel;
-		mouseClick.Enable();
+		mouseClick.Disable();
 	}
 
-	void HoverCheck()
+	private void Update()
+	{
+		HoverCheck();
+	}
+
+	private void HoverCheck()
 	{
 		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
