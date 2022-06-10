@@ -1,16 +1,22 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Location : MonoBehaviour, IClicked
 {
 	[SerializeField] private string sceneToLoad;
+
+	private MapManager mM;
+
+	private void Start()
+	{
+		mM = MapManager.instance;
+	}
+
 	public void onCancelClicked()
 	{
 	}
 
 	public void onClicked()
 	{
-		Debug.Log("click");
-		SceneManager.LoadScene(sceneToLoad);
+		mM.LoadLocation(sceneToLoad);
 	}
 }

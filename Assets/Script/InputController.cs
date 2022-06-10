@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class InputController : MonoBehaviour
 {
@@ -34,11 +33,12 @@ public class InputController : MonoBehaviour
 
 	private void OpenBulletinBoard(InputAction.CallbackContext context)
 	{
-		SceneManager.LoadScene("BulletinBoard", LoadSceneMode.Additive);
+		mM.OpenBulletinBoard();
 	}
 
 	private void CloseBulletinBoard(InputAction.CallbackContext context)
 	{
-		SceneManager.UnloadSceneAsync("BulletinBoard");
+		mM.CloseLocation();
+		mM.CloseBulletinBoard();
 	}
 }

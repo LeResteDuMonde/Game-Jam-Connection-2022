@@ -3,25 +3,52 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
-    private bool isBulletinBoardOpen;
-    #region instance
+	private bool isBulletinBoardOpen;
+	private bool isLocationOpen;
+	private string openScene;
 
-    public static MapManager instance;
+	#region instance
 
-    void Awake()
-    {
-        instance = this;
-    }
-    #endregion
+	public static MapManager instance;
 
-    public void OpenBulletinBoard()
+	void Awake()
 	{
-        SceneManager.LoadScene("BulletinBoard", LoadSceneMode.Additive);
-        isBulletinBoardOpen = true;
-    }
+		instance = this;
+	}
+	#endregion
 
-    public void CloseBulletinBoard()
+	public void OpenBulletinBoard()
 	{
-        SceneManager.UnloadSceneAsync("BulletinBoard");
-    }
+		if (!isBulletinBoardOpen) { 
+			SceneManager.LoadScene("BulletinBoard", LoadSceneMode.Additive);
+			isBulletinBoardOpen = true;
+		}
+		
+	}
+
+	public void CloseBulletinBoard()
+	{
+		if (isBulletinBoardOpen){
+			SceneManager.UnloadSceneAsync("BulletinBoard");
+			isBulletinBoardOpen = false;
+		}
+	}
+
+	public void LoadLocation(string scene)
+	{
+		if (!isBulletinBoardOpen && !isLocationOpen)
+		{
+			SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+			openScene = scene;
+			isLocationOpen = true;
+		}
+	}
+	public void CloseLocation()
+	{
+		if (!isBulletinBoardOpen && isLocationOpen)
+		{
+			SceneManager.UnloadSceneAsync(openScene);
+			isLocationOpen = false;
+		}
+	}
 }
