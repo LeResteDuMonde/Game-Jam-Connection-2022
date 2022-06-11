@@ -2,33 +2,33 @@ using UnityEngine;
 
 public class Character : MonoBehaviour, IClicked
 {
-	public CharacterData data;
-	[SerializeField] private Animator animator;
-	[SerializeField] private AnimatorOverrideController overrideController;
+    public CharacterData data;
+    [SerializeField] private Animator animator;
+    [SerializeField] private AnimatorOverrideController overrideController;
 
-	private StateMachine machine;
+    private StateMachine machine;
     private Dialog dialog;
 
-	private void Start()
-	{
-		animator.runtimeAnimatorController = data.animatorController;
+    private void Start()
+    {
+        animator.runtimeAnimatorController = data.animatorController;
 
         var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
         machine = JsonUtility.FromJson<StateMachine>(smJson.text);
         machine.Start();
 
         dialog = LocalizationManager.instance.RetrieveDialog(data.stateMachine);
-	}
+    }
 
-	public void onCancelClicked()
-	{
-	}
+    public void onCancelClicked()
+    {
+    }
 
-	public void onClicked()
-	{
-		animator.SetBool("Talking",true);
-		Interact();
-	}
+    public void onClicked()
+    {
+        animator.SetBool("Talking",true);
+        Interact();
+    }
 
     // Run each behaviour which condition is satisfied
     public void UpdateBehaviours() {
