@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Location : MonoBehaviour, IClicked
 {
-	[SerializeField] private string sceneToLoad;
+	[SerializeField] private LocationData data;
 
 	private MapManager mM;
 
@@ -17,6 +17,7 @@ public class Location : MonoBehaviour, IClicked
 
 	public void onClicked()
 	{
-		mM.LoadLocation(sceneToLoad);
+		mM.SetLocation(data);
+		mM.LoadLocation("Location");
 	}
 }

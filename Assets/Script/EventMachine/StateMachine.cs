@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class State {
@@ -14,6 +15,7 @@ public class Transition {
 
 [Serializable]
 public class StateMachine {
+    public string name;
     public State[] states;
     public Transition[] transitions;
     public string[] initialStates;
@@ -50,6 +52,7 @@ public class StateMachine {
             if(t.name == transitionName) {
                 for (var i = 0; i < currentStates.Length; i++) {
                     if(currentStates[i].name == t.origin) {
+                        Debug.Log(name + " : leaving " + currentStates[i].name + " and entering " + t.destination);
                         currentStates[i] = FindState(t.destination);
                     }
                 }
@@ -58,7 +61,7 @@ public class StateMachine {
     }
 
     public override string ToString() {
-        var str = "Current states:";
+        var str = "current states for " + name + " : ";
         foreach(var s in currentStates) {
             str += " " + s.name;
         }

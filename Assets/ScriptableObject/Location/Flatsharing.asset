@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0cfccd124d29349b44c4b39699e0a6, type: 3}
-  m_Name: WoodenStick
+  m_Script: {fileID: 11500000, guid: a4a332391f3502b489040289b5eaf754, type: 3}
+  m_Name: Flatsharing
   m_EditorClassIdentifier: 
-  collectibleName: Wooden Stick
-  sprite: {fileID: 21300000, guid: 2b78c4c544a88034bbc0bd0f95845047, type: 3}
-  position: {x: -4.33, y: -2.32}
+  locationName: Flatsharing
+  background: {fileID: 21300000, guid: e0539ea5a7facd34fb0785db157e118a, type: 3}

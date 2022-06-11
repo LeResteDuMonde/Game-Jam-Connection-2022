@@ -1,0 +1,20 @@
+{
+    "name": "Toaster",
+    "states": [
+        { "name": "initial" },
+        { "name": "flecheOSEF" },
+        { "name": "noStick" },
+        { "name": "hasStick" }
+    ],
+
+    "transitions": [
+        { "name": "getStick",
+          "origin": "noStick",
+          "destination": "hasStick" },
+        { "name": "saidOSEF",
+          "origin": "initial",
+          "destination": "flecheOSEF" }
+    ],
+
+    "initialStates": [ "initial", "noStick" ]
+}

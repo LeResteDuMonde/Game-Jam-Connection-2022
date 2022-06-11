@@ -7,6 +7,7 @@ public class MapManager : MonoBehaviour
 	public GameObject bulletinParent;
 	private bool isLocationOpen;
 	private string openScene;
+	[SerializeField] private LocationData location;
 
 	#region instance
 
@@ -55,5 +56,15 @@ public class MapManager : MonoBehaviour
 			SceneManager.UnloadSceneAsync(openScene);
 			isLocationOpen = false;
 		}
+	}
+
+	public void SetLocation(LocationData newLocation)
+	{
+		location = newLocation;
+	}
+
+	public LocationData GetLocation()
+	{
+		return location;
 	}
 }

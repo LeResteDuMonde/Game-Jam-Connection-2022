@@ -25,4 +25,11 @@ public class Collectible : MonoBehaviour, IClicked
 	{
 		return data;
 	}
+
+	public void SetData(CollectibleData newData)
+	{
+		data = newData;
+		GetComponent<SpriteRenderer>().sprite = data.sprite;
+		transform.position = data.position;
+	}
 }

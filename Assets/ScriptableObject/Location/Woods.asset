@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0cfccd124d29349b44c4b39699e0a6, type: 3}
-  m_Name: WoodenStick
+  m_Script: {fileID: 11500000, guid: a4a332391f3502b489040289b5eaf754, type: 3}
+  m_Name: Woods
   m_EditorClassIdentifier: 
-  collectibleName: Wooden Stick
-  sprite: {fileID: 21300000, guid: 2b78c4c544a88034bbc0bd0f95845047, type: 3}
-  position: {x: -4.33, y: -2.32}
+  collectible: {fileID: 11400000, guid: dcc835beebaf77d4f903098b69adfd7c, type: 2}
+  locationName: Woods
+  background: {fileID: 21300000, guid: d170babce84d20547aafc59496eedfcf, type: 3}

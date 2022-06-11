@@ -2,33 +2,31 @@ using UnityEngine;
 
 public class Character : MonoBehaviour, IClicked
 {
-	public CharacterData data;
-	[SerializeField] private Animator animator;
-	[SerializeField] private AnimatorOverrideController overrideController;
+    public CharacterData data;
+    [SerializeField] private Animator animator;
+    [SerializeField] private AnimatorOverrideController overrideController;
 
-	private StateMachine machine;
+    private StateMachine machine;
     private Dialog dialog;
 
-	private void Start()
-	{
-		animator.runtimeAnimatorController = data.animatorController;
-
-        var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
-        machine = JsonUtility.FromJson<StateMachine>(smJson.text);
-        machine.Start();
+    private void Start() {
+        animator.runtimeAnimatorController = data.animatorController;
 
         dialog = LocalizationManager.instance.RetrieveDialog(data.stateMachine);
-	}
 
-	public void onCancelClicked()
-	{
-	}
+        machine = CharacterManager.instance.GetMachine(data.stateMachine);
+        CharacterManager.instance.Register(this.gameObject);
+    }
 
-	public void onClicked()
-	{
-		animator.SetBool("Talking",true);
-		Interact();
-	}
+    public void onCancelClicked()
+    {
+    }
+
+    public void onClicked()
+    {
+        animator.SetBool("Talking",true);
+        Interact();
+    }
 
     // Run each behaviour which condition is satisfied
     public void UpdateBehaviours() {
@@ -40,16 +38,14 @@ public class Character : MonoBehaviour, IClicked
 
     void Interact() {
         Debug.Log(machine.ToString());
-        DialogBox.instance.ShowNewDialog(dialog);
-        // foreach (GameObject g in behaviours) {
-        //     ActorBehaviour b = g.GetComponent<ActorBehaviour>();
-        //     if (b.Condition(em)) {
-        //         b.Interact(em);
-        //     }
-        // }
+        DialogBox.instance.ShowNewDialog(dialog, machine);
     }
 
     public void TriggerTransition(string transition) {
-        machine.TriggerTransition(transition);
+        if(machine != null) {
+            machine.TriggerTransition(transition);
+        } else {
+            Debug.Log(machine);
+        }
     }
 }
