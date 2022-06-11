@@ -6,9 +6,6 @@ public class Character : MonoBehaviour, IClicked
 	[SerializeField] private Animator animator;
 	[SerializeField] private AnimatorOverrideController overrideController;
 
-	const string IDLE = "Idle";
-	const string TALKING = "TALKING";
-
 	private void Start()
 	{
 		animator.runtimeAnimatorController = data.animatorController;

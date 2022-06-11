@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247604955f777bc419ee3cdfba6fd69a, type: 3}
-  m_Name: Dominatrix
+  m_Script: {fileID: 11500000, guid: 9d0cfccd124d29349b44c4b39699e0a6, type: 3}
+  m_Name: WoodenStick
   m_EditorClassIdentifier: 
-  characterName: Dominatrix
-  animatorController: {fileID: 9100000, guid: a16ce65591a90454c9c17721f152f584, type: 2}

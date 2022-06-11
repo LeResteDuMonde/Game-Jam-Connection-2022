@@ -5,12 +5,15 @@ public class InputController : MonoBehaviour
 {
 	[SerializeField] private InputAction openBulletinBoard;
 	[SerializeField] private InputAction closeBulletinBoard;
+	[SerializeField] private InputAction openInventory;
 
 	private MapManager mM;
+	private Inventory inventory;
 
 	private void Start()
 	{
 		mM = MapManager.instance;
+		inventory = Inventory.instance;
 	}
 
 	private void OnEnable()
@@ -20,6 +23,9 @@ public class InputController : MonoBehaviour
 
 		closeBulletinBoard.Enable();
 		closeBulletinBoard.performed += CloseBulletinBoard;
+
+		openInventory.Enable();
+
 	}
 
 	private void OnDisable()
@@ -29,6 +35,8 @@ public class InputController : MonoBehaviour
 
 		closeBulletinBoard.performed -= CloseBulletinBoard;
 		closeBulletinBoard.Disable();
+
+		openInventory.Disable();
 	}
 
 	private void OpenBulletinBoard(InputAction.CallbackContext context)
@@ -40,5 +48,10 @@ public class InputController : MonoBehaviour
 	{
 		mM.CloseLocation();
 		mM.CloseBulletinBoard();
+	}
+
+	private void OpenInventory(InputAction.CallbackContext context)
+	{
+		inventory.OpenIventory();
 	}
 }
