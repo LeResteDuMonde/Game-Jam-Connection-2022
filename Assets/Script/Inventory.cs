@@ -42,12 +42,16 @@ public class Inventory : MonoBehaviour
 		return collectibles.Contains(collectibleComp?.GetData());
 	}
 
-	public void OpenIventory()
+	public void ToggleInventory()
 	{
 		inventoryPanel.SetActive(!inventoryPanel.activeSelf);
 	}
-	public void CloseIventory()
+	public void CloseInventory()
 	{
 		inventoryPanel.SetActive(false);
 	}
+
+    public bool IsOpen() {
+        return inventoryPanel.activeSelf;
+    }
 }

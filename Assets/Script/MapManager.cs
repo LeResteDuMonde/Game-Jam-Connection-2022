@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {	
-	private bool isBulletinBoardOpen;
 	public GameObject bulletinParent;
 	private bool isLocationOpen;
 	private string openScene;
@@ -21,28 +20,18 @@ public class MapManager : MonoBehaviour
 	}
 	#endregion
 
-	public void OpenBulletinBoard()
+	public void ToggleBulletinBoard()
 	{
-		if (!isBulletinBoardOpen) { 
-			isBulletinBoardOpen = true;
-
-			bulletinParent.active = true;
-		}
-		
+        bulletinParent.SetActive(!bulletinParent.activeSelf);
 	}
 
-	public void CloseBulletinBoard()
-	{
-		if (isBulletinBoardOpen){
-			//SceneManager.UnloadSceneAsync("BulletinBoard");
-			isBulletinBoardOpen = false;
-			bulletinParent.active = false;
-		}
-	}
+    public bool IsBulletinBoardOpen() {
+        return bulletinParent.activeSelf;
+    }
 
 	public void LoadLocation(string scene)
 	{
-		if (!isBulletinBoardOpen && !isLocationOpen)
+		if (!IsBulletinBoardOpen() && !isLocationOpen)
 		{
 			SceneManager.LoadScene(scene, LoadSceneMode.Additive);
 			openScene = scene;
@@ -51,7 +40,7 @@ public class MapManager : MonoBehaviour
 	}
 	public void CloseLocation()
 	{
-		if (!isBulletinBoardOpen && isLocationOpen)
+		if (!IsBulletinBoardOpen() && isLocationOpen)
 		{
 			SceneManager.UnloadSceneAsync(openScene);
 			isLocationOpen = false;

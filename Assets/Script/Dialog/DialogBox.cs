@@ -45,7 +45,7 @@ public class DialogBox : MonoBehaviour
     private int dialogPosition;
 
     private void ShowDialogLine() {
-        textPanel.SetActive(true);
+        OpenDialog();
         var text = textBox.GetComponent<TextMeshProUGUI>();
         var line = currentLines[dialogPosition];
         text.SetText(line.ToString());
@@ -95,9 +95,20 @@ public class DialogBox : MonoBehaviour
         NextLine();
     }
 
-    private void HideDialog() {
+    private void OpenDialog() {
+        textPanel.SetActive(true);
+        currentChara.GetAnimator().SetBool("Talking", true);
+        //MouseControls.instance.OnDisable();
+    }
+
+    private void CloseDialog() {
         textPanel.SetActive(false);
         currentChara.GetAnimator().SetBool("Talking", false);
+        //MouseControls.instance.OnEnable();
+    }
+
+    public bool IsOpen() {
+        return textPanel.activeSelf;
     }
 
     private Character currentChara;
@@ -121,7 +132,7 @@ public class DialogBox : MonoBehaviour
     private void NextLine() {
         // Maybe terminate
         if(dialogPosition >= 0 && currentLines[dialogPosition].terminal) {
-            HideDialog();
+            CloseDialog();
             return;
         }
 
@@ -145,7 +156,7 @@ public class DialogBox : MonoBehaviour
                 advanceDialog.Disable();
                 ShowChoices(currentDialog.choices);
             } else {
-                HideDialog();
+                CloseDialog();
             }
         }
     }

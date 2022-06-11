@@ -696,6 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ce2e7738097d149ad39e39860d86c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletinParent: {fileID: 0}
   location: {fileID: 11400000, guid: dca0fb1c216825a49b3c1ad857c5558f, type: 2}
 --- !u!4 &705551041
 Transform:
@@ -1185,55 +1186,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454b7d0fe6b3de14e94b44205a6c51f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openBulletinBoard:
-    m_Name: Open Bulletin Board
+  toggleBulletinBoard:
+    m_Name: Toggle Bulletin Board
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: df8da1a2-71a1-4124-8b4b-d6c8680fa7ef
+    m_Id: c991bf60-be56-4a7e-9de2-acc3440796eb
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: e4c48f12-1e65-4e70-a949-c84a14e44e08
+      m_Id: dcd30c3c-a2fc-44c8-9bbf-4c7e19fd77aa
       m_Path: <Keyboard>/b
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Open Bulletin Board
+      m_Action: Toggle Bulletin Board
       m_Flags: 0
     m_Flags: 0
-  closeBulletinBoard:
-    m_Name: Close Bulletin Board
+  closeLocation:
+    m_Name: Close Location
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: e3833829-1c6b-4ba4-a645-bd01d3429189
+    m_Id: 50921006-de75-4615-97d1-2a3dc5581444
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: f2e53dd1-a21e-4874-ba93-9e2fe8b2b221
+      m_Id: 7f44f124-aeec-4c39-b4e6-4394e298d522
       m_Path: <Keyboard>/escape
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Close Bulletin Board
+      m_Action: Close Location
       m_Flags: 0
     m_Flags: 0
-  openInventory:
-    m_Name: Open Inventory
+  toggleInventory:
+    m_Name: Toggle Inventory
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: a0eee1a1-1878-402f-a9ce-c0d9fbcc6d43
+    m_Id: bcd67d3d-210f-40e4-a002-66e3fabf9908
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 1b5a3d56-fb89-4187-9365-9d38b977d353
+      m_Id: b851504b-2e75-4994-9224-267835d142c6
       m_Path: <Keyboard>/i
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Open Inventory
+      m_Action: Toggle Inventory
       m_Flags: 0
     m_Flags: 0
 --- !u!4 &1795002675

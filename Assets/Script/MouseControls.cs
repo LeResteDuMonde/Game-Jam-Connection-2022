@@ -44,33 +44,11 @@ public class MouseControls : MonoBehaviour
 		mouseClick.Disable();
 	}
 
-	private void Update()
-	{
-		HoverCheck();
-	}
-
-	private void HoverCheck()
-	{
-		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
-
-		if (hit2D.collider != null)
-		{
-			GameObject go = hit2D.collider.gameObject;
-			if (go.TryGetComponent<IClicked>(out IClicked hover))
-			{
-				if (hoveredItem != go) 
-				{
-					UnHoverOldItem();
-					hoveredItem = go;
-					ChangeCursor(cursorHover);
-					//hover.onHover();
-				}
-			}
-			else { UnHoverOldItem(); }
-		}
-		else { UnHoverOldItem(); }
-	}
+    private bool IsActive() {
+        return
+            !Inventory.instance.IsOpen()
+            && !DialogBox.instance.IsOpen();
+    }
 
 	public Vector3 MousePosition()
 	{
@@ -80,14 +58,42 @@ public class MouseControls : MonoBehaviour
 		return new Vector3(correctedPosition.x, correctedPosition.y,0);
 	}
 
+	private void FixedUpdate()
+	{
+        HoverCheck();
+	}
+
+	private void HoverCheck()
+	{
+		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
+
+        if (hit2D.collider != null) {
+			GameObject go = hit2D.collider.gameObject;
+			if (IsActive() && go.TryGetComponent<IClicked>(out IClicked hover)) {
+                if(hoveredItem == null) ChangeCursor(cursorHover);
+                hoveredItem = go;
+			} else {
+                UnHoverOldItem();
+            }
+		} else {
+            UnHoverOldItem();
+        }
+	}
+
 	private void UnHoverOldItem()
 	{
-		if (hoveredItem != null && hoveredItem.TryGetComponent<IHovered>(out IHovered oldHover)) { oldHover.onUnhover(); };
-		ChangeCursor(cursor);
+		if (hoveredItem != null && hoveredItem.TryGetComponent<IHovered>(out IHovered oldHover)) {
+            oldHover.onUnhover();
+        };
+		if (hoveredItem != null) ChangeCursor(cursor);
 		hoveredItem = null;
 	}
+
 	private void MousePressed(InputAction.CallbackContext context)
 	{
+        if(!IsActive()) return;
+
 		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
 
@@ -102,6 +108,8 @@ public class MouseControls : MonoBehaviour
 
 	private void MouseCancel(InputAction.CallbackContext context)
 	{
+        if(!IsActive()) return;
+
 		if(clickedItem != null) {
 			clickedItem.TryGetComponent<IClicked>(out var iClickedComponent);
 			iClickedComponent?.onCancelClicked();
@@ -113,6 +121,7 @@ public class MouseControls : MonoBehaviour
 	{
 		return hoveredItem;
 	}
+
 	private void ChangeCursor(Texture2D cursorType)
 	{
 		Vector2 hotspot = new Vector2(cursorType.width / 2, cursorType.height / 6);

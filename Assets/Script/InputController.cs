@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
-	[SerializeField] private InputAction openBulletinBoard;
-	[SerializeField] private InputAction closeBulletinBoard;
-	[SerializeField] private InputAction openInventory;
+	[SerializeField] private InputAction toggleBulletinBoard;
+	[SerializeField] private InputAction closeLocation;
+	[SerializeField] private InputAction toggleInventory;
 
 	private MapManager mM;
 	private Inventory inventory;
@@ -16,45 +16,44 @@ public class InputController : MonoBehaviour
 		inventory = Inventory.instance;
 	}
 
-	private void OnEnable()
+	public void OnEnable()
 	{
-		openBulletinBoard.Enable();
-		openBulletinBoard.performed += OpenBulletinBoard;
+		toggleBulletinBoard.Enable();
+		toggleBulletinBoard.performed += ToggleBulletinBoard;
 
-		closeBulletinBoard.Enable();
-		closeBulletinBoard.performed += CloseBulletinBoard;
+        closeLocation.Enable();
+        closeLocation.performed += CloseLocation;
 
-		openInventory.Enable();
-		openInventory.performed += OpenInventory;
+		toggleInventory.Enable();
+		toggleInventory.performed += ToggleInventory;
 	}
 
-	private void OnDisable()
+	public void OnDisable()
 	{
-		openBulletinBoard.performed -= OpenBulletinBoard;
-		openBulletinBoard.Disable();
+		toggleBulletinBoard.performed -= ToggleBulletinBoard;
+		toggleBulletinBoard.Disable();
 
-		closeBulletinBoard.performed -= CloseBulletinBoard;
-		closeBulletinBoard.Disable();
+        closeLocation.Disable();
+        closeLocation.performed -= CloseLocation;
 
-		openInventory.performed -= OpenInventory;
-		openInventory.Disable();
+		toggleInventory.performed -= ToggleInventory;
+		toggleInventory.Disable();
 	}
 
-	private void OpenBulletinBoard(InputAction.CallbackContext context)
+	private void ToggleBulletinBoard(InputAction.CallbackContext context)
 	{
-		mM.OpenBulletinBoard();
-		inventory.CloseIventory();
+		mM.ToggleBulletinBoard();
 	}
 
-	private void CloseBulletinBoard(InputAction.CallbackContext context)
+	private void ToggleInventory(InputAction.CallbackContext context)
 	{
-		mM.CloseLocation();
-		mM.CloseBulletinBoard();
-		inventory.CloseIventory();
+		inventory.ToggleInventory();
 	}
 
-	private void OpenInventory(InputAction.CallbackContext context)
-	{
-		inventory.OpenIventory();
-	}
+    private void CloseLocation(InputAction.CallbackContext _) {
+        if (!DialogBox.instance.IsOpen()
+            && !Inventory.instance.IsOpen()
+            && !MapManager.instance.IsBulletinBoardOpen())
+            mM.CloseLocation();
+    }
 }
