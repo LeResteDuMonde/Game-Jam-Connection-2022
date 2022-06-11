@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8488545219483639409}
   - component: {fileID: 8488545219483639410}
   - component: {fileID: 4192621278963287345}
+  - component: {fileID: 2084956672}
   m_Layer: 0
   m_Name: Bulletin
   m_TagString: Untagged
@@ -97,3 +98,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f46c171bad000546991108d2e825310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
+--- !u!58 &2084956672
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488545219483639411}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.50000006

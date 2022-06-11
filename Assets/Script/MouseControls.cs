@@ -94,7 +94,11 @@ public class MouseControls : MonoBehaviour
 			clickedItem.TryGetComponent<IClicked>(out var iClickedComponent);
 			iClickedComponent?.onCancelClicked();
 		}
-
 		clickedItem = null;
+	}
+
+	public GameObject GetHoveredItem()
+	{
+		return hoveredItem;
 	}
 }

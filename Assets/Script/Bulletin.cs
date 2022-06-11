@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 
-public class Bulletin : MonoBehaviour, IClicked
+public class Bulletin : MonoBehaviour, IClicked, IHovered
 {
 	[SerializeField] private string characterName;
 	[SerializeField] private List<Connection> connections;
@@ -40,5 +40,18 @@ public class Bulletin : MonoBehaviour, IClicked
 	public void onCancelClicked()
 	{
 		bbM.CancelString();
+	}
+
+	public void AddConnection(Connection connection)
+	{
+		connections.Add(connection);
+	}
+
+	public void onHover()
+	{
+	}
+
+	public void onUnhover()
+	{
 	}
 }

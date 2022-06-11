@@ -4,6 +4,12 @@ public class Connection
 {
 	public GameObject bulletin;
 	public ConnectionType type;
+
+	public Connection(GameObject newBulletin, ConnectionType newType)
+	{
+		bulletin = newBulletin;
+		type = newType;
+	}
 }
 
 public enum ConnectionType
@@ -16,6 +22,9 @@ public enum ConnectionType
 public class BulletinBoardManager : MonoBehaviour
 {
 	[SerializeField] private GameObject stringCursor;
+	private GameObject currentBulletin;
+	private ConnectionType currentConnectionType = ConnectionType.Love;
+	private MouseControls mC;
 
 	#region instance
 
@@ -27,13 +36,25 @@ public class BulletinBoardManager : MonoBehaviour
 	}
 	#endregion
 
+	private void Start()
+	{
+		mC = MouseControls.instance;
+	}
+
 	public void CreateString(GameObject bulletin)
 	{
+		currentBulletin = bulletin;
 		stringCursor.SetActive(true);
 	}
 
 	public void CancelString()
 	{
+		GameObject hoveredItem = mC.GetHoveredItem();
+
+		if (hoveredItem != null && hoveredItem != currentBulletin)
+		{
+			currentBulletin.GetComponent<Bulletin>().AddConnection(new Connection(hoveredItem, currentConnectionType));
+		}
 		stringCursor.SetActive(false);
 	}
 }
