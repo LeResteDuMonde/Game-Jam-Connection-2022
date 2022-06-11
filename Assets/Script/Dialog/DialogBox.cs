@@ -52,7 +52,7 @@ public class DialogBox : MonoBehaviour
 
         // Transition
         if (line.transition is string transition) {
-            ActorManager.instance.TriggerTransition(transition);
+            CharacterManager.instance.TriggerTransition(transition);
         }
     }
 
@@ -119,7 +119,6 @@ public class DialogBox : MonoBehaviour
 
     private void NextLine() {
         // Maybe terminate
-        Debug.Log(dialogPosition);
         if(dialogPosition >= 0 && currentLines[dialogPosition].terminal) {
             HideDialog();
             return;

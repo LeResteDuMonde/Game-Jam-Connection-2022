@@ -12,11 +12,10 @@ public class Character : MonoBehaviour, IClicked
     private void Start() {
         animator.runtimeAnimatorController = data.animatorController;
 
-        var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
-        machine = JsonUtility.FromJson<StateMachine>(smJson.text);
-        machine.Start();
-
         dialog = LocalizationManager.instance.RetrieveDialog(data.stateMachine);
+
+        machine = CharacterManager.instance.GetMachine(data.stateMachine);
+        CharacterManager.instance.Register(this.gameObject);
     }
 
     public void onCancelClicked()
