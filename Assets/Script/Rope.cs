@@ -12,14 +12,14 @@ public class Rope : MonoBehaviour
 	private int nodeMini = 3;
 	private int nbnode =0;
 	public Rope (){
-	    nodes  = new List<Vector3>();
-	    nodesOld  = new List<Vector3>();
-	    rp  = new List<RopePart>();
+		nodes  = new List<Vector3>();
+		nodesOld  = new List<Vector3>();
+		rp  = new List<RopePart>();
 	}
-    void Awake()
-    {
-	    nbnode=nodeMini;
-	    Debug.Log("start");
+	void Awake()
+	{
+		nbnode=nodeMini;
+		Debug.Log("start");
 	for (int i=0; i<nodeMini; i++){
 		nodes.Add(origine);
 		nodesOld.Add(origine);
@@ -27,31 +27,31 @@ public class Rope : MonoBehaviour
 	for (int i=0;i<nbnode-1;i++){
 		rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
 	}
-    }
-    void addNode(){
+	}
+	void addNode(){
 	nbnode++;
 	nodes.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
 	nodesOld.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
 	rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
-    }
-    bool removeNode(){
+	}
+	bool removeNode(){
 
-	    if (nbnode>3){
+		if (nbnode>3){
 
-		    nodes.RemoveAt(nbnode-1);
-		    nodesOld.RemoveAt(nbnode-1);
-		    Destroy(rp[nbnode-2].gameObject);
-		    rp.RemoveAt(nbnode-2);
+			nodes.RemoveAt(nbnode-1);
+			nodesOld.RemoveAt(nbnode-1);
+			Destroy(rp[nbnode-2].gameObject);
+			rp.RemoveAt(nbnode-2);
 
-		    nbnode--;
+			nbnode--;
 			return true;
-	    }
-	    return false;
-    }
+		}
+		return false;
+	}
 
-    float maxDist = 0.1f;
-    float vkill = 0f;
-    Vector3 origine = Vector3.zero;
+	float maxDist = 0.1f;
+	float vkill = 0f;
+	Vector3 origine = Vector3.zero;
    public void setOrigine(Vector3 origine){
 
 	   this.origine = origine;
@@ -64,9 +64,9 @@ public class Rope : MonoBehaviour
 		}
 	setRope(m);
    }
-    public void setRope(Vector3 m)
-    {
-	    Debug.Log("update");
+	public void setRope(Vector3 m)
+	{
+		Debug.Log("update");
 	if (m.magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		vkill =0f;
@@ -98,17 +98,17 @@ public class Rope : MonoBehaviour
 		nodes[i-1]+=change*0.5f;
 		nodes[i] -= change*0.5f;
 		}
-	    }
+		}
 	nodes[nbnode-1] = m;
 	for (int i=1;i<nbnode;i++){
 		rp[i-1].setCoord(nodes[i-1],nodes[i]);
 	}
-    }
-    public void OnDestroy(){
-	    for (int i=0;i<nbnode-1;i++){
+	}
+	public void OnDestroy(){
+		for (int i=0;i<nbnode-1;i++){
 
 		Destroy(rp[i].gameObject);
-	    }
-    }
+		}
+	}
 
 }

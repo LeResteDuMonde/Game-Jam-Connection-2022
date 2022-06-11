@@ -25,7 +25,7 @@ public class InputController : MonoBehaviour
 		closeBulletinBoard.performed += CloseBulletinBoard;
 
 		openInventory.Enable();
-
+		openInventory.performed += OpenInventory;
 	}
 
 	private void OnDisable()
@@ -36,18 +36,21 @@ public class InputController : MonoBehaviour
 		closeBulletinBoard.performed -= CloseBulletinBoard;
 		closeBulletinBoard.Disable();
 
+		openInventory.performed -= OpenInventory;
 		openInventory.Disable();
 	}
 
 	private void OpenBulletinBoard(InputAction.CallbackContext context)
 	{
 		mM.OpenBulletinBoard();
+		inventory.CloseIventory();
 	}
 
 	private void CloseBulletinBoard(InputAction.CallbackContext context)
 	{
 		mM.CloseLocation();
 		mM.CloseBulletinBoard();
+		inventory.CloseIventory();
 	}
 
 	private void OpenInventory(InputAction.CallbackContext context)

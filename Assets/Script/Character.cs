@@ -6,7 +6,7 @@ public class Character : MonoBehaviour, IClicked
 	[SerializeField] private Animator animator;
 	[SerializeField] private AnimatorOverrideController overrideController;
 
-    private StateMachine machine;
+	private StateMachine machine;
 
 	private void Start()
 	{
@@ -24,7 +24,7 @@ public class Character : MonoBehaviour, IClicked
 	public void onClicked()
 	{
 		animator.SetBool("Talking",true);
-        Interact();
+		Interact();
 	}
 
     // Run each behaviour which condition is satisfied

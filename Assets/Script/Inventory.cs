@@ -4,6 +4,8 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 	private List<CollectibleData> collectibles;
+	[SerializeField] private GameObject inventoryPanel;
+	[SerializeField] private GameObject collectibleIcon;
 
 	#region instance
 
@@ -13,17 +15,22 @@ public class Inventory : MonoBehaviour
 	{
 		instance = this;
 	}
-
+	#endregion
 	private void Start()
 	{
 		collectibles = new List<CollectibleData>();
 	}
 
-	#endregion
 	public void AddToInventory(GameObject collectible)
 	{
 		collectible.TryGetComponent(out Collectible collectibleComp);
-		collectibles.Add(collectibleComp?.GetData());
+		CollectibleData data = collectibleComp?.GetData();
+		collectibles.Add(data);
+
+		GameObject newCollectibleIcon = Instantiate(collectibleIcon);
+		newCollectibleIcon.GetComponent<CollectibleIcon>().SetData(data);
+		newCollectibleIcon.transform.SetParent(inventoryPanel.transform);
+		newCollectibleIcon.transform.localScale = new Vector3(1, 1, 1);
 	}
 
 	public bool IsInInventory(GameObject collectible)
@@ -34,6 +41,10 @@ public class Inventory : MonoBehaviour
 
 	public void OpenIventory()
 	{
-
+		inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+	}
+	public void CloseIventory()
+	{
+		inventoryPanel.SetActive(false);
 	}
 }
