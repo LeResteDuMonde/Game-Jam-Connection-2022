@@ -24,6 +24,7 @@ public class Bulletin : MonoBehaviour, IClicked, IHovered
 
 	private void Start()
 	{
+		connections = new List<Connection>();
 		bbM = BulletinBoardManager.instance;
 	}
 
@@ -42,9 +43,21 @@ public class Bulletin : MonoBehaviour, IClicked, IHovered
 		bbM.CancelString();
 	}
 
-	public void AddConnection(Connection connection)
+	public void AddConnection(Connection newConnection)
 	{
-		connections.Add(connection);
+		foreach (var connection in connections)
+		{
+			if(connection.bulletin == newConnection.bulletin) { connections.Remove(connection); break; }
+		}
+
+		connections.Add(newConnection);
+		Debug.Log("there is : " + connections.Count + " connections");
+		
+	}
+
+	public void DebugBulletin()
+	{
+		Debug.Log(id);
 	}
 
 	public void onHover()
