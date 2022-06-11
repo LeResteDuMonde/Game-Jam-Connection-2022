@@ -4,7 +4,6 @@ using UnityEngine;
 public class CharacterData : ScriptableObject
 {
     public string characterName;
-    //public Sprite sprite;
     public RuntimeAnimatorController animatorController;
+    public string stateMachine;
 }
-

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247604955f777bc419ee3cdfba6fd69a, type: 3}
   m_Name: Lemair
   m_EditorClassIdentifier: 
-  characterName: Toaster
-  sprite: {fileID: 21300000, guid: cdc7fa490b6183649b00f8c8b5ca7063, type: 3}
-  animatorController: {fileID: 9100000, guid: 47ee5e644a6bf304299b57b1244e5f3e, type: 2}
+  characterName: Lemair
+  animatorController: {fileID: 9100000, guid: e0ebefd033444aa4e8f35fc1855ffeaa, type: 2}
+  stateMachine: lemair

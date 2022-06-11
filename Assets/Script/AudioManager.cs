@@ -1,14 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] playlist;
+	[SerializeField] private AudioClip currentMusic;
+	[SerializeField] private AudioSource musicAudioSource;
 
 	[SerializeField] private AudioMixer mainMixer;
 	[SerializeField] private AudioMixerGroup soundEffectMixer;
+
+	#region instance
+
+	public static AudioManager instance;
+
+	void Awake()
+	{
+		instance = this;
+	}
+
+	#endregion
+
+	private void Start()
+	{
+		musicAudioSource.clip = currentMusic;
+	}
 
 	public AudioSource PlayClipAt(AudioClip clip, Vector3 pos = default(Vector3), string tag = "Sound")
 	{

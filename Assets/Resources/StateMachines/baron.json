@@ -1,0 +1,15 @@
+{
+    "states": [
+        { "name": "initial" },
+        { "name": "noStick" },
+        { "name": "hasStick" }
+    ],
+
+    "transitions": [
+        { "name": "getStick",
+          "origin": "noStick",
+          "destination": "hasStick" }
+    ],
+
+    "initialStates": [ "initial", "noStick" ]
+}
