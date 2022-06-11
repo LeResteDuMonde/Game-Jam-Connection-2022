@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ropepartFab: {fileID: 5858168833189977489, guid: db25602afbaae8c28b91a6d67ee4cbb4, type: 3}
+  arrow: {fileID: 21300000, guid: f6684e5034528872696b65e8d37c2667, type: 3}

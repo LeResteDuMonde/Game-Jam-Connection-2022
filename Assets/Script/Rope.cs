@@ -18,15 +18,6 @@ public class Rope : MonoBehaviour
 	}
     void Awake()
     {
-	    nbnode=nodeMini;
-	    Debug.Log("start");
-	for (int i=0; i<nodeMini; i++){
-		nodes.Add(origine);
-		nodesOld.Add(origine);
-	}
-	for (int i=0;i<nbnode-1;i++){
-		rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
-	}
     }
     void addNode(){
 	nbnode++;
@@ -53,31 +44,54 @@ public class Rope : MonoBehaviour
     float vkill = 0f;
     Vector3 origine = Vector3.zero;
    public void setOrigine(Vector3 origine){
-
+	    nbnode=nodeMini;
 	   this.origine = origine;
+	    Debug.Log("awake");
+	for (int i=0; i<nodeMini; i++){
+		nodes.Add(origine);
+		nodesOld.Add(origine);
+	}
+	for (int i=0;i<nbnode-1;i++){
+		rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
+	}
    }
+   public Sprite arrow;
    public void forceLength(Vector3 m){
 	while (removeNode());
-
-	while(m.magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
+	Debug.Log("magnitude");
+	Debug.Log(m.magnitude);
+	while((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		}
-	setRope(m);
+	for (int i=0;i<100;i++){
+		setRope(m);
+	}
+	//put the arrow
+	SpriteRenderer sr = rp[(int)nbnode/2].gameObject.GetComponent<SpriteRenderer>();
+	sr.sprite = arrow;
+	sr.drawMode = SpriteDrawMode.Simple;
+	Vector3 s = sr.gameObject.transform.localScale;
+	sr.gameObject.transform.localScale = new Vector3(s.x,s.x,s.z);
+   }
+   private float mag = 1f;
+   public void setSecondRope(){
+	   mag = 0.5f; 
+	   maxDist *= 0.5f;
    }
     public void setRope(Vector3 m)
     {
-	    Debug.Log("update");
-	if (m.magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
+//	    Debug.Log("update");
+	if ((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		vkill =0f;
 	}
-	if (m.magnitude - 1.2f*nbnode*maxDist < nodeMini*maxDist){
+	if ((m-origine).magnitude - 1.2f*nbnode*maxDist < nodeMini*maxDist){
 		removeNode();
 	}
 	for (int i=1;i<nbnode-1; i++){
 		Vector3 vel = nodes[i]-nodesOld[i];
 		nodesOld[i] = nodes[i];
-		nodes[i] += vel * vkill - new Vector3(0,0.008f/(float)Math.Sqrt(m.magnitude),0);
+		nodes[i] += vel * vkill - new Vector3(0,0.008f/(float)Math.Sqrt(m.magnitude)/mag,0);
 		vkill = vkill + (0.95f - vkill)/10f;
 	}
 	for(int i=1; i<nbnode; i++){
