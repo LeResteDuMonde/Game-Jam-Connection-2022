@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stringCursor: {fileID: 317626257}
   currentBulletin: {fileID: 0}
+  ropePrefab: {fileID: 2723082129932627607, guid: 9c08c2d7bf117743388297f941db0754, type: 3}
 --- !u!4 &251941122
 Transform:
   m_ObjectHideFlags: 0

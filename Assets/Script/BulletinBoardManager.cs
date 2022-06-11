@@ -40,15 +40,26 @@ public class BulletinBoardManager : MonoBehaviour
 	{
 		mC = MouseControls.instance;
 	}
-
+	private bool isDrawingString = false;
+	public GameObject ropePrefab;
+	private Rope rope;
 	public void CreateString(GameObject bulletin)
 	{
+		//Debug.Log("creation");
 		currentBulletin = bulletin;
 		stringCursor.SetActive(true);
+		isDrawingString=true;
+		rope = Instantiate(ropePrefab).GetComponent<Rope>();
+		rope.setOrigine(bulletin.gameObject.transform.position);
+
 	}
 
 	public void CancelString()
 	{
+//		Debug.Log("destruction");
+		isDrawingString=false;
+		Destroy(rope?.gameObject);
+
 		GameObject hoveredItem = mC.GetHoveredItem();
 
 		if (hoveredItem != null && hoveredItem != currentBulletin)
@@ -60,5 +71,13 @@ public class BulletinBoardManager : MonoBehaviour
 		}
 
 		stringCursor.SetActive(false);
+	}
+	public void Update(){
+
+		if (isDrawingString){
+//			Debug.Log("update");
+			rope?.setRope(MouseControls.instance.MousePosition());
+
+		}
 	}
 }

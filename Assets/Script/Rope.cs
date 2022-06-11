@@ -11,7 +11,6 @@ public class Rope : MonoBehaviour
 	private List<RopePart> rp;
 	private int nodeMini = 3;
 	private int nbnode ;
-    // Start is called before the first frame update
     void Start()
     {
 	    nbnode=nodeMini;
@@ -19,8 +18,8 @@ public class Rope : MonoBehaviour
 	    nodesOld  = new List<Vector3>();
 	    rp  = new List<RopePart>();
 	for (int i=0; i<nodeMini; i++){
-		nodes.Add(Vector3.zero);
-		nodesOld.Add(Vector3.zero);
+		nodes.Add(origine);
+		nodesOld.Add(origine);
 	}
 	for (int i=0;i<nbnode-1;i++){
 		rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
@@ -32,7 +31,7 @@ public class Rope : MonoBehaviour
 	nodesOld.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
 	rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
     }
-    void removeNode(){
+    bool removeNode(){
 
 	    if (nbnode>3){
 
@@ -42,16 +41,28 @@ public class Rope : MonoBehaviour
 		    rp.RemoveAt(nbnode-2);
 
 		    nbnode--;
-
+			return true;
 	    }
+	    return false;
     }
 
-    // Update is called once per frame
     float maxDist = 0.1f;
     float vkill = 0f;
-    void Update()
+    Vector3 origine = Vector3.zero;
+   public void setOrigine(Vector3 origine){
+
+	   this.origine = origine;
+   }
+   public void forceLength(Vector3 m){
+	while (removeNode());
+
+	while(m.magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
+		addNode();
+		}
+	setRope(m);
+   }
+    public void setRope(Vector3 m)
     {
-	Vector3 m = MouseControls.instance.MousePosition();
 	if (m.magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		vkill =0f;
@@ -88,6 +99,12 @@ public class Rope : MonoBehaviour
 	for (int i=1;i<nbnode;i++){
 		rp[i-1].setCoord(nodes[i-1],nodes[i]);
 	}
+    }
+    public void OnDestroy(){
+	    for (int i=0;i<nbnode-1;i++){
+
+		Destroy(rp[i].gameObject);
+	    }
     }
 
 }

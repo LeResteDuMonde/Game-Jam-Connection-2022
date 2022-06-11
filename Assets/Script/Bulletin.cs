@@ -32,7 +32,6 @@ public class Bulletin : MonoBehaviour, IClicked, IHovered
 	{
 		return id;
 	}
-
 	public void onClicked()
 	{
 		bbM.CreateString(gameObject);
@@ -43,6 +42,9 @@ public class Bulletin : MonoBehaviour, IClicked, IHovered
 		bbM.CancelString();
 	}
 
+	public void update(){
+		
+	}
 	public void AddConnection(Connection newConnection)
 	{
 		foreach (var connection in connections)
