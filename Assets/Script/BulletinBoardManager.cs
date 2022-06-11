@@ -3,12 +3,18 @@ using UnityEngine;
 public class Connection
 {
 	public GameObject bulletin;
+	public Rope rope;
 	public ConnectionType type;
 
-	public Connection(GameObject newBulletin, ConnectionType newType)
+	public Connection(GameObject newBulletin, ConnectionType newType, Rope rope)
 	{
 		bulletin = newBulletin;
 		type = newType;
+		this.rope = rope;
+
+	}
+	~Connection(){
+		GameObject.Destroy(rope.gameObject);
 	}
 }
 
@@ -58,7 +64,6 @@ public class BulletinBoardManager : MonoBehaviour
 	{
 //		Debug.Log("destruction");
 		isDrawingString=false;
-		Destroy(rope?.gameObject);
 
 		GameObject hoveredItem = mC.GetHoveredItem();
 
@@ -66,8 +71,11 @@ public class BulletinBoardManager : MonoBehaviour
 		{
 			currentBulletin.TryGetComponent(out Bulletin bulletin);
 			bulletin?.DebugBulletin();
-			Connection newConnection = new Connection(hoveredItem, currentConnectionType);
+			Connection newConnection = new Connection(hoveredItem, currentConnectionType, rope);
 			bulletin?.AddConnection(newConnection);
+		}else{
+
+			Destroy(rope?.gameObject);
 		}
 
 		stringCursor.SetActive(false);
