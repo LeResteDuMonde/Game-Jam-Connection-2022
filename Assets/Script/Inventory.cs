@@ -29,8 +29,11 @@ public class Inventory : MonoBehaviour
 
 		GameObject newCollectibleIcon = Instantiate(collectibleIcon);
 		newCollectibleIcon.GetComponent<CollectibleIcon>().SetData(data);
-		newCollectibleIcon.transform.SetParent(inventoryPanel.transform);
-		newCollectibleIcon.transform.localScale = new Vector3(1, 1, 1);
+		newCollectibleIcon.transform.SetParent(inventoryPanel.transform.GetChild(collectibles.Count - 1));
+
+		//newCollectibleIcon.transform.position = new Vector3(0, 0, 1);
+		newCollectibleIcon.transform.localPosition = new Vector3(0, 0, 1);
+		newCollectibleIcon.transform.localScale = new Vector3(.12f, .12f, 1);
 	}
 
 	public bool IsInInventory(GameObject collectible)

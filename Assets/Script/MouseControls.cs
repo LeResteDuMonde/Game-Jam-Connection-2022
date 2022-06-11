@@ -9,6 +9,11 @@ public class MouseControls : MonoBehaviour
 	[SerializeField] private GameObject hoveredItem;
 	[SerializeField] private GameObject clickedItem;
 
+	[SerializeField]
+	private Texture2D cursor;
+	[SerializeField]
+	private Texture2D cursorHover;
+
 	#region instance
 
 	public static MouseControls instance;
@@ -19,6 +24,11 @@ public class MouseControls : MonoBehaviour
 	}
 
 	#endregion
+
+	private void Start()
+	{
+		ChangeCursor(cursor);
+	}
 
 	private void OnEnable()
 	{
@@ -47,13 +57,14 @@ public class MouseControls : MonoBehaviour
 		if (hit2D.collider != null)
 		{
 			GameObject go = hit2D.collider.gameObject;
-			if (go.TryGetComponent<IHovered>(out IHovered hover))
+			if (go.TryGetComponent<IClicked>(out IClicked hover))
 			{
 				if (hoveredItem != go) 
 				{
 					UnHoverOldItem();
 					hoveredItem = go;
-					hover.onHover();
+					ChangeCursor(cursorHover);
+					//hover.onHover();
 				}
 			}
 			else { UnHoverOldItem(); }
@@ -72,6 +83,7 @@ public class MouseControls : MonoBehaviour
 	private void UnHoverOldItem()
 	{
 		if (hoveredItem != null && hoveredItem.TryGetComponent<IHovered>(out IHovered oldHover)) { oldHover.onUnhover(); };
+		ChangeCursor(cursor);
 		hoveredItem = null;
 	}
 	private void MousePressed(InputAction.CallbackContext context)
@@ -100,5 +112,10 @@ public class MouseControls : MonoBehaviour
 	public GameObject GetHoveredItem()
 	{
 		return hoveredItem;
+	}
+	private void ChangeCursor(Texture2D cursorType)
+	{
+		Vector2 hotspot = new Vector2(cursorType.width / 2, cursorType.height / 6);
+		Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
 	}
 }

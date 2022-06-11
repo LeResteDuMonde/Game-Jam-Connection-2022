@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a332391f3502b489040289b5eaf754, type: 3}
-  m_Name: SkatePark
+  m_Script: {fileID: 11500000, guid: 9d0cfccd124d29349b44c4b39699e0a6, type: 3}
+  m_Name: Bottle
   m_EditorClassIdentifier: 
-  collectible: {fileID: 11400000, guid: c09b54539c73d674f8e9fb649c5ca48a, type: 2}
-  locationName: Skate Park
-  background: {fileID: 21300000, guid: fe339e9f6c247f645bdf617cae3d0871, type: 3}
+  collectibleName: Bottle
+  sprite: {fileID: 21300000, guid: 7b8472a2c341dcd45ba8db74ddb9bb0c, type: 3}
+  position: {x: -7.25, y: -1.58}
+  scale: {x: 0.11, y: 0.11}

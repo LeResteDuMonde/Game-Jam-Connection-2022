@@ -31,5 +31,6 @@ public class Collectible : MonoBehaviour, IClicked
 		data = newData;
 		GetComponent<SpriteRenderer>().sprite = data.sprite;
 		transform.position = data.position;
+		transform.localScale = data.scale;
 	}
 }
