@@ -506,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1112458876547691867, guid: 8a44489343d0e0e418671d1627489635, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -573,6 +573,15 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Close Bulletin Board
       m_Flags: 0
+    m_Flags: 0
+  openInventory:
+    m_Name: Open Inventory
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c422e440-a94f-4acf-9758-37b49c605ace
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
     m_Flags: 0
 --- !u!4 &1795002675
 Transform:

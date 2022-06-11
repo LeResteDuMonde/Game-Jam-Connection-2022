@@ -35,7 +35,13 @@ public class DialogBox : MonoBehaviour
     private void ShowDialogLine() {
         textBox.SetActive(true);
         var text = textBox.GetComponent<TextMeshPro>();
-        text.SetText(currentDialog.lines[dialogPosition].ToString());
+        var line = currentDialog.lines[dialogPosition];
+        text.SetText(line.ToString());
+
+        // Transition
+        if (line.transition is string transition) {
+            ActorManager.instance.TriggerTransition(transition);
+        }
     }
 
     private void HideDialog() {

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Dominique
   animatorController: {fileID: 9100000, guid: 2a5f47f9d827adb4d87cf1834e8fe6ae, type: 2}
+  stateMachine: dominique

@@ -16,7 +16,7 @@ public class Dialog {
 
 
 [Serializable]
-public class DialogLine : Dialog {
+public class DialogLine {
     public string line;
     public string? transition;
 

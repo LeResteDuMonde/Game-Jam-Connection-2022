@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Baron
   m_EditorClassIdentifier: 
   characterName: Baron Gunter VonGerberg
-  sprite: {fileID: 21300000, guid: 01cd8898ecb6e1e4f9b1e7fd734303cf, type: 3}
   animatorController: {fileID: 9100000, guid: 86ef8064eac6b0f4580f66dfb4ca28ac, type: 2}
+  stateMachine: baron

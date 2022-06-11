@@ -5,5 +5,5 @@ public class CharacterData : ScriptableObject
 {
     public string characterName;
     public RuntimeAnimatorController animatorController;
+    public string stateMachine;
 }
-
