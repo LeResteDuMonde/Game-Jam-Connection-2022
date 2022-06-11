@@ -66,7 +66,7 @@ public class MouseControls : MonoBehaviour
 		Vector3 mousePosition = Mouse.current.position.ReadValue();
 		Vector3 correctedPosition = mainCamera.ScreenToWorldPoint(mousePosition);
 
-		return correctedPosition;
+		return new Vector3(correctedPosition.x, correctedPosition.y,0);
 	}
 
 	private void UnHoverOldItem()
