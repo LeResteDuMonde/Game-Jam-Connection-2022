@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
-{
+{	
 	private bool isBulletinBoardOpen;
+	public GameObject bulletinParent;
 	private bool isLocationOpen;
 	private string openScene;
 
@@ -13,15 +14,18 @@ public class MapManager : MonoBehaviour
 
 	void Awake()
 	{
+		SceneManager.LoadScene("BulletinBoard", LoadSceneMode.Additive);
 		instance = this;
+
 	}
 	#endregion
 
 	public void OpenBulletinBoard()
 	{
 		if (!isBulletinBoardOpen) { 
-			SceneManager.LoadScene("BulletinBoard", LoadSceneMode.Additive);
 			isBulletinBoardOpen = true;
+
+			bulletinParent.active = true;
 		}
 		
 	}
@@ -29,8 +33,9 @@ public class MapManager : MonoBehaviour
 	public void CloseBulletinBoard()
 	{
 		if (isBulletinBoardOpen){
-			SceneManager.UnloadSceneAsync("BulletinBoard");
+			//SceneManager.UnloadSceneAsync("BulletinBoard");
 			isBulletinBoardOpen = false;
+			bulletinParent.active = false;
 		}
 	}
 

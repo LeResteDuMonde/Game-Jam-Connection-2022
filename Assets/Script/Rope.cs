@@ -23,7 +23,7 @@ public class Rope : MonoBehaviour
 	nbnode++;
 	nodes.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
 	nodesOld.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
-	rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
+	rp.Add(Instantiate(ropepartFab, gameObject.transform).GetComponent<RopePart>());
 	}
 	bool removeNode(){
 
@@ -52,7 +52,8 @@ public class Rope : MonoBehaviour
 		nodesOld.Add(origine);
 	}
 	for (int i=0;i<nbnode-1;i++){
-		rp.Add(Instantiate(ropepartFab).GetComponent<RopePart>());
+		rp.Add(Instantiate(ropepartFab, this.gameObject.transform).GetComponent<RopePart>());
+		
 	}
    }
    public Sprite arrow;
@@ -76,7 +77,7 @@ public class Rope : MonoBehaviour
    private float mag = 1f;
    public void setSecondRope(){
 	   mag = 0.5f; 
-	   maxDist *= 0.5f;
+	   maxDist *= 0.8f;
    }
     public void setRope(Vector3 m)
     {

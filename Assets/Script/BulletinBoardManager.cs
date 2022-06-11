@@ -13,9 +13,19 @@ public class Connection
 		this.rope = rope;
 
 	}
-	~Connection(){
-		GameObject.Destroy(rope.gameObject);
+}
+public class ConnectionSerial{
+	public string character;
+	public ConnectionType type;
+	public ConnectionSerial(Connection connection){
+		//character = connection.bulletin.GetComponent<Bulletin>().charName;
+		type = connection.type;
 	}
+	public void serialize(){
+
+	}
+
+
 }
 
 public enum ConnectionType
@@ -55,7 +65,7 @@ public class BulletinBoardManager : MonoBehaviour
 		currentBulletin = bulletin;
 		stringCursor.SetActive(true);
 		isDrawingString=true;
-		rope = Instantiate(ropePrefab).GetComponent<Rope>();
+		rope = Instantiate(ropePrefab, gameObject.transform).GetComponent<Rope>();
 		rope.setOrigine(bulletin.gameObject.transform.position);
 
 	}
