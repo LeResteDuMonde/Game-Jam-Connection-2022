@@ -97,22 +97,23 @@ public class DialogBox : MonoBehaviour
 
     private void HideDialog() {
         textPanel.SetActive(false);
+        currentChara.GetAnimator().SetBool("Talking", false);
     }
 
-    private StateMachine currentMachine;
+    private Character currentChara;
 
-    public void ShowNewDialog(Dialog dialog, StateMachine machine) {
+    public void ShowNewDialog(Dialog dialog, Character chara) {
         currentDialog = dialog;
         currentLines = dialog.lines;
         dialogPosition = -1;
-        currentMachine = machine;
+        currentChara = chara;
         NextLine();
     }
 
     private bool CheckInStates(string[] states) {
         if (states == null) return true;
         foreach (var s in states) {
-            if(!(currentMachine.CheckState(s))) return false;
+            if(!(currentChara.GetMachine().CheckState(s))) return false;
         }
         return true;
     }

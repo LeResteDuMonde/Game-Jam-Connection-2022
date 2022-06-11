@@ -9,6 +9,14 @@ public class Character : MonoBehaviour, IClicked
     private StateMachine machine;
     private Dialog dialog;
 
+    public StateMachine GetMachine() {
+        return machine;
+    }
+
+    public Animator GetAnimator() {
+        return animator;
+    }
+
     private void Start() {
         animator.runtimeAnimatorController = data.animatorController;
 
@@ -38,7 +46,7 @@ public class Character : MonoBehaviour, IClicked
 
     void Interact() {
         Debug.Log(machine.ToString());
-        DialogBox.instance.ShowNewDialog(dialog, machine);
+        DialogBox.instance.ShowNewDialog(dialog, this);
     }
 
     public void TriggerTransition(string transition) {

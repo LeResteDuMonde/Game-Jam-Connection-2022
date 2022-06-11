@@ -27,6 +27,7 @@ public class CharacterManager : MonoBehaviour
         var smJson = Resources.Load<TextAsset>("StateMachines/" + name);
         var machine = JsonUtility.FromJson<StateMachine>(smJson.text);
         machine.Start();
+        loadedMachines.Add(machine);
 
         return machine;
     }
@@ -36,6 +37,7 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void TriggerTransition(string transition) {
+        actors.RemoveAll(s => s == null);
         foreach(GameObject g in actors) {
             var a = g.GetComponent<Character>();
             a.TriggerTransition(transition);
@@ -43,6 +45,7 @@ public class CharacterManager : MonoBehaviour
     }
 
     void UpdateActors() {
+        actors.RemoveAll(s => s == null);
         foreach(GameObject g in actors) {
             var a = g.GetComponent<Character>();
             //a.UpdateBehaviours();

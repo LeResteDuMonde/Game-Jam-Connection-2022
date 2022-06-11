@@ -1,5 +1,5 @@
 {
-    "name": "Baron",
+    "name": "baron",
     "states": [
         { "name": "initial" },
         { "name": "flecheOSEF" },

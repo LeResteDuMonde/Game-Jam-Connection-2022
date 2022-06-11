@@ -1,5 +1,5 @@
 {
-    "name": "Toaster",
+    "name": "toaster",
     "states": [
         { "name": "initial" },
         { "name": "flecheOSEF" },
