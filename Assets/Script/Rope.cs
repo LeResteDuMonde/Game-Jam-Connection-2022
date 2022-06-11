@@ -10,13 +10,16 @@ public class Rope : MonoBehaviour
 	private List<Vector3> nodesOld;
 	private List<RopePart> rp;
 	private int nodeMini = 3;
-	private int nbnode ;
-    void Start()
-    {
-	    nbnode=nodeMini;
+	private int nbnode =0;
+	public Rope (){
 	    nodes  = new List<Vector3>();
 	    nodesOld  = new List<Vector3>();
 	    rp  = new List<RopePart>();
+	}
+    void Awake()
+    {
+	    nbnode=nodeMini;
+	    Debug.Log("start");
 	for (int i=0; i<nodeMini; i++){
 		nodes.Add(origine);
 		nodesOld.Add(origine);
@@ -63,6 +66,7 @@ public class Rope : MonoBehaviour
    }
     public void setRope(Vector3 m)
     {
+	    Debug.Log("update");
 	if (m.magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		vkill =0f;
