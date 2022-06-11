@@ -17,15 +17,17 @@ public class Dialog {
 
 [Serializable]
 public class DialogLine {
+    public string[] inStates;
     public string line;
     public string? transition;
+    public bool terminal;
 
     public override String ToString() { return line; }
 }
 
 [Serializable]
 public class Choice {
-    public string[] availableStates;
+    public string[] inStates;
     public string answer;
     public DialogLine[] lines;
 }

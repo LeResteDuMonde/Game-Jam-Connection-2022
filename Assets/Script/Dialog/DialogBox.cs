@@ -59,9 +59,8 @@ public class DialogBox : MonoBehaviour
     private void ShowChoices(Choice[] choices) {
         var text = textBox.GetComponent<TextMeshProUGUI>();
         text.SetText("");
-        Debug.Log(textPanel.transform);
         foreach (var choice in choices) {
-            // TODO check state
+            if(!CheckInStates(choice.inStates)) continue;
 
             // Create new button
             var button = Instantiate(choiceButtonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
@@ -86,36 +85,72 @@ public class DialogBox : MonoBehaviour
             Destroy(button);
         }
         buttons = new List<GameObject>();
+        advanceDialog.Enable();
     }
 
     private void MakeChoice(DialogLine[] lines) {
         HideChoices();
         currentLines = lines;
-        dialogPosition = 0;
-        ShowDialogLine();
+        dialogPosition = -1;
+        NextLine();
     }
 
     private void HideDialog() {
         textPanel.SetActive(false);
     }
 
-    public void ShowNewDialog(Dialog dialog) {
+    private StateMachine currentMachine;
+
+    public void ShowNewDialog(Dialog dialog, StateMachine machine) {
         currentDialog = dialog;
         currentLines = dialog.lines;
-        dialogPosition = 0;
-        ShowDialogLine();
+        dialogPosition = -1;
+        currentMachine = machine;
+        NextLine();
     }
 
-    public void AdvanceDialog(InputAction.CallbackContext _) {
-        if(dialogPosition >= currentLines.Length - 1) {
+    private bool CheckInStates(string[] states) {
+        if (states == null) return true;
+        foreach (var s in states) {
+            if(!(currentMachine.CheckState(s))) return false;
+        }
+        return true;
+    }
+
+    private void NextLine() {
+        // Maybe terminate
+        Debug.Log(dialogPosition);
+        if(dialogPosition >= 0 && currentLines[dialogPosition].terminal) {
+            HideDialog();
+            return;
+        }
+
+        // Advance
+        if(dialogPosition < currentLines.Length - 1) {
+
+            dialogPosition++;
+
+            // Maybe skip the line
+            if (!(CheckInStates(currentLines[dialogPosition].inStates))) {
+                NextLine();
+                return;
+            }
+
+            ShowDialogLine();
+        }
+
+        // Show choices
+        else {
             if(currentDialog.choices.Length > 0) {
+                advanceDialog.Disable();
                 ShowChoices(currentDialog.choices);
             } else {
                 HideDialog();
             }
-        } else {
-            dialogPosition++;
-            ShowDialogLine();
         }
+    }
+
+    public void AdvanceDialog(InputAction.CallbackContext _) {
+        NextLine();
     }
 }

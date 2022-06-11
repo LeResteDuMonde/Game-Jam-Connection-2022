@@ -9,8 +9,7 @@ public class Character : MonoBehaviour, IClicked
     private StateMachine machine;
     private Dialog dialog;
 
-    private void Start()
-    {
+    private void Start() {
         animator.runtimeAnimatorController = data.animatorController;
 
         var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
@@ -40,16 +39,14 @@ public class Character : MonoBehaviour, IClicked
 
     void Interact() {
         Debug.Log(machine.ToString());
-        DialogBox.instance.ShowNewDialog(dialog);
-        // foreach (GameObject g in behaviours) {
-        //     ActorBehaviour b = g.GetComponent<ActorBehaviour>();
-        //     if (b.Condition(em)) {
-        //         b.Interact(em);
-        //     }
-        // }
+        DialogBox.instance.ShowNewDialog(dialog, machine);
     }
 
     public void TriggerTransition(string transition) {
-        machine.TriggerTransition(transition);
+        if(machine != null) {
+            machine.TriggerTransition(transition);
+        } else {
+            Debug.Log(machine);
+        }
     }
 }
