@@ -13,7 +13,8 @@ public class Character : MonoBehaviour, IClicked
 		animator.runtimeAnimatorController = data.animatorController;
 
         var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
-        //machine = JsonUtility.FromJson<StateMachine>(smJson.text);
+        machine = JsonUtility.FromJson<StateMachine>(smJson.text);
+        machine.Start();
 	}
 
 	public void onCancelClicked()
@@ -35,6 +36,7 @@ public class Character : MonoBehaviour, IClicked
     }
 
     void Interact() {
+        Debug.Log(machine.ToString());
         // foreach (GameObject g in behaviours) {
         //     ActorBehaviour b = g.GetComponent<ActorBehaviour>();
         //     if (b.Condition(em)) {
@@ -44,6 +46,6 @@ public class Character : MonoBehaviour, IClicked
     }
 
     public void TriggerTransition(string transition) {
-        //machine.TriggerTransition(transition);
+        machine.TriggerTransition(transition);
     }
 }

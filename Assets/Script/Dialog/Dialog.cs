@@ -3,7 +3,7 @@ using System;
 [Serializable]
 public class Dialog {
     public DialogLine[] lines;
-    public Choice[]? choice;
+    public Choice[] choice;
 
     public override String ToString() {
         String str = "";
@@ -25,6 +25,7 @@ public class DialogLine {
 
 [Serializable]
 public class Choice {
+    public string[] availableStates;
     public string text;
     public Dialog next;
 }
