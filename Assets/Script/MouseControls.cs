@@ -7,8 +7,8 @@ public class MouseControls : MonoBehaviour
 	[SerializeField] private InputAction mouseClick;
 
 	[SerializeField] private GameObject hoveredItem;
+	[SerializeField] private GameObject clickedItem;
 
-	/*
 	#region instance
 
 	public static MouseControls instance;
@@ -18,7 +18,7 @@ public class MouseControls : MonoBehaviour
 		instance = this;
 	}
 
-	#endregion*/
+	#endregion
 
 	private void OnEnable()
 	{
@@ -61,6 +61,14 @@ public class MouseControls : MonoBehaviour
 		else { UnHoverOldItem(); }
 	}
 
+	public Vector3 MousePosition()
+	{
+		Vector3 mousePosition = Mouse.current.position.ReadValue();
+		Vector3 correctedPosition = mainCamera.ScreenToWorldPoint(mousePosition);
+
+		return correctedPosition;
+	}
+
 	private void UnHoverOldItem()
 	{
 		if (hoveredItem != null && hoveredItem.TryGetComponent<IHovered>(out IHovered oldHover)) { oldHover.onUnhover(); };
@@ -73,24 +81,20 @@ public class MouseControls : MonoBehaviour
 
 		if (hit2D.collider != null)
 		{
-			GameObject go = hit2D.collider.gameObject;
+			clickedItem = hit2D.collider.gameObject;
 
-			go.TryGetComponent<IClicked>(out var iClickedComponent);
+			clickedItem.TryGetComponent<IClicked>(out var iClickedComponent);
 			iClickedComponent?.onClicked();
 		}
 	}
 
 	private void MouseCancel(InputAction.CallbackContext context)
 	{
-		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
-
-		if (hit2D.collider != null)
-		{
-			GameObject go = hit2D.collider.gameObject;
-
-			go.TryGetComponent<IClicked>(out var iClickedComponent);
+		if(clickedItem != null) {
+			clickedItem.TryGetComponent<IClicked>(out var iClickedComponent);
 			iClickedComponent?.onCancelClicked();
 		}
+
+		clickedItem = null;
 	}
 }
