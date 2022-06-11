@@ -1,9 +1,13 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class DialogBox : MonoBehaviour
 {
+    public GameObject choiceButtonPrefab;
+
     public static DialogBox instance;
 
     void Awake() {
@@ -12,11 +16,18 @@ public class DialogBox : MonoBehaviour
 
     [SerializeField] private InputAction advanceDialog;
 
+    private GameObject textPanel;
     private GameObject textBox;
+    private GameObject buttonPanel;
+
+    private List<GameObject> buttons;
 
     // Start is called before the first frame update
     void Start() {
-        textBox = transform.Find("TextBox").gameObject;
+        textPanel = transform.Find("TextPanel").gameObject;
+        textBox = textPanel.transform.Find("TextBox").gameObject;
+        buttonPanel = textPanel.transform.Find("ButtonPanel").gameObject;
+        buttons = new List<GameObject>();
     }
 
     void OnEnable() {
@@ -30,12 +41,13 @@ public class DialogBox : MonoBehaviour
     }
 
     private Dialog currentDialog;
+    private DialogLine[] currentLines;
     private int dialogPosition;
 
     private void ShowDialogLine() {
-        textBox.SetActive(true);
-        var text = textBox.GetComponent<TextMeshPro>();
-        var line = currentDialog.lines[dialogPosition];
+        textPanel.SetActive(true);
+        var text = textBox.GetComponent<TextMeshProUGUI>();
+        var line = currentLines[dialogPosition];
         text.SetText(line.ToString());
 
         // Transition
@@ -44,20 +56,63 @@ public class DialogBox : MonoBehaviour
         }
     }
 
+    private void ShowChoices(Choice[] choices) {
+        var text = textBox.GetComponent<TextMeshProUGUI>();
+        text.SetText("");
+        Debug.Log(textPanel.transform);
+        foreach (var choice in choices) {
+            // TODO check state
+
+            // Create new button
+            var button = Instantiate(choiceButtonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            button.transform.SetParent(buttonPanel.transform);
+            button.transform.localScale = new Vector3(2, 2, 2);
+
+            // Set its text
+            var bText = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+            bText.text = choice.answer;
+
+            // Create a listener
+            button.GetComponent<Button>().onClick.AddListener(() => MakeChoice(choice.lines));
+
+            // Add it
+            buttons.Add(button);
+        }
+    }
+
+    private void HideChoices() {
+        // Delete buttons
+        foreach(var button in buttons) {
+            Destroy(button);
+        }
+        buttons = new List<GameObject>();
+    }
+
+    private void MakeChoice(DialogLine[] lines) {
+        HideChoices();
+        currentLines = lines;
+        dialogPosition = 0;
+        ShowDialogLine();
+    }
+
     private void HideDialog() {
-        textBox.SetActive(false);
+        textPanel.SetActive(false);
     }
 
     public void ShowNewDialog(Dialog dialog) {
         currentDialog = dialog;
+        currentLines = dialog.lines;
         dialogPosition = 0;
         ShowDialogLine();
     }
 
     public void AdvanceDialog(InputAction.CallbackContext _) {
-        if(dialogPosition >= currentDialog.lines.Length - 1) {
-            // TODO choice
-            HideDialog();
+        if(dialogPosition >= currentLines.Length - 1) {
+            if(currentDialog.choices.Length > 0) {
+                ShowChoices(currentDialog.choices);
+            } else {
+                HideDialog();
+            }
         } else {
             dialogPosition++;
             ShowDialogLine();

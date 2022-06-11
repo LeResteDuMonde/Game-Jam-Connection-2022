@@ -7,6 +7,7 @@ public class Character : MonoBehaviour, IClicked
 	[SerializeField] private AnimatorOverrideController overrideController;
 
 	private StateMachine machine;
+    private Dialog dialog;
 
 	private void Start()
 	{
@@ -15,6 +16,8 @@ public class Character : MonoBehaviour, IClicked
         var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
         machine = JsonUtility.FromJson<StateMachine>(smJson.text);
         machine.Start();
+
+        dialog = LocalizationManager.instance.RetrieveDialog(data.stateMachine);
 	}
 
 	public void onCancelClicked()
@@ -37,6 +40,7 @@ public class Character : MonoBehaviour, IClicked
 
     void Interact() {
         Debug.Log(machine.ToString());
+        DialogBox.instance.ShowNewDialog(dialog);
         // foreach (GameObject g in behaviours) {
         //     ActorBehaviour b = g.GetComponent<ActorBehaviour>();
         //     if (b.Condition(em)) {

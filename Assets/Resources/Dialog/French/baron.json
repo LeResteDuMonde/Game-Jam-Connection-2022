@@ -1,0 +1,18 @@
+{
+    "lines": [
+        { "line": "Avant j'etais un aventurier comme vous," },
+        { "line": "et puis je me suis pris une fleche dans le genou" }
+    ],
+    "choices": [
+        { "availableStates" : [ ],
+          "answer": "ah oui alors",
+          "lines": [ { "line": "RT si c'est triste" }]
+        },
+
+        { "availableStates" : [ ],
+          "answer": "ah bon",
+          "lines": [ { "line": "Et oui mon bon monsieur" }]
+        }
+
+    ]
+}

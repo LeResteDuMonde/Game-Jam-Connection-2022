@@ -1,6 +1,16 @@
 {
     "lines": [
         { "line": "Avant j'etais un aventurier comme vous," },
-        { "line": "et puis je me suis pris une fleche dans le genou" }
+        { "line": "et puis je me suis pris une fleche dans le genou`" }
+    ],
+    "choices": [
+        { "availableStates" : [ ],
+          "text": "ah oui alors",
+        },
+
+        { "availableStates" : [ ],
+          "text": "ah bon"
+        }
+
     ]
 }

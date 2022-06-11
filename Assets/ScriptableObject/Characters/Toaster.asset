@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Toaster
   m_EditorClassIdentifier: 
   characterName: Toaster
-  sprite: {fileID: 21300000, guid: cdc7fa490b6183649b00f8c8b5ca7063, type: 3}
   animatorController: {fileID: 9100000, guid: 47ee5e644a6bf304299b57b1244e5f3e, type: 2}
+  stateMachine: toaster
