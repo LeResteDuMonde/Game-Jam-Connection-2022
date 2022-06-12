@@ -4,6 +4,7 @@ using UnityEngine;
 [Serializable]
 public class State {
     public string name;
+    public string? location;
 }
 
 [Serializable]

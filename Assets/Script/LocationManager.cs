@@ -27,7 +27,12 @@ public class LocationManager : MonoBehaviour
 		inventory = Inventory.instance;
 		SetData();
 		SpawnCollectible();
+        CharacterManager.instance.LoadLocationCharacters(data.locationName);
 	}
+
+    void OnDisable() {
+        CharacterManager.instance.UnloadCharacters();
+    }
 
 	public void SetData()
 	{

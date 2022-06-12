@@ -162,6 +162,6 @@ public class DialogBox : MonoBehaviour
     }
 
     public void AdvanceDialog(InputAction.CallbackContext _) {
-        NextLine();
+        if(IsOpen()) NextLine();
     }
 }

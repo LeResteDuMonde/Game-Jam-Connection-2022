@@ -3,18 +3,14 @@
     "states": [
         { "name": "initial" },
         { "name": "flecheOSEF" },
-        { "name": "noStick" },
-        { "name": "hasStick" }
+        { "name": "isInBistrot", "location": "Bistrot" }
     ],
 
     "transitions": [
-        { "name": "getStick",
-          "origin": "noStick",
-          "destination": "hasStick" },
         { "name": "saidOSEF",
           "origin": "initial",
           "destination": "flecheOSEF" }
     ],
 
-    "initialStates": [ "initial", "noStick" ]
+    "initialStates": [ "initial", "isInBistrot" ]
 }

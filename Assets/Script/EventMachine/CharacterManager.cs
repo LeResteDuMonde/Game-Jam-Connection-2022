@@ -5,12 +5,12 @@ public class CharacterManager : MonoBehaviour
 {
 
     public static CharacterManager instance;
-    private List<GameObject> actors;
-    private List<StateMachine> loadedMachines;
+    public List<GameObject> characters;
 
     void Start() {
-        actors = new List<GameObject>();
-        loadedMachines = new List<StateMachine>();
+        foreach(var c in characters) {
+            c.GetComponent<Character>().Initialize();
+        }
     }
 
     void Awake() {
@@ -18,37 +18,23 @@ public class CharacterManager : MonoBehaviour
     }
 
 
-    public StateMachine GetMachine(string name) {
-        foreach(StateMachine sm in loadedMachines) {
-            if(sm.name == name) return sm;
-        }
-
-        // If the machine isnt yet loaded, load it
-        var smJson = Resources.Load<TextAsset>("StateMachines/" + name);
-        var machine = JsonUtility.FromJson<StateMachine>(smJson.text);
-        machine.Start();
-        loadedMachines.Add(machine);
-
-        return machine;
-    }
-
-    public void Register(GameObject actor) {
-        actors.Add(actor);
-    }
-
     public void TriggerTransition(string transition) {
-        actors.RemoveAll(s => s == null);
-        foreach(GameObject g in actors) {
+        foreach(GameObject g in characters) {
             var a = g.GetComponent<Character>();
             a.TriggerTransition(transition);
         }
     }
 
-    void UpdateActors() {
-        actors.RemoveAll(s => s == null);
-        foreach(GameObject g in actors) {
+    public void LoadLocationCharacters(string location) {
+        foreach(GameObject g in characters) {
             var a = g.GetComponent<Character>();
-            //a.UpdateBehaviours();
+            a.LoadInLocation(location);
+        }
+    }
+
+    public void UnloadCharacters() {
+        foreach(GameObject g in characters) {
+            g.SetActive(false);
         }
     }
 }
