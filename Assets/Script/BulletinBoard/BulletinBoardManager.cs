@@ -72,6 +72,17 @@ public class BulletinBoardManager : MonoBehaviour
 		currentConnetionSprite.sprite = loveSprite;
 	}
 
+    private void OnEnable() {
+        foreach(var b in bulletins) {
+            if(b.activeSelf) continue;
+
+            var data = b.GetComponent<Bulletin>().GetData();
+            if(CharacterManager.instance.WasEncountered(data)) {
+                b.SetActive(true);
+            }
+        }
+    }
+
 	private void OnDisable()
 	{
 		enableAfterAnimation.SetActive(false);

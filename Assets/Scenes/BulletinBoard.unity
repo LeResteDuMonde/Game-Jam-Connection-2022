@@ -225,6 +225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: elisabeth
       objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
@@ -370,6 +374,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: zephyr
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -919,12 +927,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 5.2068906, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 659539750}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &659539750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1173,6 +1181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lemair
       objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
@@ -1244,6 +1256,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: justine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1317,6 +1333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toaster
       objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
@@ -1388,6 +1408,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: maryse
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1465,6 +1489,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: colombin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1553,6 +1581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: nounours
       objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
@@ -1625,6 +1657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mia
       objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
@@ -1696,6 +1732,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: vieu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1773,6 +1813,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: dominique
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2102,6 +2146,10 @@ PrefabInstance:
     - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
       propertyPath: m_Name
       value: baron
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488545219483639411, guid: 35c25e4b6809e38478b58c6af246664c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

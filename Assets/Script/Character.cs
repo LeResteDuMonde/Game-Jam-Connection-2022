@@ -10,6 +10,12 @@ public class Character : MonoBehaviour, IClicked
     private StateMachine machine;
     private Dialog dialog;
 
+    private bool encountered;
+
+    public CharacterData GetData() {
+        return data;
+    }
+
     public StateMachine GetMachine() {
         return machine;
     }
@@ -18,7 +24,13 @@ public class Character : MonoBehaviour, IClicked
         return animator;
     }
 
+    public bool WasEncountered() {
+        return encountered;
+    }
+
     public void Initialize() {
+        encountered = false;
+
         dialog = LocalizationManager.instance.RetrieveDialog(data.stateMachine);
 
         try {
@@ -33,6 +45,7 @@ public class Character : MonoBehaviour, IClicked
 
     void Start() {
         animator.runtimeAnimatorController = data.animatorController;
+        encountered = true;
     }
 
     public void onCancelClicked()

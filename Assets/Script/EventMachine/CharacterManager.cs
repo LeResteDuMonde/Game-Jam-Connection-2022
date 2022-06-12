@@ -34,7 +34,15 @@ public class CharacterManager : MonoBehaviour
 
     public void UnloadCharacters() {
         foreach(GameObject g in characters) {
-            g.SetActive(false);
+            if(g != null) g.SetActive(false);
         }
+    }
+
+    public bool WasEncountered(CharacterData data) {
+        foreach(var go in characters) {
+            var c = go.GetComponent<Character>();
+            if(c.GetData() == data && c.WasEncountered()) return true;
+        }
+        return false;
     }
 }
