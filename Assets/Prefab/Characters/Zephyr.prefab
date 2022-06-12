@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080f358316c5cd84b819d56223ae9645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 7033d948638d9514c985a16b9e2bd726, type: 2}
+  data: {fileID: 11400000, guid: 57dc74fee8191564b94d95e92aec2e93, type: 2}
   animator: {fileID: 2995952279854872401}
   overrideController: {fileID: 0}
 --- !u!212 &2802362454321377001

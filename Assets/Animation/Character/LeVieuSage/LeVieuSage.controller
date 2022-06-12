@@ -72,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 00691f06663e322479f0db8b234dca28, type: 2}
+  m_Motion: {fileID: 7400000, guid: c63b17d230f26f5419e9c40f2db25e25, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -84,7 +84,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mia
+  m_Name: LeVieuSage
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Talking
@@ -126,7 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 07c751387b04c67409aa2953623aa30f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1329d2cbd494c7b4699623bc2cfb0570, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
