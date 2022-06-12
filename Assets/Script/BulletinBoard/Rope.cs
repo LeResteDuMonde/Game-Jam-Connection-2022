@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -16,9 +15,7 @@ public class Rope : MonoBehaviour
 		nodesOld  = new List<Vector3>();
 		rp  = new List<RopePart>();
 	}
-	void Awake()
-	{
-	}
+
 	void addNode(){
 	nbnode++;
 	nodes.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);

@@ -54,6 +54,7 @@ public class BulletinBoardManager : MonoBehaviour
 	[SerializeField] private Sprite loveSprite, hateSprite, shitSprite;
 	[SerializeField] private SpriteRenderer currentConnetionSprite;
 	[SerializeField] private Color loveColor, hateColor, shitColor;
+	[HideInInspector] public Color currentColor;
 
 	#region instance
 
@@ -70,6 +71,7 @@ public class BulletinBoardManager : MonoBehaviour
 		mC = MouseControls.instance;
 		currentConnectionType = ConnectionType.Love;
 		currentConnetionSprite.sprite = loveSprite;
+		currentColor = loveColor;
 	}
 
     private void OnEnable() {
@@ -142,14 +144,17 @@ public class BulletinBoardManager : MonoBehaviour
 			case ConnectionType.Love:
 				currentConnectionType = ConnectionType.Hate;
 				currentConnetionSprite.sprite = hateSprite;
+				currentColor = hateColor;
 				break;
 			case ConnectionType.Hate:
 				currentConnectionType = ConnectionType.Shit;
 				currentConnetionSprite.sprite = shitSprite;
+				currentColor = shitColor;
 				break;
 			case ConnectionType.Shit:
 				currentConnectionType = ConnectionType.Love;
 				currentConnetionSprite.sprite = loveSprite;
+				currentColor = loveColor;
 				break;
 			default:
 				break;

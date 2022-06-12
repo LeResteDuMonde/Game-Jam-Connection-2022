@@ -22,12 +22,12 @@ public class MapManager : MonoBehaviour
 
 	public void ToggleBulletinBoard()
 	{
-        bulletinParent.SetActive(!bulletinParent.activeSelf);
+		bulletinParent.SetActive(!bulletinParent.activeSelf);
 	}
 
-    public bool IsBulletinBoardOpen() {
-        return bulletinParent.activeSelf;
-    }
+	public bool IsBulletinBoardOpen() {
+		return bulletinParent.activeSelf;
+	}
 
 	public void LoadLocation(string scene)
 	{

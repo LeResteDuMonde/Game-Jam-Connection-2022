@@ -9,5 +9,4 @@ public class CharacterData : ScriptableObject
     public string stateMachine;
     public List<CharacterData> connections;
     public List<ConnectionType> connectionsType;
-
 }

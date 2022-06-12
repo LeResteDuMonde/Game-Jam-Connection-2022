@@ -15,3 +15,5 @@ MonoBehaviour:
   characterName: LeVieuSage
   animatorController: {fileID: 9100000, guid: 40efe1bfdd562854cb17167f7960bc9f, type: 2}
   stateMachine: vieu
+  connections: []
+  connectionsType: 
