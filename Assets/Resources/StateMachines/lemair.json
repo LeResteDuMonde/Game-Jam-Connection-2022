@@ -5,14 +5,20 @@
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
 	    {"name" : "seenDaugther"},
-	    {"name" : "inSchool", "location" : "City Hall", "position" : "left"}
+	    {"name" : "inHall", "location" : "City Hall", "position" : "left"},
+	    {"name" : "inCafe", "location" : "Bistro", "position" : "left"}
     ],
 
     "transitions": [
-	    {"name" : "readDominique",
+	    {"name" : "readLemair",
 	    "origin" : "dialogInit",
-	    "destination" : "terminal" }
+	    "destination" : "terminal" },
+
+	    {"name" : "readCaca",
+	    "origin" : "inHall",
+	    "destination" : "inCafe" }
+
     ],
 
-    "initialStates": ["initial","dialogInit","inSchool" ]
+    "initialStates": ["initial","dialogInit","inHall" ]
 }

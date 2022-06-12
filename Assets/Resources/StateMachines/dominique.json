@@ -4,13 +4,18 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
+	    {"name" : "aEuCaca"},
 	    {"name" : "inSchool", "location" : "Classroom", "position" : "left"}
     ],
 
     "transitions": [
 	    {"name" : "readDominique",
 	    "origin" : "dialogInit",
-	    "destination" : "terminal" }
+	    "destination" : "terminal"},
+
+	    {"name" : "faireCaca",
+	    "origin" : "initial",
+	    "destination" : "aEuCaca"}
     ],
 
     "initialStates": ["initial","dialogInit","inSchool" ]

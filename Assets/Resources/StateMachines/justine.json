@@ -8,7 +8,7 @@
     ],
 
     "transitions": [
-	    {"name" : "readDominique",
+	    {"name" : "readJustine",
 	    "origin" : "dialogInit",
 	    "destination" : "terminal" }
     ],
