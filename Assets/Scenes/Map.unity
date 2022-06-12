@@ -2013,6 +2013,23 @@ MonoBehaviour:
       m_Action: Swap Connection Type
       m_Flags: 0
     m_Flags: 0
+  closeDialog:
+    m_Name: Close Dialog
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7ffa6dcf-5f51-47f0-b0ad-2e64bf01566b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 145bcc87-e9e0-41b2-94ef-fdaf0f05a10b
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Close Dialog
+      m_Flags: 0
+    m_Flags: 0
 --- !u!4 &1795002675
 Transform:
   m_ObjectHideFlags: 0

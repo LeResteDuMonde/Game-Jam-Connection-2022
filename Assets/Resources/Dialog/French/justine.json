@@ -2,7 +2,7 @@
     "lines": [
 	    {"line" : "TODO dialogue initial justine" },
 	    {"line" : "TODO dialogue initial justine 2", 
-		    "transition" : "readDominique"}
+		    "transition" : "readJustine"}
     ],
     "choices": [
 	{"inStates":[],

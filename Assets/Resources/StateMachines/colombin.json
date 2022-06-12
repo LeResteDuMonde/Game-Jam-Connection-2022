@@ -1,10 +1,24 @@
 {
     "name": "colombin",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "aFaitCaca"},
+	    {"name" : "inPark", "location" : "Skate Park", "position" : "left"}
     ],
 
     "transitions": [
+	    {"name" : "readColonbin",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" },
+
+	    {"name" : "faireCaca",
+	    "origin" : "initial",
+	    "destination" : "aFaitCaca" }
+
+
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inPark" ]
 }

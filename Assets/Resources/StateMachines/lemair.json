@@ -6,7 +6,7 @@
 	    {"name" : "terminal"},
 	    {"name" : "seenDaugther"},
 	    {"name" : "inHall", "location" : "City Hall", "position" : "left"},
-	    {"name" : "inCafe", "location" : "Bistro", "position" : "left"}
+	    {"name" : "inCafe", "location" : "Bistrot", "position" : "left"}
     ],
 
     "transitions": [

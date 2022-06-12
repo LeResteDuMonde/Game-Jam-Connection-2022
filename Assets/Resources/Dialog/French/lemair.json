@@ -1,8 +1,9 @@
 {
     "lines": [
-	    {"line" : "TODO dialogue initial lemair" },
-	    {"line" : "TODO dialogue initial lemair 2", 
-		    "transition" : "readLemair"}
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial lemair" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial lemair 2", 
+		    "transition" : "readLemair"},
+		    {"line":""}
     ],
     "choices": [
 	{"inStates":[],
