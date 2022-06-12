@@ -6,21 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartingScene.unity
+    guid: a66f03f628215b94887924b6ef635255
+  - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/BulletinBoard.unity
     guid: d79bdd9e5a869794ca090742d5d177b3
-  - enabled: 1
-    path: Assets/Scenes/Location/School.unity
-    guid: 35b6ba202173bca4d8ecae770b12909b
-  - enabled: 1
-    path: Assets/Scenes/Location/Woods.unity
-    guid: 915543d858f3b394ab635941dec28acd
-  - enabled: 1
-    path: Assets/Scenes/Location/Bay.unity
-    guid: 428a88dd3ee7d1948b2889754e433a5c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Location.unity
     guid: d90bd5aeb236d3e4585e57d0e1b938b2
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: b90779b5102a53db3916a875d0ec44c8
   m_configObjects: {}

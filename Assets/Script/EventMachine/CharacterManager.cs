@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
     public List<GameObject> characters;
 
     void Start() {
+        // Here is the big load
         foreach(var c in characters) {
             c.GetComponent<Character>().Initialize();
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishDialog : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class FinishDialog : MonoBehaviour
     }
 
     public void OnClickedYes() {
-        Debug.Log(Scoring.instance.Score());
+        SceneManager.LoadScene("EndingScene", LoadSceneMode.Additive);
+        BulletinBoardManager.instance.transform.parent.gameObject.SetActive(false);
     }
 }
