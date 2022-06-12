@@ -77,6 +77,10 @@ public class BulletinBoardManager : MonoBehaviour
 		enableAfterAnimation.SetActive(false);
 	}
 
+    public List<GameObject> GetBulletins() {
+        return bulletins;
+    }
+
 	public void CreateString(GameObject bulletin)
 	{
 		//Debug.Log("creation");

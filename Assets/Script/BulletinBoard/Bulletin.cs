@@ -32,6 +32,11 @@ public class Bulletin : MonoBehaviour, IClicked, IHovered
 	{
 		return id;
 	}
+
+    public CharacterData GetData() {
+        return data;
+    }
+
 	public void onClicked()
 	{
 		bbM.CreateString(gameObject);
