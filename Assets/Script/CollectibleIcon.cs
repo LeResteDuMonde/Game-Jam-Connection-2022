@@ -12,11 +12,19 @@ public class CollectibleIcon : MonoBehaviour
 
 	public void ShowAlternateSprite()
 	{
-		GameObject alternateSprite = GameObject.Find("Alternative Sprite");
-		if(data.alternativeSprite != null)
+		GameObject alternateSprite = GameObject.Find("AlternativeSprite");
+		Image image = alternateSprite.GetComponent<Image>();
+
+		if (data.alternativeSprite != null)
 		{
-			alternateSprite.GetComponent<Image>().sprite = data.alternativeSprite;
+			
+			image.enabled = true;
+			image.sprite = data.alternativeSprite;
 			alternateSprite.SetActive(true);
+		}
+		else
+		{
+			image.enabled = false;
 		}
 	}
 }
