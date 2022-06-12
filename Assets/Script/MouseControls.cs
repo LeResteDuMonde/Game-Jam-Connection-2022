@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 public class MouseControls : MonoBehaviour
 {
@@ -124,7 +125,7 @@ public class MouseControls : MonoBehaviour
 
 	private void ChangeCursor(Texture2D cursorType)
 	{
-		Vector2 hotspot = new Vector2(cursorType.width / 2, cursorType.height / 6);
+		Vector2 hotspot = new Vector2(cursorType.width / 2 + cursorType.width/8, cursorType.height / 6);
 		Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
 	}
 }

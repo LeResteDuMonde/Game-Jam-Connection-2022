@@ -6,6 +6,7 @@ public class InputController : MonoBehaviour
 	[SerializeField] private InputAction toggleBulletinBoard;
 	[SerializeField] private InputAction closeLocation;
 	[SerializeField] private InputAction toggleInventory;
+    [SerializeField] private InputAction toggleHelp;
 
 	private MapManager mM;
 	private Inventory inventory;
@@ -26,6 +27,9 @@ public class InputController : MonoBehaviour
 
 		toggleInventory.Enable();
 		toggleInventory.performed += ToggleInventory;
+
+		toggleHelp.Enable();
+		toggleHelp.performed += ToggleHelp;
 	}
 
 	public void OnDisable()
@@ -38,6 +42,9 @@ public class InputController : MonoBehaviour
 
 		toggleInventory.performed -= ToggleInventory;
 		toggleInventory.Disable();
+
+		toggleHelp.Disable();
+		toggleHelp.performed -= ToggleHelp;
 	}
 
 	private void ToggleBulletinBoard(InputAction.CallbackContext context)
@@ -50,10 +57,19 @@ public class InputController : MonoBehaviour
 		inventory.ToggleInventory();
 	}
 
-    private void CloseLocation(InputAction.CallbackContext _) {
-        if (!DialogBox.instance.IsOpen()
+	private void ToggleHelp(InputAction.CallbackContext context)
+	{
+        HelpBox.instance.ToggleHelp();
+
+	}
+
+    public bool CanCloseLocation() {
+        return !DialogBox.instance.IsOpen()
             && !Inventory.instance.IsOpen()
-            && !MapManager.instance.IsBulletinBoardOpen())
-            mM.CloseLocation();
+            && !MapManager.instance.IsBulletinBoardOpen();
+    }
+
+    private void CloseLocation(InputAction.CallbackContext _) {
+        if (CanCloseLocation()) mM.CloseLocation();
     }
 }
