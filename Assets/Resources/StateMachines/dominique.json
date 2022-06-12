@@ -1,10 +1,17 @@
 {
     "name": "dominique",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "inSchool", "location" : "Classroom", "position" : "left"}
     ],
 
     "transitions": [
+	    {"name" : "readDominique",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" }
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inSchool" ]
 }

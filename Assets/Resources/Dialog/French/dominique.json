@@ -1,6 +1,21 @@
 {
     "lines": [
+	    {"line" : "TODO dialogue initial dominique" },
+	    {"line" : "TODO dialogue initial dominique 2", 
+		    "transition" : "readDominique"}
+
+
     ],
     "choices": [
+	{"inStates":[],
+		"answer": "TODO choice 14",
+		"lines": [ { "line" : "TODO answer 15" }] 
+	},
+	{"inStates":[],
+		"answer": "TODO choice 15",
+		"lines": [ { "line" : "TODO answer 15", "transition": "createKey"}] },		
+	{"inStates":[],
+		"answer": "TODO choice 16",
+		"lines": [ { "line" : "TODO answer 16", "transition": "createKey"}]}
     ]
 }
