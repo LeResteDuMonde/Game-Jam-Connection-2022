@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibleName: Wooden Stick
   sprite: {fileID: 21300000, guid: 2b78c4c544a88034bbc0bd0f95845047, type: 3}
+  alternativeSprite: {fileID: 0}
   position: {x: -4.33, y: -2.32}
   scale: {x: 0.27, y: 0.27}
+  transition: getStick

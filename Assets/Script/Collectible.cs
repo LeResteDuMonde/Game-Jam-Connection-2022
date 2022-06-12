@@ -18,6 +18,7 @@ public class Collectible : MonoBehaviour, IClicked
 	public void onClicked()
 	{
 		inventory.AddToInventory(gameObject);
+        CharacterManager.instance.TriggerTransition(data.transition);
 		Destroy(gameObject);
 	}
 

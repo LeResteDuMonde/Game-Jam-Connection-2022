@@ -8,4 +8,5 @@ public class CollectibleData : ScriptableObject
 	public Sprite alternativeSprite;
 	public Vector2 position;
 	public Vector2 scale;
+    public string transition;
 }
