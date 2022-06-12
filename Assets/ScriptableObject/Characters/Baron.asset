@@ -15,3 +15,6 @@ MonoBehaviour:
   characterName: Baron Gunter VonGerberg
   animatorController: {fileID: 9100000, guid: 86ef8064eac6b0f4580f66dfb4ca28ac, type: 2}
   stateMachine: baron
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: f070a60f9f3ebf54bbc16a3243b7a417, type: 3}

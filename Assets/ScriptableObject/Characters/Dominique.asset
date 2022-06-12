@@ -15,3 +15,6 @@ MonoBehaviour:
   characterName: Dominique
   animatorController: {fileID: 9100000, guid: 2a5f47f9d827adb4d87cf1834e8fe6ae, type: 2}
   stateMachine: dominique
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: 9bc69d1bc3b0130429676378b7f83480, type: 3}

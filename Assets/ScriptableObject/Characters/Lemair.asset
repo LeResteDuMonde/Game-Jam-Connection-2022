@@ -15,3 +15,6 @@ MonoBehaviour:
   characterName: Lemair
   animatorController: {fileID: 9100000, guid: e0ebefd033444aa4e8f35fc1855ffeaa, type: 2}
   stateMachine: lemair
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: 2dcd1d895e8406845896bfd21d1d2bed, type: 3}

@@ -15,3 +15,6 @@ MonoBehaviour:
   characterName: Zephyr
   animatorController: {fileID: 9100000, guid: 40efe1bfdd562854cb17167f7960bc9f, type: 2}
   stateMachine: zephyr
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: 9788845f466b7ef489ff847e800b74a7, type: 3}

@@ -43,7 +43,7 @@ public class Rope : MonoBehaviour
    public void setOrigine(Vector3 origine){
 		nbnode=nodeMini;
 	   this.origine = origine;
-		Debug.Log("awake");
+		//Debug.Log("awake");
 	for (int i=0; i<nodeMini; i++){
 		nodes.Add(origine);
 		nodesOld.Add(origine);
@@ -55,9 +55,11 @@ public class Rope : MonoBehaviour
    }
    public Sprite arrow;
    public void forceLength(Vector3 m){
-	while (removeNode());
-	Debug.Log("magnitude");
-	Debug.Log(m.magnitude);
+		m.z = 0;
+		origine.z = 0;
+		while (removeNode());
+	//Debug.Log("magnitude");
+	//Debug.Log(m.magnitude);
 	while((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		}
@@ -78,7 +80,9 @@ public class Rope : MonoBehaviour
    }
 	public void setRope(Vector3 m)
 	{
-//	    Debug.Log("update");
+		m.z = 0;
+		origine.z = 0;
+	    Debug.Log(m - origine);
 	if ((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		vkill =0f;

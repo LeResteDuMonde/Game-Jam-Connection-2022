@@ -5,7 +5,8 @@ public class FinishDialog : MonoBehaviour
 {
     private GameObject finishButton;
     private GameObject confirm;
-
+    private Camera mainCamera;
+    [SerializeField] private Transform endSceneBackgroundPosition;
     void Start() {
         finishButton = transform.Find("FinishButton").gameObject;
         confirm = transform.Find("Confirm").gameObject;
@@ -35,6 +36,8 @@ public class FinishDialog : MonoBehaviour
 
         // Load end scene
         SceneManager.LoadScene("EndingScene", LoadSceneMode.Additive);
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mainCamera.transform.position = new Vector3(endSceneBackgroundPosition.transform.position.x, endSceneBackgroundPosition.transform.position.y, mainCamera.transform.position.z);
         BulletinBoardManager.instance.transform.parent.gameObject.SetActive(false);
     }
 }
