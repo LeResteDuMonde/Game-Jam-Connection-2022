@@ -27,6 +27,13 @@ public class FinishDialog : MonoBehaviour
     }
 
     public void OnClickedYes() {
+        // Turn off help box
+        HelpBox.instance.gameObject.SetActive(false);
+
+        // Turn off some interactions
+        InputController.instance.OnDisable();
+
+        // Load end scene
         SceneManager.LoadScene("EndingScene", LoadSceneMode.Additive);
         BulletinBoardManager.instance.transform.parent.gameObject.SetActive(false);
     }

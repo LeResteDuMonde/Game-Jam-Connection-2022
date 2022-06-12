@@ -3,6 +3,13 @@ using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
+
+    public static InputController instance;
+
+    void Awake() {
+        instance = this;
+    }
+
 	[SerializeField] private InputAction toggleBulletinBoard;
 	[SerializeField] private InputAction closeLocation;
 	[SerializeField] private InputAction toggleInventory;
@@ -56,12 +63,15 @@ public class InputController : MonoBehaviour
 
 	private void ToggleBulletinBoard(InputAction.CallbackContext context)
 	{
-		mM.ToggleBulletinBoard();
+        if(!DialogBox.instance.IsOpen()
+           && !Inventory.instance.IsOpen())
+        mM.ToggleBulletinBoard();
 	}
 
 	private void ToggleInventory(InputAction.CallbackContext context)
 	{
-		inventory.ToggleInventory();
+        if(!MapManager.instance.IsBulletinBoardOpen())
+            inventory.ToggleInventory();
 	}
 
 	private void ToggleHelp(InputAction.CallbackContext context)

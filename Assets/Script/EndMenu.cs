@@ -8,6 +8,8 @@ public class EndMenu : MonoBehaviour
     }
 
     public void OnClickedContinue() {
+        HelpBox.instance.gameObject.SetActive(true);
+        InputController.instance.OnEnable();
         SceneManager.UnloadSceneAsync("EndingScene");
     }
 }
