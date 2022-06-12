@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Character : MonoBehaviour, IClicked
@@ -20,9 +21,14 @@ public class Character : MonoBehaviour, IClicked
     public void Initialize() {
         dialog = LocalizationManager.instance.RetrieveDialog(data.stateMachine);
 
-        var smJson = Resources.Load<TextAsset>("StateMachines/" + name);
-        machine = JsonUtility.FromJson<StateMachine>(smJson.text);
-        machine.Start();
+        try {
+            var smJson = Resources.Load<TextAsset>("StateMachines/" + data.stateMachine);
+            machine = JsonUtility.FromJson<StateMachine>(smJson.text);
+            machine.Start();
+        } catch(Exception e) {
+            Debug.LogError("Couldn't load state machine for " + data.stateMachine);
+            Debug.LogException(e, this);
+        }
     }
 
     void Start() {

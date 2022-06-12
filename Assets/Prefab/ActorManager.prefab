@@ -44,5 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769002d1c2509987da1edb457de89500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actors:
+  characters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
