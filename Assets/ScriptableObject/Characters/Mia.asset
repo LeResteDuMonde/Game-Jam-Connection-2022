@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Mia
   m_EditorClassIdentifier: 
   characterName: Mia
-  animatorController: {fileID: 9100000, guid: 33dc361d9401b384580cbb143f455373, type: 2}
+  animatorController: {fileID: 9100000, guid: 9205ead901e545b479e8e11d91110765, type: 2}
   stateMachine: mia
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: bb68734cf73e2944a8b701ef535023a5, type: 3}

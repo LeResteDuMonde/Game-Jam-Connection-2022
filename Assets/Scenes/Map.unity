@@ -356,10 +356,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78e6b0792aabaf4089d2d98cb29e797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMusic: {fileID: 0}
+  currentMusic: {fileID: 8300000, guid: 5b16f0ea54eef3647b933521afbf62ab, type: 3}
   musicAudioSource: {fileID: 239912209}
   mainMixer: {fileID: 24100000, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
   soundEffectMixer: {fileID: 4765040703484978879, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
+  testMusic: {fileID: 8300000, guid: d880d485e90a058459baa7943c985048, type: 3}
+  musicDefaultVolume: 0
+  fadeTime: 1
 --- !u!4 &239912208
 Transform:
   m_ObjectHideFlags: 0
@@ -384,8 +387,8 @@ AudioSource:
   m_GameObject: {fileID: 239912206}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8161154507965558612, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5b16f0ea54eef3647b933521afbf62ab, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

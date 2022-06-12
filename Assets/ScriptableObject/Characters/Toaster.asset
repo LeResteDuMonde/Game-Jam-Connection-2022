@@ -15,3 +15,6 @@ MonoBehaviour:
   characterName: Toaster
   animatorController: {fileID: 9100000, guid: 47ee5e644a6bf304299b57b1244e5f3e, type: 2}
   stateMachine: toaster
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: 81d9c8621ce88214cb9632a40b8f92eb, type: 3}

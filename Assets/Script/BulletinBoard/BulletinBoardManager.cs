@@ -24,8 +24,6 @@ public class ConnectionSerial{
 	public void serialize(){
 
 	}
-
-
 }
 
 public enum ConnectionType
@@ -100,7 +98,7 @@ public class BulletinBoardManager : MonoBehaviour
 		currentBulletin = bulletin;
 		stringCursor.SetActive(true);
 		isDrawingString=true;
-		rope = Instantiate(ropePrefab, gameObject.transform).GetComponent<Rope>();
+		rope = Instantiate(ropePrefab, enableAfterAnimation.transform).GetComponent<Rope>();
 		rope.setOrigine(bulletin.gameObject.transform.position);
 	}
 

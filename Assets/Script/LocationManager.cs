@@ -25,7 +25,7 @@ public class LocationManager : MonoBehaviour
 	private void Start()
 	{
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-		mainCamera.transform.position = new Vector3(background.transform.position.x, background.transform.position.y, mainCamera.transform.position.z); ;
+		mainCamera.transform.position = new Vector3(background.transform.position.x, background.transform.position.y, mainCamera.transform.position.z);
 		mM = MapManager.instance;
 		inventory = Inventory.instance;
 		SetData();

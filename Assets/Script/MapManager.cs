@@ -24,6 +24,9 @@ public class MapManager : MonoBehaviour
 	public void ToggleBulletinBoard()
 	{
 		bulletinParent.SetActive(!bulletinParent.activeSelf);
+		Camera mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+		bulletinParent.transform.position = 
+			new Vector3 (mainCamera.transform.position.x, mainCamera.transform.position.y,transform.position.z);
 	}
 
 	public bool IsBulletinBoardOpen() {

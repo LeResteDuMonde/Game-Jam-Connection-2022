@@ -15,3 +15,6 @@ MonoBehaviour:
   characterName: Colombin
   animatorController: {fileID: 9100000, guid: 6809338a947dec441b6ca889a046d6dc, type: 2}
   stateMachine: colombin
+  connections: []
+  connectionsType: 
+  music: {fileID: 8300000, guid: 5213bc788dab72e45a42f048cf69e272, type: 3}
