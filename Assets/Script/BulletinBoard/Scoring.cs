@@ -13,6 +13,13 @@ public enum ScoringConnectionType
 public class Scoring : MonoBehaviour
 {
 
+	public static Scoring instance;
+
+	void Awake()
+	{
+		instance = this;
+	}
+
     private List<Bulletin> bulletins;
 
     void Start() {
@@ -21,7 +28,7 @@ public class Scoring : MonoBehaviour
         foreach(var b in bull) {
             bulletins.Add(b.GetComponent<Bulletin>());
         }
-        FillGraphs();
+        InitGraphs();
     }
 
     ScoringConnectionType[][] providedGraph;
@@ -40,7 +47,15 @@ public class Scoring : MonoBehaviour
         }
     }
 
-    void FillGraphs() {
+    int FindCharaIndex(string name) {
+        for(var i = 0; i < bulletins.Count; i++) {
+            var data = bulletins[i].GetData();
+            if(data.name == name) return i;
+        }
+        return -1;
+    }
+
+    void InitGraphs() {
         providedGraph = new ScoringConnectionType[bulletins.Count][];
         expectedGraph = new ScoringConnectionType[bulletins.Count][];
         for(var i = 0; i < bulletins.Count; i++) {
@@ -52,28 +67,40 @@ public class Scoring : MonoBehaviour
             }
         }
 
+        // Fill expected graph
         for(var i = 0; i < bulletins.Count; i++) {
             var b = bulletins[i];
-            foreach(var c in b.connections) {
-                var j = bulletins.IndexOf(c.bulletin.GetComponent<Bulletin>());
-                providedGraph[i][j] = ScoringConnectionTypeOfConnectionType(c.type);
-
+            for(var j = 0; j < b.GetData().connections.Count; j++) {
+                var k = FindCharaIndex(b.GetData().connections[j].name);
+                expectedGraph[i][k] = ScoringConnectionTypeOfConnectionType(b.GetData().connectionsType[j]);
             }
         }
+    }
 
-        // TODO add to expected graph
+    void FillProvidedGraph() {
+        if(bulletins == null) return;
+        for(var i = 0; i < bulletins.Count; i++) {
+            var b = bulletins[i];
+            if(b.connections == null) continue;
+            foreach(var c in b.connections) {
+                var j = FindCharaIndex(c.bulletin.GetComponent<Bulletin>().GetData().name);
+                providedGraph[i][j] = ScoringConnectionTypeOfConnectionType(c.type);
+            }
+        }
     }
 
     int ScoreConnection(ScoringConnectionType provided, ScoringConnectionType expected) {
-        switch(expected) {
-            // TODO
-            default:
-                return 0;
-        }
+        if(provided == ScoringConnectionType.None && expected == ScoringConnectionType.None)
+            return 0;
+        if(provided == ScoringConnectionType.None || expected == ScoringConnectionType.None)
+            return -1;
+        else if (provided == expected) return 2;
+        else return -2;
     }
 
     int ScoreGraph(ScoringConnectionType[][] provided, ScoringConnectionType[][] expected) {
         int score = 0;
+        if(bulletins==null) return 0;
         for(var i = 0; i < bulletins.Count; i++) {
             for(var j = 0; j < bulletins.Count; j++) {
                 score += ScoreConnection(provided[i][j], expected[i][j]);
@@ -83,6 +110,7 @@ public class Scoring : MonoBehaviour
     }
 
     public int Score() {
+        FillProvidedGraph();
         return ScoreGraph(providedGraph, expectedGraph);
     }
 

@@ -7,20 +7,9 @@ public class Bulletin : MonoBehaviour, IClicked, IHovered
 {
 	[SerializeField] private CharacterData data;
 	[SerializeField] public List<Connection> connections;
-	private static int idC;
 	private int id;
 
 	private BulletinBoardManager bbM;
-
-	static Bulletin()
-	{
-		idC = 0;
-	}
-	public Bulletin()
-	{
-		id = idC;
-		idC++;
-	}
 
 	private void Start()
 	{
