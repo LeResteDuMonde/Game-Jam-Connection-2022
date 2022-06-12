@@ -5,6 +5,7 @@ using UnityEngine;
 public class State {
     public string name;
     public string? location;
+    public string? position;
 }
 
 [Serializable]

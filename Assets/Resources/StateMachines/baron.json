@@ -3,7 +3,7 @@
     "states": [
         { "name": "initial" },
         { "name": "flecheOSEF" },
-        { "name": "isInSquare", "location": "Square" }
+        { "name": "isInSquare", "location": "Square", "position": "left" }
     ],
 
     "transitions": [
