@@ -5,7 +5,7 @@ public class Connection
 	public GameObject bulletin;
 	public Rope rope;
 	public ConnectionType type;
-
+	
 	public Connection(GameObject newBulletin, ConnectionType newType, Rope rope)
 	{
 		bulletin = newBulletin;
@@ -39,8 +39,16 @@ public class BulletinBoardManager : MonoBehaviour
 {
 	[SerializeField] private GameObject stringCursor;
 	[SerializeField] private GameObject currentBulletin;
+
 	private ConnectionType currentConnectionType = ConnectionType.Love;
 	private MouseControls mC;
+
+	[SerializeField] Animator noteBookAnimator;
+	[SerializeField] GameObject bulletins;
+
+	private bool isDrawingString = false;
+	public GameObject ropePrefab;
+	private Rope rope;
 
 	#region instance
 
@@ -56,9 +64,12 @@ public class BulletinBoardManager : MonoBehaviour
 	{
 		mC = MouseControls.instance;
 	}
-	private bool isDrawingString = false;
-	public GameObject ropePrefab;
-	private Rope rope;
+
+	private void OnDisable()
+	{
+		bulletins.SetActive(false);
+	}
+
 	public void CreateString(GameObject bulletin)
 	{
 		//Debug.Log("creation");
@@ -91,7 +102,10 @@ public class BulletinBoardManager : MonoBehaviour
 		stringCursor.SetActive(false);
 	}
 	public void Update(){
-
+		if (noteBookAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+		{
+			bulletins.SetActive(true);
+		}
 		if (isDrawingString){
 //			Debug.Log("update");
 			rope?.setRope(MouseControls.instance.MousePosition());

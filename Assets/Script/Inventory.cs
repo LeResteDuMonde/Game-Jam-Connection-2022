@@ -6,6 +6,7 @@ public class Inventory : MonoBehaviour
 	private List<CollectibleData> collectibles;
 	[SerializeField] private GameObject inventoryPanel;
 	[SerializeField] private GameObject collectibleIcon;
+	[SerializeField] private GameObject alternateSprite;
 
 	#region instance
 
@@ -48,6 +49,7 @@ public class Inventory : MonoBehaviour
 	}
 	public void CloseInventory()
 	{
+		alternateSprite.SetActive(false);
 		inventoryPanel.SetActive(false);
 	}
 
