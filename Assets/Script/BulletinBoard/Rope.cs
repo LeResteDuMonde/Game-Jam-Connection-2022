@@ -16,10 +16,10 @@ public class Rope : MonoBehaviour
 		nodesOld  = new List<Vector3>();
 		rp  = new List<RopePart>();
 	}
-    void Awake()
-    {
-    }
-    void addNode(){
+	void Awake()
+	{
+	}
+	void addNode(){
 	nbnode++;
 	nodes.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
 	nodesOld.Add(nodes[nbnode-2]+Vector3.forward*maxDist*0.8f);
@@ -44,9 +44,9 @@ public class Rope : MonoBehaviour
 	float vkill = 0f;
 	Vector3 origine = Vector3.zero;
    public void setOrigine(Vector3 origine){
-	    nbnode=nodeMini;
+		nbnode=nodeMini;
 	   this.origine = origine;
-	    Debug.Log("awake");
+		Debug.Log("awake");
 	for (int i=0; i<nodeMini; i++){
 		nodes.Add(origine);
 		nodesOld.Add(origine);
@@ -79,8 +79,8 @@ public class Rope : MonoBehaviour
 	   mag = 0.5f; 
 	   maxDist *= 0.8f;
    }
-    public void setRope(Vector3 m)
-    {
+	public void setRope(Vector3 m)
+	{
 //	    Debug.Log("update");
 	if ((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();

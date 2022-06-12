@@ -11,7 +11,6 @@ public class Connection
 		bulletin = newBulletin;
 		type = newType;
 		this.rope = rope;
-
 	}
 }
 public class ConnectionSerial{
@@ -40,7 +39,7 @@ public class BulletinBoardManager : MonoBehaviour
 	[SerializeField] private GameObject stringCursor;
 	[SerializeField] private GameObject currentBulletin;
 
-	private ConnectionType currentConnectionType = ConnectionType.Love;
+	private ConnectionType currentConnectionType;
 	private MouseControls mC;
 
 	[SerializeField] Animator noteBookAnimator;
@@ -50,6 +49,9 @@ public class BulletinBoardManager : MonoBehaviour
 	public GameObject ropePrefab;
 	private Rope rope;
 
+	[SerializeField] private Sprite loveSprite, hateSprite, shitSprite;
+	[SerializeField] private SpriteRenderer currentConnetionSprite;
+	[SerializeField] private Color loveColor, hateColor, shitColor;
 
 	#region instance
 
@@ -64,6 +66,8 @@ public class BulletinBoardManager : MonoBehaviour
 	private void Start()
 	{
 		mC = MouseControls.instance;
+		currentConnectionType = ConnectionType.Love;
+		currentConnetionSprite.sprite = loveSprite;
 	}
 
 	private void OnDisable()
@@ -79,7 +83,6 @@ public class BulletinBoardManager : MonoBehaviour
 		isDrawingString=true;
 		rope = Instantiate(ropePrefab, gameObject.transform).GetComponent<Rope>();
 		rope.setOrigine(bulletin.gameObject.transform.position);
-
 	}
 
 	public void CancelString()
@@ -116,20 +119,23 @@ public class BulletinBoardManager : MonoBehaviour
 
 	public void SwapConnectionType()
 	{
-		currentConnectionType++;
 		switch (currentConnectionType)
 		{
 			case ConnectionType.Love:
 				currentConnectionType = ConnectionType.Hate;
+				currentConnetionSprite.sprite = hateSprite;
 				break;
 			case ConnectionType.Hate:
 				currentConnectionType = ConnectionType.Shit;
+				currentConnetionSprite.sprite = shitSprite;
 				break;
 			case ConnectionType.Shit:
 				currentConnectionType = ConnectionType.Love;
+				currentConnetionSprite.sprite = loveSprite;
 				break;
 			default:
 				break;
 		}
+		Debug.Log(currentConnectionType);
 	}
 }
