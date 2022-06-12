@@ -44,11 +44,12 @@ public class BulletinBoardManager : MonoBehaviour
 	private MouseControls mC;
 
 	[SerializeField] Animator noteBookAnimator;
-	[SerializeField] GameObject bulletins;
+	[SerializeField] GameObject enableAfterAnimation;
 
 	private bool isDrawingString = false;
 	public GameObject ropePrefab;
 	private Rope rope;
+
 
 	#region instance
 
@@ -67,7 +68,7 @@ public class BulletinBoardManager : MonoBehaviour
 
 	private void OnDisable()
 	{
-		bulletins.SetActive(false);
+		enableAfterAnimation.SetActive(false);
 	}
 
 	public void CreateString(GameObject bulletin)
@@ -104,12 +105,31 @@ public class BulletinBoardManager : MonoBehaviour
 	public void Update(){
 		if (noteBookAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
 		{
-			bulletins.SetActive(true);
+			enableAfterAnimation.SetActive(true);
 		}
 		if (isDrawingString){
 //			Debug.Log("update");
 			rope?.setRope(MouseControls.instance.MousePosition());
 
+		}
+	}
+
+	public void SwapConnectionType()
+	{
+		currentConnectionType++;
+		switch (currentConnectionType)
+		{
+			case ConnectionType.Love:
+				currentConnectionType = ConnectionType.Hate;
+				break;
+			case ConnectionType.Hate:
+				currentConnectionType = ConnectionType.Shit;
+				break;
+			case ConnectionType.Shit:
+				currentConnectionType = ConnectionType.Love;
+				break;
+			default:
+				break;
 		}
 	}
 }
