@@ -8,10 +8,13 @@ public class RopePart : MonoBehaviour
 	{
 		sp = GetComponent<SpriteRenderer>();
 		SetColor();
+		Vector3 p = transform.position;
+		transform.position = new Vector3(p.x,p.y,0);
 	}
 	float offset = 0;
 	public void setCoord(Vector3 start, Vector3 end){
 		Vector3 dir = end-start;
+		dir.z=0;
 		float angle;
 		//angle  = (float)Math.Asin(dir.y/Math.Sqrt(dir.x*dir.x,dir.y*dir.y));
 		//angle *= 180f/3.14f;
@@ -25,6 +28,7 @@ public class RopePart : MonoBehaviour
 //	    Debug.Log(dir);
 	
 		Vector3 mid = new Vector3((start.x+end.x)/2,(start.y+end.y)/2);
+		mid.z = 0;
 		gameObject.transform.position = mid;
 
 		sp = GetComponent<SpriteRenderer>();
