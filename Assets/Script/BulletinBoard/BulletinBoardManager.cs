@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Connection
@@ -38,6 +39,7 @@ public class BulletinBoardManager : MonoBehaviour
 {
 	[SerializeField] private GameObject stringCursor;
 	[SerializeField] private GameObject currentBulletin;
+	[SerializeField] private List<GameObject> bulletins;
 
 	private ConnectionType currentConnectionType;
 	private MouseControls mC;

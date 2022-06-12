@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bulletin : MonoBehaviour, IClicked, IHovered
 {
-	[SerializeField] private string characterName;
+	[SerializeField] private CharacterData data;
 	[SerializeField] public List<Connection> connections;
 	private static int idC;
 	private int id;
