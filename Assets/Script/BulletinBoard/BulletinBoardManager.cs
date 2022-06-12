@@ -74,25 +74,25 @@ public class BulletinBoardManager : MonoBehaviour
 		currentColor = loveColor;
 	}
 
-    private void OnEnable() {
-        foreach(var b in bulletins) {
-            if(b.activeSelf) continue;
+	private void OnEnable() {
+		foreach(var b in bulletins) {
+			if(b.activeSelf) continue;
 
-            var data = b.GetComponent<Bulletin>().GetData();
-            if(CharacterManager.instance.WasEncountered(data)) {
-                b.SetActive(true);
-            }
-        }
-    }
+			var data = b.GetComponent<Bulletin>().GetData();
+			if(CharacterManager.instance.WasEncountered(data)) {
+				b.SetActive(true);
+			}
+		}
+	}
 
 	private void OnDisable()
 	{
 		enableAfterAnimation.SetActive(false);
 	}
 
-    public List<GameObject> GetBulletins() {
-        return bulletins;
-    }
+	public List<GameObject> GetBulletins() {
+		return bulletins;
+	}
 
 	public void CreateString(GameObject bulletin)
 	{

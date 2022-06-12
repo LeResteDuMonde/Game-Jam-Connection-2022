@@ -14,15 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BulletinBoard.unity
     guid: d79bdd9e5a869794ca090742d5d177b3
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Location.unity
     guid: d90bd5aeb236d3e4585e57d0e1b938b2
