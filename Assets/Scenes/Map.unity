@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeVieuSage
       objectReference: {fileID: 0}
+    - target: {fileID: 2802362454321377003, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
@@ -1003,6 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletinParent: {fileID: 0}
+  locationTransitionSound: {fileID: 8300000, guid: 3a3d89b1272d4824588e58bd3713dd70, type: 3}
   location: {fileID: 11400000, guid: dca0fb1c216825a49b3c1ad857c5558f, type: 2}
 --- !u!4 &705551041
 Transform:
@@ -1075,6 +1080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elisabeth
       objectReference: {fileID: 0}
+    - target: {fileID: 2802362454321377003, guid: a179ade910a17e14792fb10130ccd8f6, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a179ade910a17e14792fb10130ccd8f6, type: 3}
@@ -1462,6 +1471,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2802362454321377003, guid: bdc92065f55af474584cfa85d8915e31, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc92065f55af474584cfa85d8915e31, type: 3}
@@ -1599,6 +1612,37 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 21, y: -20.2}
   m_UseGraphicAlpha: 1
+--- !u!1 &1374566950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374566951}
+  m_Layer: 0
+  m_Name: LocationBackgroundPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1374566951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374566950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25, y: 0, z: 0.03219223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686341612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2085,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2802362454321377003, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
@@ -2057,6 +2105,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 286806847165133876, guid: b458f1c9bd83e32ef858fcdf46e403f5, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     - target: {fileID: 286806847165133877, guid: b458f1c9bd83e32ef858fcdf46e403f5, type: 3}
       propertyPath: m_Name
       value: Nounours
@@ -2121,6 +2173,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1273844931, guid: 9586350113f774840952a6915b43a84d, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 305603b9da45e6949bcdea967f4dc69f, type: 2}
     - target: {fileID: 408677635453423940, guid: 9586350113f774840952a6915b43a84d, type: 3}
       propertyPath: m_Name
       value: Map
@@ -2263,6 +2319,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4383068449849679445, guid: 17d4dfe622910b9e4b044b1dff2d2541, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     - target: {fileID: 4383068449849679446, guid: 17d4dfe622910b9e4b044b1dff2d2541, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2362,6 +2422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732514919554991170, guid: 3b4e98c40d8f5c7268fe2f85ccc776a1, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     - target: {fileID: 1732514919554991171, guid: 3b4e98c40d8f5c7268fe2f85ccc776a1, type: 3}
       propertyPath: m_Name
       value: Justine
@@ -2430,6 +2494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maryse
       objectReference: {fileID: 0}
+    - target: {fileID: 1215343846497581255, guid: ac312cc88055bd858abcb0c6cc8508cf, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ac312cc88055bd858abcb0c6cc8508cf, type: 3}
@@ -2498,6 +2566,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4897213028262955323, guid: be6ce5f75435b32fbbc6603fecd0c90f, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: be6ce5f75435b32fbbc6603fecd0c90f, type: 3}
@@ -2513,6 +2585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mia
       objectReference: {fileID: 0}
+    - target: {fileID: 7403655876513391545, guid: 0499b6264672a2b3e8a1743ce53ed571, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     - target: {fileID: 7403655876513391546, guid: 0499b6264672a2b3e8a1743ce53ed571, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -2632,6 +2708,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5152862002121364028, guid: 8b82d7e7eff7b882fae5d670413a3bce, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     - target: {fileID: 5152862002121364029, guid: 8b82d7e7eff7b882fae5d670413a3bce, type: 3}
       propertyPath: m_Name
       value: Dominique
@@ -2744,6 +2824,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lemair
       objectReference: {fileID: 0}
+    - target: {fileID: 4960330888324501791, guid: 38a7ec3a3043cbca598e1d678c939098, type: 3}
+      propertyPath: locationBackgroundPosition
+      value: 
+      objectReference: {fileID: 1374566951}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a7ec3a3043cbca598e1d678c939098, type: 3}

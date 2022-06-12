@@ -12,7 +12,7 @@ public class ChoiceButton : Button
     [SerializeField] private Sprite hoverSprite;
     [SerializeField] private Image sprite;
     private MouseControls mC;
-    // Start is called before the first frame update
+
     protected override void Start()
     {
         mC = MouseControls.instance;
@@ -30,6 +30,7 @@ public class ChoiceButton : Button
         base.OnPointerEnter(data);
         if (text != null) { text.color = base.colors.highlightedColor; }
         if (sprite != null) { sprite.sprite = hoverSprite; }
+
         mC.CursorHoverAnimation(true);
     }
 

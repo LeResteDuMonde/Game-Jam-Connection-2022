@@ -18,7 +18,7 @@ public class Collectible : MonoBehaviour, IClicked
 	public void onClicked()
 	{
 		inventory.AddToInventory(gameObject);
-        CharacterManager.instance.TriggerTransition(data.transition);
+		CharacterManager.instance.TriggerTransition(data.transition);
 		Destroy(gameObject);
 	}
 
@@ -31,7 +31,7 @@ public class Collectible : MonoBehaviour, IClicked
 	{
 		data = newData;
 		GetComponent<SpriteRenderer>().sprite = data.sprite;
-		transform.position = data.position;
+		transform.localPosition = data.position;
 		transform.localScale = data.scale;
 	}
 }

@@ -65,33 +65,61 @@ public class MouseControls : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		ClickHoverCheck();
 		HoverCheck();
 	}
 
+	private void ClickHoverCheck()
+	{
+		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
+
+		if (hit2D.collider != null)
+		{
+			GameObject go = hit2D.collider.gameObject;
+			if (IsActive() && go.TryGetComponent(out IClicked clicked))
+			{
+				ChangeCursor(cursorHover);
+			}
+			else
+			{
+				ChangeCursor(cursor);
+			}
+		}
+		else
+		{
+			ChangeCursor(cursor);
+		}
+	}
 	private void HoverCheck()
 	{
 		Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 		RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
 
-		if (hit2D.collider != null) {
+		if (hit2D.collider != null)
+		{
 			GameObject go = hit2D.collider.gameObject;
-			if (IsActive() && go.TryGetComponent<IClicked>(out IClicked hover)) {
-				if(hoveredItem == null) ChangeCursor(cursorHover);
+			if (IsActive() && go.TryGetComponent(out IHovered hover))
+			{
+				if (hoveredItem == null) hover.onHover();
 				hoveredItem = go;
-			} else {
+			}
+			else
+			{
 				UnHoverOldItem();
 			}
-		} else {
+		}
+		else
+		{
 			UnHoverOldItem();
 		}
 	}
-
 	private void UnHoverOldItem()
 	{
 		if (hoveredItem != null && hoveredItem.TryGetComponent<IHovered>(out IHovered oldHover)) {
 			oldHover.onUnhover();
 		};
-		if (hoveredItem != null) ChangeCursor(cursor);
+		if (hoveredItem != null) //ChangeCursor(cursor);
 		hoveredItem = null;
 	}
 

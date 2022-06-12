@@ -6,6 +6,7 @@ public class LocationManager : MonoBehaviour
 	[SerializeField] private SpriteRenderer background;
 
 	[SerializeField] private GameObject collectible;
+	[SerializeField] private Camera mainCamera;
 
 	private MapManager mM;
 	private Inventory inventory;
@@ -23,16 +24,19 @@ public class LocationManager : MonoBehaviour
 
 	private void Start()
 	{
+		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+		mainCamera.transform.position = new Vector3(background.transform.position.x, background.transform.position.y, mainCamera.transform.position.z); ;
 		mM = MapManager.instance;
 		inventory = Inventory.instance;
 		SetData();
 		SpawnCollectible();
-        CharacterManager.instance.LoadLocationCharacters(data.locationName);
+		CharacterManager.instance.LoadLocationCharacters(data.locationName);
 	}
 
-    void OnDisable() {
-        CharacterManager.instance.UnloadCharacters();
-    }
+	void OnDisable() {
+		CharacterManager.instance.UnloadCharacters();
+		mainCamera.transform.position = new Vector3(0, 0, mainCamera.transform.position.z);
+	}
 
 	public void SetData()
 	{
@@ -45,7 +49,7 @@ public class LocationManager : MonoBehaviour
 		if (data.collectible != null && !inventory.IsInInventory(gameObject))
 		{
 			GameObject newcollectible = Instantiate(collectible);
-			newcollectible.transform.SetParent(gameObject.transform);
+			newcollectible.transform.SetParent(background.transform);
 			newcollectible.GetComponent<Collectible>().SetData(data.collectible);
 		}
 	}

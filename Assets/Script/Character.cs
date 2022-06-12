@@ -6,7 +6,7 @@ public class Character : MonoBehaviour, IClicked
     public CharacterData data;
     [SerializeField] private Animator animator;
     [SerializeField] private AnimatorOverrideController overrideController;
-
+    [SerializeField] private Transform locationBackgroundPosition;
     private StateMachine machine;
     private Dialog dialog;
 
@@ -64,12 +64,13 @@ public class Character : MonoBehaviour, IClicked
             if (s.location is string loc) {
                 if (loc == location) {
                     gameObject.SetActive(true);
-                    gameObject.transform.position = new Vector2(0, gameObject.transform.position.y);
+                    gameObject.transform.SetParent(locationBackgroundPosition);
+                    gameObject.transform.localPosition = new Vector2(0, gameObject.transform.position.y);
                     if (s.position is string pos) {
                         if (pos == "left") {
-                            gameObject.transform.position = new Vector2(-5, gameObject.transform.position.y);
+                            gameObject.transform.localPosition = new Vector2(-5, gameObject.transform.position.y);
                         } else if (pos == "right") {
-                            gameObject.transform.position = new Vector2(5, gameObject.transform.position.y);
+                            gameObject.transform.localPosition = new Vector2(5, gameObject.transform.position.y);
                         }
                     }
                     break;

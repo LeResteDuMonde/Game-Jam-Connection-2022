@@ -6,6 +6,7 @@ public class MapManager : MonoBehaviour
 	public GameObject bulletinParent;
 	private bool isLocationOpen;
 	private string openScene;
+	[SerializeField] private AudioClip locationTransitionSound;
 	[SerializeField] private LocationData location;
 
 	#region instance
@@ -36,6 +37,7 @@ public class MapManager : MonoBehaviour
 			SceneManager.LoadScene(scene, LoadSceneMode.Additive);
 			openScene = scene;
 			isLocationOpen = true;
+			AudioManager.instance.PlayClipAt(locationTransitionSound);
 		}
 	}
 	public void CloseLocation()
