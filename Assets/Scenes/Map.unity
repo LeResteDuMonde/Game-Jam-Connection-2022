@@ -586,6 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choiceButtonPrefab: {fileID: 3819111426781291002, guid: dcb85487488174f14bd158707638eea4, type: 3}
+  typeWriterDelay: 0.05
   advanceDialog:
     m_Name: Advance Dialog
     m_Type: 0
@@ -597,6 +598,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: ef11e502-9d51-47d4-a020-cdcc22bca9d5
       m_Path: <Keyboard>/enter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Advance Dialog
+      m_Flags: 0
+    - m_Name: 
+      m_Id: be5e5434-570c-41ff-8c44-6e4afa8e9f40
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 

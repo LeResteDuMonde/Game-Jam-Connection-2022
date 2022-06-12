@@ -2,11 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEditor;
 
 public class ChoiceButton : Button
 {
     private TextMeshProUGUI text;
     Color baseColor;
+    private Sprite baseSprite;
+    [SerializeField] private Sprite hoverSprite;
+    [SerializeField] private Image sprite;
     private MouseControls mC;
     // Start is called before the first frame update
     protected override void Start()
@@ -14,21 +18,36 @@ public class ChoiceButton : Button
         mC = MouseControls.instance;
 
         base.Start();
-        text = gameObject.transform.GetComponentInChildren<TextMeshProUGUI>();
-        baseColor = text.color;
+        gameObject.transform.GetChild(0).TryGetComponent(out TextMeshProUGUI textMesh);
+        gameObject.transform.GetChild(0).TryGetComponent(out Image spriteRenderer);
+        text = textMesh;
+        sprite = spriteRenderer;
+        if (sprite != null) { baseSprite = sprite.sprite; }
+        if (text != null) { baseColor = text.color; }
     }
 
     public override void OnPointerEnter(PointerEventData data) {
         base.OnPointerEnter(data);
-        text.color = base.colors.highlightedColor;
-
+        if (text != null) { text.color = base.colors.highlightedColor; }
+        if (sprite != null) { sprite.sprite = hoverSprite; }
         mC.CursorHoverAnimation(true);
     }
 
     public override void OnPointerExit(PointerEventData data) {
         base.OnPointerEnter(data);
-        text.color = baseColor;
+        if (text != null){ text.color = baseColor; }
+        if (sprite != null) { sprite.sprite = baseSprite; }
 
         mC.CursorHoverAnimation(false);
+    }
+}
+
+[CustomEditor(typeof(ChoiceButton))]
+public class MenuButtonEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        ChoiceButton choiceButton = (ChoiceButton)target;
+        DrawDefaultInspector();
     }
 }

@@ -3,165 +3,202 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 public class DialogBox : MonoBehaviour
 {
-    public GameObject choiceButtonPrefab;
+	public GameObject choiceButtonPrefab;
 
-    public static DialogBox instance;
+	public static DialogBox instance;
 
-    void Awake() {
-        instance = this;
-    }
+	[SerializeField] private float typeWriterDelay = 0;
+	private bool typing = false;
+	private bool endTypeWriterEffect;
+	private 
+	void Awake() {
+		instance = this;
+	}
 
-    [SerializeField] private InputAction advanceDialog;
+	[SerializeField] private InputAction advanceDialog;
 
-    private GameObject textPanel;
-    private GameObject textBox;
-    private GameObject buttonPanel;
+	private GameObject textPanel;
+	private GameObject textBox;
+	private GameObject buttonPanel;
 
-    private List<GameObject> buttons;
+	private List<GameObject> buttons;
 
-    // Start is called before the first frame update
-    void Start() {
-        textPanel = transform.Find("TextPanel").gameObject;
-        textBox = textPanel.transform.Find("TextBox").gameObject;
-        buttonPanel = textPanel.transform.Find("ButtonPanel").gameObject;
-        buttons = new List<GameObject>();
-    }
+	// Start is called before the first frame update
+	void Start() {
+		textPanel = transform.Find("TextPanel").gameObject;
+		textBox = textPanel.transform.Find("TextBox").gameObject;
+		buttonPanel = textPanel.transform.Find("ButtonPanel").gameObject;
+		buttons = new List<GameObject>();
+	}
 
-    void OnEnable() {
-        advanceDialog.Enable();
-        advanceDialog.performed += AdvanceDialog;
-    }
+	void OnEnable() {
+		advanceDialog.Enable();
+		advanceDialog.performed += AdvanceDialog;
+	}
 
-    void OnDisable() {
-        advanceDialog.performed -= AdvanceDialog;
-        advanceDialog.Disable();
-    }
+	void OnDisable() {
+		advanceDialog.performed -= AdvanceDialog;
+		advanceDialog.Disable();
+	}
 
-    private Dialog currentDialog;
-    private DialogLine[] currentLines;
-    private int dialogPosition;
+	private Dialog currentDialog;
+	private DialogLine[] currentLines;
+	private int dialogPosition;
 
-    private void ShowDialogLine() {
-        OpenDialog();
-        var text = textBox.GetComponent<TextMeshProUGUI>();
-        var line = currentLines[dialogPosition];
-        text.SetText(line.ToString());
+	private void ShowDialogLine() {
+		OpenDialog();
+		var text = textBox.GetComponent<TextMeshProUGUI>();
+		var line = currentLines[dialogPosition];
 
-        // Transition
-        if (line.transition is string transition) {
-            CharacterManager.instance.TriggerTransition(transition);
-        }
-    }
+		//text.SetText(line.ToString());
+		StartCoroutine(TypeWriter(text, line.ToString()));
 
-    private void ShowChoices(Choice[] choices) {
-        var text = textBox.GetComponent<TextMeshProUGUI>();
-        text.SetText("");
-        foreach (var choice in choices) {
-            if(!CheckInStates(choice.inStates)) continue;
+		// Transition
+		if (line.transition is string transition) {
+			CharacterManager.instance.TriggerTransition(transition);
+		}
+	}
 
-            // Create new button
-            var button = Instantiate(choiceButtonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            button.transform.SetParent(buttonPanel.transform);
-            button.transform.localScale = new Vector3(2, 2, 2);
+	private void ShowChoices(Choice[] choices) {
+		var text = textBox.GetComponent<TextMeshProUGUI>();
+		text.SetText("");
+		foreach (var choice in choices) {
+			if(!CheckInStates(choice.inStates)) continue;
 
-            // Set its text
-            var bText = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-            bText.text = choice.answer;
+			// Create new button
+			var button = Instantiate(choiceButtonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+			button.transform.SetParent(buttonPanel.transform);
+			button.transform.localScale = new Vector3(2, 2, 2);
 
-            // Create a listener
-            button.GetComponent<Button>().onClick.AddListener(() => MakeChoice(choice.lines));
+			// Set its text
+			var bText = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+			bText.text = choice.answer;
 
-            // Add it
-            buttons.Add(button);
-        }
-    }
+			// Create a listener
+			button.GetComponent<Button>().onClick.AddListener(() => MakeChoice(choice.lines));
 
-    private void HideChoices() {
-        // Delete buttons
-        foreach(var button in buttons) {
-            Destroy(button);
-        }
-        buttons = new List<GameObject>();
-        advanceDialog.Enable();
-    }
+			// Add it
+			buttons.Add(button);
+		}
+	}
 
-    private void MakeChoice(DialogLine[] lines) {
-        HideChoices();
-        currentLines = lines;
-        dialogPosition = -1;
-        NextLine();
-    }
+	private void HideChoices() {
+		// Delete buttons
+		foreach(var button in buttons) {
+			Destroy(button);
+		}
+		buttons = new List<GameObject>();
+		advanceDialog.Enable();
+	}
 
-    private void OpenDialog() {
-        textPanel.SetActive(true);
-        currentChara.GetAnimator().SetBool("Talking", true);
-        //MouseControls.instance.OnDisable();
-    }
+	private void MakeChoice(DialogLine[] lines) {
+		HideChoices();
+		currentLines = lines;
+		dialogPosition = -1;
+		NextLine();
+	}
 
-    private void CloseDialog() {
-        textPanel.SetActive(false);
-        currentChara.GetAnimator().SetBool("Talking", false);
-        //MouseControls.instance.OnEnable();
-    }
+	private void OpenDialog() {
+		textPanel.SetActive(true);
+		currentChara.GetAnimator().SetBool("Talking", true);
+		//MouseControls.instance.OnDisable();
+	}
 
-    public bool IsOpen() {
-        return textPanel.activeSelf;
-    }
+	private void CloseDialog() {
+		textPanel.SetActive(false);
+		currentChara.GetAnimator().SetBool("Talking", false);
+		//MouseControls.instance.OnEnable();
+	}
 
-    private Character currentChara;
+	public bool IsOpen() {
+		return textPanel.activeSelf;
+	}
 
-    public void ShowNewDialog(Dialog dialog, Character chara) {
-        currentDialog = dialog;
-        currentLines = dialog.lines;
-        dialogPosition = -1;
-        currentChara = chara;
-        NextLine();
-    }
+	private Character currentChara;
 
-    private bool CheckInStates(string[] states) {
-        if (states == null) return true;
-        foreach (var s in states) {
-            if(!(currentChara.GetMachine().CheckState(s))) return false;
-        }
-        return true;
-    }
+	public void ShowNewDialog(Dialog dialog, Character chara) {
+		currentDialog = dialog;
+		currentLines = dialog.lines;
+		dialogPosition = -1;
+		currentChara = chara;
+		NextLine();
+	}
 
-    private void NextLine() {
-        // Maybe terminate
-        if(dialogPosition >= 0 && currentLines[dialogPosition].terminal) {
-            CloseDialog();
-            return;
-        }
+	private bool CheckInStates(string[] states) {
+		if (states == null) return true;
+		foreach (var s in states) {
+			if(!(currentChara.GetMachine().CheckState(s))) return false;
+		}
+		return true;
+	}
 
-        // Advance
-        if(dialogPosition < currentLines.Length - 1) {
+	private void NextLine() {
 
-            dialogPosition++;
+		if (typing) { endTypeWriterEffect = true; } //TypeWriter Effect Unfinished
+		else
+		{
+			// Maybe terminate
+			if (dialogPosition >= 0 && currentLines[dialogPosition].terminal)
+			{
+				CloseDialog();
+				return;
+			}
 
-            // Maybe skip the line
-            if (!(CheckInStates(currentLines[dialogPosition].inStates))) {
-                NextLine();
-                return;
-            }
+			// Advance
+			if (dialogPosition < currentLines.Length - 1)
+			{
 
-            ShowDialogLine();
-        }
+				dialogPosition++;
 
-        // Show choices
-        else {
-            if(currentDialog.choices.Length > 0) {
-                advanceDialog.Disable();
-                ShowChoices(currentDialog.choices);
-            } else {
-                CloseDialog();
-            }
-        }
-    }
+				// Maybe skip the line
+				if (!(CheckInStates(currentLines[dialogPosition].inStates)))
+				{
+					NextLine();
+					return;
+				}
 
-    public void AdvanceDialog(InputAction.CallbackContext _) {
-        if(IsOpen()) NextLine();
-    }
+				ShowDialogLine();
+			}
+
+			// Show choices
+			else
+			{
+				if (currentDialog.choices.Length > 0)
+				{
+					advanceDialog.Disable();
+					ShowChoices(currentDialog.choices);
+				}
+				else
+				{
+					CloseDialog();
+				}
+			}
+		}
+		
+	}
+
+	private IEnumerator TypeWriter(TextMeshProUGUI textMesh, string text)
+	{
+		typing = true;
+
+		for (int i = 0; i < text.Length; i++)
+		{
+			if (endTypeWriterEffect){
+				textMesh.SetText(text); break;
+			}
+
+			textMesh.SetText(text.Substring(0,i+1));
+			yield return new WaitForSeconds(typeWriterDelay);
+		}
+		endTypeWriterEffect = false;
+		typing = false;
+	}
+
+	public void AdvanceDialog(InputAction.CallbackContext _) {
+		if(IsOpen()) NextLine();
+	}
 }

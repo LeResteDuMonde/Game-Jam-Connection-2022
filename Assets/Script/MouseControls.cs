@@ -11,6 +11,9 @@ public class MouseControls : MonoBehaviour
 	[SerializeField] private GameObject hoveredItem;
 	[SerializeField] private GameObject clickedItem;
 
+	[SerializeField] private float hotSpotXEnumarator = 2;
+	[SerializeField] private float hotSpotYEnumarator = 6;
+
 	[SerializeField]
 	private Texture2D cursor;
 	[SerializeField]
@@ -130,7 +133,7 @@ public class MouseControls : MonoBehaviour
 
 	private void ChangeCursor(Texture2D cursorType)
 	{
-		Vector2 hotspot = new Vector2(cursorType.width / 2 + cursorType.width/8, cursorType.height / 6);
+		Vector2 hotspot = new Vector2(cursorType.width / hotSpotXEnumarator, cursorType.height / hotSpotYEnumarator);
 		Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
 	}
 }
