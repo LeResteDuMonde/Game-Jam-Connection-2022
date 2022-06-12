@@ -1,10 +1,19 @@
 {
     "name": "vieu",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "inSquare", "location" : "Square", "position" : "left"}
     ],
 
     "transitions": [
+	    {"name" : "readVieu",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" }
+
+
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inSquare" ]
 }

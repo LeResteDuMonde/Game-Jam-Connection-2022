@@ -2,8 +2,10 @@
     "name": "baron",
     "states": [
         { "name": "initial" },
-        { "name": "flecheOSEF" },
-        { "name": "isInSquare", "location": "Square", "position": "left" }
+	{"name" : "dialogInit"},
+        { "name": "terminal" },
+        { "name": "inWoods","location":"Woods","position":"right" }
+
     ],
 
     "transitions": [
@@ -12,5 +14,5 @@
           "destination": "flecheOSEF" }
     ],
 
-    "initialStates": [ "initial", "isInSquare" ]
+    "initialStates": [ "initial", "inWoods" , "dialogInit"]
 }

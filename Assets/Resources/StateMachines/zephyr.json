@@ -1,10 +1,22 @@
 {
     "name": "zephyr",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "inJetee", "location" : "Cemetery", "position" : "left"}
     ],
 
     "transitions": [
+	    {"name" : "readZephyr",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" },
+
+	    {"name" : "clef",
+	    "origin" : "initial",
+	    "destination" : "haveKey" }
+
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inJetee" ]
 }

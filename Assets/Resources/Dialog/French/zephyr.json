@@ -1,6 +1,26 @@
 {
     "lines": [
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial zephir" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial zephir 2", 
+		    "transition" : "readZephir"},
+		    {"line":""}
     ],
     "choices": [
+	{"inStates":[],
+		"answer": "TODO 21",
+		"lines": [ { "line" : "TODO 21"}] 
+	},
+	{"inStates":[],
+		"answer": "TODO 22",
+		"lines": [ { "line" : "22"}] },		
+	{"inStates":[],
+		"answer": "23",
+		"lines": [ { "line" : "23"}]},
+		
+		
+	{"inStates":["haveKey"],
+		"answer": "43",
+		"lines": [ { "line" : "43"}]}
+    
     ]
 }

@@ -1,16 +1,22 @@
 {
     "name": "toaster",
     "states": [
-        { "name": "initial" },
-        { "name": "flecheOSEF" },
-        { "name": "isInBistrot", "location": "Bistrot" }
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "inCafe", "location" : "Bistro", "position" : "right"}
     ],
 
     "transitions": [
-        { "name": "saidOSEF",
-          "origin": "initial",
-          "destination": "flecheOSEF" }
+	    {"name" : "readToaster",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" },
+
+	    {"name" : "vieuxCouple2",
+	    "origin" : "initial",
+	    "destination" : "sentiment" }
+
     ],
 
-    "initialStates": [ "initial", "isInBistrot" ]
+    "initialStates": ["initial","dialogInit","inCafe" ]
 }

@@ -1,6 +1,23 @@
 {
     "lines": [
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial vieu" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial vieu 2", 
+		    "transition" : "readVieu"},
+		    {"line":""}
     ],
     "choices": [
+	{"inStates":[],
+		"answer": "TODO choice 11",
+		"lines": [ { "line" : "TODO answer 11","transition" : "vieuxCoulpe" }] 
+	},
+	{"inStates":[],
+		"answer": "TODO choice 12",
+		"lines": [ { "line" : "TODO answer 12"}] },		
+	{"inStates":[],
+		"answer": "TODO choice 14",
+		"lines": [ { "line" : "TODO answer 14"}]}
+		
+		
+    
     ]
 }

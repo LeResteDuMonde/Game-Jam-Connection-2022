@@ -1,10 +1,17 @@
 {
     "name": "elisabeth",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "inFlat", "location" : "Flatsharing", "position" : "left"}
     ],
 
     "transitions": [
+	    {"name" : "readElisabeth",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" }
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inFlat" ]
 }

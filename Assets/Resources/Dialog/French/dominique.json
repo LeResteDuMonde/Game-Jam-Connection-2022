@@ -18,10 +18,7 @@
 		"lines": [ { "line" : "TODO answer 15", "transition": "createKey"}] },		
 	{"inStates":[],
 		"answer": "TODO choice 16",
-		"lines": [ { "line" : "TODO answer 16", "transition": "createKey"}]},
-	{"inStates":["aEuCaca"],
-		"answer": "TODO choice 42",
-		"lines": [ { "line" : "TODO answer 16"}]}
+		"lines": [ { "line" : "TODO answer 16", "transition": "createKey"}]}
 
     ]
 }

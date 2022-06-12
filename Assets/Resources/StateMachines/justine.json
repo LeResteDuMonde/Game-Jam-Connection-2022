@@ -4,7 +4,7 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
-	    {"name" : "inSchool", "location" : "Classroom", "position" : "right"}
+	    {"name" : "inSchool", "location" : "Bay", "position" : "right"}
     ],
 
     "transitions": [
