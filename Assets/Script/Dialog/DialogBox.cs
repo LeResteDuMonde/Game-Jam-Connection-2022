@@ -108,7 +108,8 @@ public class DialogBox : MonoBehaviour
 		//MouseControls.instance.OnDisable();
 	}
 
-	private void CloseDialog() {
+	public void CloseDialog() {
+		HideChoices();
 		textPanel.SetActive(false);
 		currentChara.GetAnimator().SetBool("Talking", false);
 		//MouseControls.instance.OnEnable();

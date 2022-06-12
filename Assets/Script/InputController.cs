@@ -15,6 +15,7 @@ public class InputController : MonoBehaviour
 	[SerializeField] private InputAction toggleInventory;
 	[SerializeField] private InputAction toggleHelp;
 	[SerializeField] private InputAction swapConnectionType;
+	[SerializeField] private InputAction closeDialog;
 
 	private MapManager mM;
 	private Inventory inventory;
@@ -41,6 +42,9 @@ public class InputController : MonoBehaviour
 
 		swapConnectionType.Enable();
 		swapConnectionType.performed += SwapConncetion;
+		
+		closeDialog.Enable();
+		closeDialog.performed += CloseDialog;
 	}
 
 	public void OnDisable()
@@ -59,6 +63,9 @@ public class InputController : MonoBehaviour
 
 		swapConnectionType.Disable();
 		swapConnectionType.performed -= SwapConncetion;
+
+		closeDialog.Disable();
+		closeDialog.performed -= CloseDialog;
 	}
 
 	private void ToggleBulletinBoard(InputAction.CallbackContext context)
@@ -92,5 +99,8 @@ public class InputController : MonoBehaviour
 	private void SwapConncetion(InputAction.CallbackContext context)
 	{
 		BulletinBoardManager.instance?.SwapConnectionType();
+	}
+	private void CloseDialog(InputAction.CallbackContext context){
+		DialogBox.instance?.CloseDialog();	
 	}
 }

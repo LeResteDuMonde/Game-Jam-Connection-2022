@@ -1,6 +1,25 @@
 {
     "lines": [
+	    {"line" : "TODO dialogue initial lemair" },
+	    {"line" : "TODO dialogue initial lemair 2", 
+		    "transition" : "readLemair"}
     ],
     "choices": [
+	{"inStates":[],
+		"answer": "TODO choice 6",
+		"lines": [ { "line" : "TODO answer 6"}] 
+	},
+	{"inStates":[],
+		"answer": "TODO choice 5",
+		"lines": [ { "line" : "TODO answer 5", "transition":"faireCaca" }] },		
+	{"inStates":[],
+		"answer": "TODO choice 7",
+		"lines": [ { "line" : "TODO answer 7"}]},
+		
+	{"inStates":["seenDaughter"],
+		"answer": "TODO choice 40",
+		"lines": [ { "line" : "TODO answer 40"}]}
+		
+    
     ]
 }
