@@ -88,7 +88,6 @@ public class BulletinBoardManager : MonoBehaviour
 	private void OnDisable()
 	{
 		enableAfterAnimation.SetActive(false);
-        Debug.Log(Scoring.instance.Score());
 	}
 
     public List<GameObject> GetBulletins() {
