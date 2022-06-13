@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
 	[SerializeField] private AudioClip mapMusic;
 
 	[SerializeField] private AudioSource musicAudioSource;
+	[SerializeField] private AudioSource atmosphereAudioSource;
 
 	[SerializeField] private AudioMixer mainMixer;
 

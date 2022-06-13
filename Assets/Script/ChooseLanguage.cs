@@ -5,9 +5,11 @@ public class ChooseLanguage : MonoBehaviour
 	[SerializeField] private SpriteRenderer introLetter;
 	[SerializeField] private Sprite introLetterFR;
 	[SerializeField] private Sprite introLetterEN;
-
+	[SerializeField] private AudioClip paperSound;
 	public void ChangeLanguage(string language)
 	{
+		AudioManager.instance.PlayClip(paperSound);
+
 		PlayerPrefs.SetString("language", language);
 		switch (language)
 		{
