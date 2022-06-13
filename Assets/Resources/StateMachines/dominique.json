@@ -4,8 +4,9 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
-	    {"name" : "aEuCaca"},
-	    {"name" : "inSchool", "location" : "Classroom", "position" : "left"}
+	    {"name" : "disparu"},
+	    {"name" : "inSchool", "location" : "Classroom", "position" : "left"},
+	    {"name" : "netherland", "location" : "", "position" : "left"}
     ],
 
     "transitions": [
@@ -13,9 +14,9 @@
 	    "origin" : "dialogInit",
 	    "destination" : "terminal"},
 
-	    {"name" : "faireCaca",
-	    "origin" : "initial",
-	    "destination" : "aEuCaca"}
+	    {"name" : "getKey",
+	    "origin" : "inSchool",
+	    "destination" : "netherland"}
     ],
 
     "initialStates": ["initial","dialogInit","inSchool" ]

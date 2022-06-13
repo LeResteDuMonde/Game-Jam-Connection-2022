@@ -18,7 +18,7 @@
 		"lines": [ { "line" : "23"}]},
 		
 		
-	{"inStates":["haveKey"],
+	{"inStates":["haveKey", "aimeChien"],
 		"answer": "43",
 		"lines": [ { "line" : "43"}]}
     

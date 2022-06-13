@@ -4,13 +4,23 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
+	    {"name" : "wood"},
+	    {"name" : "batonJete"},
 	    {"name" : "inFlat", "location" : "Flatsharing", "position" : "left"}
     ],
 
     "transitions": [
 	    {"name" : "readElisabeth",
 	    "origin" : "dialogInit",
-	    "destination" : "terminal" }
+	    "destination" : "terminal" },
+
+	    {"name" : "getWoodenStick",
+	    "origin" : "initial",
+	    "destination" : "wood" },
+	    
+	    {"name" : "jeterBaton",
+	    "origin" : "wood",
+	    "destination" : "batonJete" }
     ],
 
     "initialStates": ["initial","dialogInit","inFlat" ]

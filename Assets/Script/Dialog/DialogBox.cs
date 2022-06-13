@@ -103,18 +103,20 @@ public class DialogBox : MonoBehaviour
 
 	private void MakeChoice(DialogLine[] lines) {
 
-		GameObject character = CharacterManager.instance.GetCurrentCharacter();
-		if (character.GetComponent<Character>().GetData().name == "Elisabeth"
-			&& character.GetComponent<Character>().GetMachine().CheckState("jeterBaton")
-			)
-		{
-			character.GetComponent<Animator>().enabled = false;
-			character.GetComponent<SpriteRenderer>().sprite = elisabethBackSprite;
-		}
 		HideChoices();
 		currentLines = lines;
 		dialogPosition = -1;
 		NextLine();
+
+		GameObject character = CharacterManager.instance.GetCurrentCharacter();
+		Debug.Log("character choice "+character.GetComponent<Character>().GetData().name );
+		if (CharacterManager.instance.getCharacter("Elisabeth").GetMachine().CheckState("batonJete")
+			)
+		{
+			Debug.Log("elisabeth got the stick throwned at her");
+			character.GetComponent<Animator>().enabled = false;
+			character.GetComponent<SpriteRenderer>().sprite = elisabethBackSprite;
+		}
 	}
 
 	private void OpenDialog() {

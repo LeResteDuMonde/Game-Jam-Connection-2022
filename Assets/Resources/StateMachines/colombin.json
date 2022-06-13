@@ -2,6 +2,8 @@
     "name": "colombin",
     "states": [
 	    {"name" : "initial" }, 
+	    {"name" : "noKey" }, 
+	    {"name" : "keyCreated" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
 	    {"name" : "aFaitCaca"},
@@ -15,10 +17,13 @@
 
 	    {"name" : "faireCaca",
 	    "origin" : "initial",
-	    "destination" : "aFaitCaca" }
+	    "destination" : "aFaitCaca" },
 
+	    {"name" : "createKey",
+	    "origin" : "noKey",
+	    "destination" : "keyCreated" }
 
     ],
 
-    "initialStates": ["initial","dialogInit","inPark" ]
+    "initialStates": ["initial","dialogInit","inPark","noKey" ]
 }

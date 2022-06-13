@@ -4,6 +4,8 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
+	    {"name" : "initAimeChien"},
+	    {"name" : "aimeChien"},
 	    {"name" : "inJetee", "location" : "Cemetery", "position" : "left"}
     ],
 
@@ -12,11 +14,14 @@
 	    "origin" : "dialogInit",
 	    "destination" : "terminal" },
 
-	    {"name" : "clef",
+	    {"name" : "getKey",
 	    "origin" : "initial",
-	    "destination" : "haveKey" }
+	    "destination" : "haveKey" },
 
+	    {"name" : "aimeChien",
+	    "origin" : "initAimeChien",
+	    "destination" : "aimeChien" }
     ],
 
-    "initialStates": ["initial","dialogInit","inJetee" ]
+    "initialStates": ["initial","dialogInit","inJetee","initAimeChien" ]
 }
