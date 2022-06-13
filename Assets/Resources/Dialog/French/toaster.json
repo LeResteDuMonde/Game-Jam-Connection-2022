@@ -18,7 +18,7 @@
 		"lines": [ { "line" : "29"}]},
 		
 		
-	{"inStates":["vieuxCouple2"],
+	{"inStates":["sentiment"],
 		"answer": "50",
 		"lines": [ { "line" : "50"}]}
     

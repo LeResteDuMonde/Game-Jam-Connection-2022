@@ -1,10 +1,23 @@
 {
     "name": "mia",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "sentiment"},
+	    {"name" : "inMarise", "location" : "Maryse House", "position" : "right"}
     ],
 
     "transitions": [
+	    {"name" : "readMia",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" },
+
+	    {"name" : "vieuxCoulpe",
+	    "origin" : "initial",
+	    "destination" : "sentiment" }
+
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inMarise" ]
 }

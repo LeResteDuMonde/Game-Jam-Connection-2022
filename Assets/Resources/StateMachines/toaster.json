@@ -4,7 +4,8 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
-	    {"name" : "inCafe", "location" : "Bistro", "position" : "right"}
+	    {"name" : "sentiment"},
+	    {"name" : "inCafe", "location" : "Bistrot", "position" : "right"}
     ],
 
     "transitions": [
