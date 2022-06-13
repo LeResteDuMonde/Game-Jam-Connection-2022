@@ -18,3 +18,5 @@ MonoBehaviour:
   connections: []
   connectionsType: 
   music: {fileID: 8300000, guid: 449d7967f0e380c4abbfeda18ea5faca, type: 3}
+  dialogueSoundEffect:
+  - {fileID: 8300000, guid: a3c44ec00276d2544a4a6f26d1e58a1b, type: 3}

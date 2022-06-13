@@ -35,7 +35,7 @@ public class LocationManager : MonoBehaviour
 
 	void OnDisable() {
 		CharacterManager.instance.UnloadCharacters();
-		mainCamera.transform.position = new Vector3(0, 0, mainCamera.transform.position.z);
+		CameraManager.instance.ResetCamera();
 	}
 
 	public void SetData()

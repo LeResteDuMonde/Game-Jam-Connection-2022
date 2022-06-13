@@ -5,7 +5,6 @@ public class Character : MonoBehaviour, IClicked
 {
     public CharacterData data;
     [SerializeField] private Animator animator;
-    [SerializeField] private AnimatorOverrideController overrideController;
     [SerializeField] private Transform locationBackgroundPosition;
     private StateMachine machine;
     private Dialog dialog;
@@ -85,6 +84,8 @@ public class Character : MonoBehaviour, IClicked
     }
 
     void Interact() {
+        CharacterManager.instance.SetCurrentCharacter(gameObject);
+        AudioManager.instance.ChangeMusic(data.music);
         Debug.Log(machine.ToString());
         DialogBox.instance.ShowNewDialog(dialog, this);
     }

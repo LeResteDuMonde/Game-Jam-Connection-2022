@@ -24,6 +24,16 @@ public class StateMachine {
 
     private State[] currentStates;
 
+    #region instance
+
+    public static StateMachine instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+
     private State FindState(string name) {
         foreach(var s in states) {
             if (s.name == name) return s;

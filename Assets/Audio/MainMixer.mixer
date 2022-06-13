@@ -118,6 +118,8 @@ AudioMixerSnapshotController:
   m_SnapshotID: 1acc4e3a5b7fc594c81ee70a1ec05deb
   m_FloatValues:
     f938e66968c189d4e8e9ac7a1e3900c9: 0.10800299
+    a011022c381d0b443b44392b948ba3c3: 0
+    70ed34bd3ad723d4988901cd0211af38: -16.035946
   m_TransitionOverrides: {}
 --- !u!244 &3272040420331315200
 AudioMixerEffectController:
@@ -173,7 +175,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DialogueSound
+  m_Name: DialogSound
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 09456534bd9b18c49883987a25dc2409
   m_Children: []

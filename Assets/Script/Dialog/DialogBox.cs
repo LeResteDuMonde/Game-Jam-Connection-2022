@@ -25,7 +25,11 @@ public class DialogBox : MonoBehaviour
 	private GameObject textBox;
 	private GameObject buttonPanel;
 
+	[SerializeField] private Sprite elisabethBackSprite;
+
 	private List<GameObject> buttons;
+
+	[SerializeField] private AudioClip mapMusic;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -50,6 +54,7 @@ public class DialogBox : MonoBehaviour
 	private int dialogPosition;
 
 	private void ShowDialogLine() {
+		currentChara.GetAnimator().SetBool("Talking", true);
 		OpenDialog();
 		var text = textBox.GetComponent<TextMeshProUGUI>();
 		var line = currentLines[dialogPosition];
@@ -64,6 +69,7 @@ public class DialogBox : MonoBehaviour
 	}
 
 	private void ShowChoices(Choice[] choices) {
+		currentChara.GetAnimator().SetBool("Talking", false);
 		var text = textBox.GetComponent<TextMeshProUGUI>();
 		text.SetText("");
 		foreach (var choice in choices) {
@@ -96,6 +102,15 @@ public class DialogBox : MonoBehaviour
 	}
 
 	private void MakeChoice(DialogLine[] lines) {
+
+		GameObject character = CharacterManager.instance.GetCurrentCharacter();
+		if (character.GetComponent<Character>().GetData().name == "Elisabeth"
+			&& StateMachine.instance.CheckState("jeterBaton")
+			)
+		{
+			character.GetComponent<Animator>().enabled = false;
+			character.GetComponent<SpriteRenderer>().sprite = elisabethBackSprite;
+		}
 		HideChoices();
 		currentLines = lines;
 		dialogPosition = -1;
@@ -109,9 +124,14 @@ public class DialogBox : MonoBehaviour
 	}
 
 	public void CloseDialog() {
-		HideChoices();
-		textPanel.SetActive(false);
-		currentChara.GetAnimator().SetBool("Talking", false);
+		if (IsOpen())
+		{
+			HideChoices();
+			textPanel.SetActive(false);
+			currentChara.GetAnimator().SetBool("Talking", false);
+			AudioManager.instance.ChangeMusic(mapMusic);
+		}
+		
 		//MouseControls.instance.OnEnable();
 	}
 
@@ -184,6 +204,8 @@ public class DialogBox : MonoBehaviour
 
 	private IEnumerator TypeWriter(TextMeshProUGUI textMesh, string text)
 	{
+		Debug.Log(CharacterManager.instance.GetCurrentCharacter());
+		CharacterData characterData = CharacterManager.instance.GetCurrentCharacter().GetComponent<Character>().GetData();
 		typing = true;
 
 		for (int i = 0; i < text.Length; i++)
@@ -192,9 +214,11 @@ public class DialogBox : MonoBehaviour
 				textMesh.SetText(text); break;
 			}
 
+			AudioManager.instance.PlayClip(characterData.dialogueSoundEffect[0], "Dialog");
 			textMesh.SetText(text.Substring(0,i+1));
 			yield return new WaitForSeconds(typeWriterDelay);
 		}
+		currentChara.GetAnimator().SetBool("Talking", false);
 		endTypeWriterEffect = false;
 		typing = false;
 	}

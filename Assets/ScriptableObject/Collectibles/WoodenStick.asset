@@ -17,4 +17,4 @@ MonoBehaviour:
   alternativeSprite: {fileID: 0}
   position: {x: -4.33, y: -2.32}
   scale: {x: 0.27, y: 0.27}
-  transition: getStick
+  transition: jeterBaton

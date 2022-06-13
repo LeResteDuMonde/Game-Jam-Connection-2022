@@ -6,11 +6,14 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 	[SerializeField] private AudioClip currentMusic;
-	
+	[SerializeField] private AudioClip mapMusic;
+
 	[SerializeField] private AudioSource musicAudioSource;
 
 	[SerializeField] private AudioMixer mainMixer;
+
 	[SerializeField] private AudioMixerGroup soundEffectMixer;
+	[SerializeField] private AudioMixerGroup dialogMixer;
 
 	[SerializeField] private AudioClip testMusic;
 	private float fadeVolume = -80;
@@ -46,7 +49,7 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	public AudioSource PlayClipAt(AudioClip clip, Vector3 pos = default(Vector3), string tag = "Sound")
+	public AudioSource PlayClip(AudioClip clip, string tag = "Sound", Vector3 pos = default(Vector3))
 	{
 		GameObject tempGO = new GameObject("TempAudio");
 		tempGO.tag = tag;
@@ -55,6 +58,13 @@ public class AudioManager : MonoBehaviour
 		AudioSource audioSource = tempGO.AddComponent<AudioSource>();
 		audioSource.clip = clip;
 		audioSource.outputAudioMixerGroup = soundEffectMixer;
+		switch (tag)
+		{
+			case "Dialog":
+				audioSource.outputAudioMixerGroup = dialogMixer;
+				break;
+		}
+		
 		audioSource.Play();
 		Destroy(tempGO, clip.length);
 		return audioSource;

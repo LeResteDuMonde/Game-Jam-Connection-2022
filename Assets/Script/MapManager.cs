@@ -40,7 +40,7 @@ public class MapManager : MonoBehaviour
 			SceneManager.LoadScene(scene, LoadSceneMode.Additive);
 			openScene = scene;
 			isLocationOpen = true;
-			AudioManager.instance.PlayClipAt(locationTransitionSound);
+			AudioManager.instance.PlayClip(locationTransitionSound);
 		}
 	}
 	public void CloseLocation()
