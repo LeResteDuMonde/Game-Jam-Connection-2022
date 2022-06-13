@@ -14,7 +14,7 @@ public class CameraManager : MonoBehaviour
 
 	private void Start()
 	{
-		defaultPosition = transform.position;
+		defaultPosition = new Vector3(0,0,-10);
 	}
 
 	#endregion

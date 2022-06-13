@@ -17,10 +17,6 @@ public class CaveCinematic : MonoBehaviour
 
 	#endregion
 
-	private void Start()
-	{
-		StartCinematic();
-	}
 	public void StartCinematic()
 	{
 		StartCoroutine(EnterCave());

@@ -218,6 +218,7 @@ public class DialogBox : MonoBehaviour
 			textMesh.SetText(text.Substring(0,i+1));
 			yield return new WaitForSeconds(typeWriterDelay);
 		}
+
 		currentChara.GetAnimator().SetBool("Talking", false);
 		endTypeWriterEffect = false;
 		typing = false;

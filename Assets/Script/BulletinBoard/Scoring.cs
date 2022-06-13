@@ -117,14 +117,6 @@ public class Scoring : MonoBehaviour
 
 		}
 
-		/*
-		if(provided == ScoringConnectionType.None && expected == ScoringConnectionType.None)
-			return 0;
-		if(provided == ScoringConnectionType.None || expected == ScoringConnectionType.None)
-			return -1;
-		else if (provided == expected) return 2;
-		else return -2;*/
-
 		return score;
 	}
 
