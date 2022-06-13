@@ -18,7 +18,15 @@ public class CharacterManager : MonoBehaviour
 	void Awake() {
 		instance = this;
 	}
-
+	public Character getCharacter(string characterName){
+		foreach (GameObject car in characters){
+			name = car.GetComponent<Character>().GetData().name;
+			if (characterName == name) { 
+				return car.GetComponent<Character>();
+			}
+		}
+		return null;
+	}
 
 	public void TriggerTransition(string transition) {
 		foreach(GameObject g in characters) {

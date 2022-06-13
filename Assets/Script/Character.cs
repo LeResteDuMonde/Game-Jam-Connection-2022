@@ -45,6 +45,11 @@ public class Character : MonoBehaviour, IClicked
     void Start() {
         animator.runtimeAnimatorController = data.animatorController;
         encountered = true;
+
+	//TEST
+	string name = CharacterManager.instance.getCharacter(GetData().name)?.GetData().name;
+	Debug.Log(name);
+
     }
 
     public void onCancelClicked()

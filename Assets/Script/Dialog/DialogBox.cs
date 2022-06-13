@@ -105,7 +105,7 @@ public class DialogBox : MonoBehaviour
 
 		GameObject character = CharacterManager.instance.GetCurrentCharacter();
 		if (character.GetComponent<Character>().GetData().name == "Elisabeth"
-			&& StateMachine.instance.CheckState("jeterBaton")
+			&& character.GetComponent<Character>().GetMachine().CheckState("jeterBaton")
 			)
 		{
 			character.GetComponent<Animator>().enabled = false;
