@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 2802362454321377003}
   - component: {fileID: 2802362454321377001}
   - component: {fileID: 2995952279854872401}
-  - component: {fileID: 5143198776543582629}
+  - component: {fileID: 2439222053151119704}
   m_Layer: 0
   m_Name: Zephyr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2802362454321377000
 Transform:
   m_ObjectHideFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2802362454321377003
 MonoBehaviour:
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 57dc74fee8191564b94d95e92aec2e93, type: 2}
   animator: {fileID: 2995952279854872401}
-  overrideController: {fileID: 0}
+  locationBackgroundPosition: {fileID: 0}
 --- !u!212 &2802362454321377001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,8 +122,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!68 &5143198776543582629
-EdgeCollider2D:
+--- !u!61 &2439222053151119704
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,22 +136,15 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.48, y: 20.48}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.97510815, y: 9.522261}
-  - {x: 2.7665381, y: 9.51674}
-  - {x: 5.475669, y: 3.7376084}
-  - {x: 5.1641912, y: -1.3794427}
-  - {x: 4.6829686, y: -7.073311}
-  - {x: 0.016846657, y: -8.91543}
-  - {x: -4.0408955, y: -7.2208056}
-  - {x: -5.294484, y: -0.56566477}
-  - {x: -3.4801502, y: 0.680244}
-  - {x: -1.8196573, y: -1.2790787}
-  - {x: -2.5268917, y: 1.8714261}
-  - {x: -0.54452705, y: 6.5543556}
-  - {x: 0.92934513, y: 9.522262}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0

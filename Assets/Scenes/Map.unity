@@ -472,8 +472,8 @@ MonoBehaviour:
       m_Action: Advance Dialog
       m_Flags: 0
     m_Flags: 0
-  elisabethBackSprite: {fileID: 0}
-  mapMusic: {fileID: 0}
+  elisabethBackSprite: {fileID: 21300000, guid: a744c0e7b3ac6214b8787c61d1598dca, type: 3}
+  mapMusic: {fileID: 8300000, guid: 5b16f0ea54eef3647b933521afbf62ab, type: 3}
 --- !u!114 &346474112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2187,6 +2187,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2439222053151119704, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
+      propertyPath: m_Size.x
+      value: 8.06942
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439222053151119704, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
+      propertyPath: m_Size.y
+      value: 18.362154
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439222053151119704, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.80017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439222053151119704, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.46592617
+      objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: 68adbbff6e96b7a11a158242b8c989da, type: 3}
       propertyPath: m_RootOrder
       value: 22
