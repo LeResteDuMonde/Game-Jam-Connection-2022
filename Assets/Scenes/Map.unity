@@ -357,9 +357,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMusic: {fileID: 8300000, guid: 5b16f0ea54eef3647b933521afbf62ab, type: 3}
+  mapMusic: {fileID: 0}
   musicAudioSource: {fileID: 239912209}
   mainMixer: {fileID: 24100000, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
   soundEffectMixer: {fileID: 4765040703484978879, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
+  dialogMixer: {fileID: 0}
   testMusic: {fileID: 8300000, guid: d880d485e90a058459baa7943c985048, type: 3}
   musicDefaultVolume: 0
   fadeTime: 1
@@ -619,6 +621,8 @@ MonoBehaviour:
       m_Action: Advance Dialog
       m_Flags: 0
     m_Flags: 0
+  elisabethBackSprite: {fileID: 0}
+  mapMusic: {fileID: 0}
 --- !u!114 &346474112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +864,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -933,6 +938,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6645d97297838343bdccce9eb5921db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &680709817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletinParent: {fileID: 0}
-  locationTransitionSound: {fileID: 8300000, guid: 3a3d89b1272d4824588e58bd3713dd70, type: 3}
+  locationTransitionSound: {fileID: 8300000, guid: 125654201fe8bc34580170bf3120a7e6, type: 3}
   location: {fileID: 11400000, guid: dca0fb1c216825a49b3c1ad857c5558f, type: 2}
 --- !u!4 &705551041
 Transform:
