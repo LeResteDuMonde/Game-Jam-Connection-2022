@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
 	private string openScene;
 	[SerializeField] private AudioClip locationTransitionSound;
 	[SerializeField] private LocationData location;
+	[SerializeField] private GameObject locationsParent;
 
 	#region instance
 
@@ -24,6 +25,7 @@ public class MapManager : MonoBehaviour
 	public void ToggleBulletinBoard()
 	{
 		bulletinParent.SetActive(!bulletinParent.activeSelf);
+		locationsParent.SetActive(!bulletinParent.activeSelf);
 		Camera mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		bulletinParent.transform.position = 
 			new Vector3 (mainCamera.transform.position.x, mainCamera.transform.position.y,transform.position.z);

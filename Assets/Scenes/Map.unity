@@ -879,6 +879,7 @@ MonoBehaviour:
   bulletinParent: {fileID: 0}
   locationTransitionSound: {fileID: 8300000, guid: 125654201fe8bc34580170bf3120a7e6, type: 3}
   location: {fileID: 11400000, guid: dca0fb1c216825a49b3c1ad857c5558f, type: 2}
+  locationsParent: {fileID: 2981538021685840092}
 --- !u!4 &705551041
 Transform:
   m_ObjectHideFlags: 0
@@ -2068,6 +2069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 408677635453423940, guid: 9586350113f774840952a6915b43a84d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 408677635453423941, guid: 9586350113f774840952a6915b43a84d, type: 3}
       propertyPath: m_SortingOrder
       value: -2
@@ -2119,6 +2124,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9586350113f774840952a6915b43a84d, type: 3}
+--- !u!1 &2981538021685840092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1280484927483170439, guid: 9586350113f774840952a6915b43a84d, type: 3}
+  m_PrefabInstance: {fileID: 2981538021685840091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2987687811683660917
 PrefabInstance:
   m_ObjectHideFlags: 0

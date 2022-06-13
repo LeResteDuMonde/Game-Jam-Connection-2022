@@ -50,16 +50,16 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	public AudioSource PlayClip(AudioClip clip, string tag = "Sound", Vector3 pos = default(Vector3))
+	public AudioSource PlayClip(AudioClip clip, string mixer = "Sound", Vector3 pos = default(Vector3))
 	{
 		GameObject tempGO = new GameObject("TempAudio");
-		tempGO.tag = tag;
+		tempGO.tag = "Sound";
 		tempGO.transform.position = pos;
 		
 		AudioSource audioSource = tempGO.AddComponent<AudioSource>();
 		audioSource.clip = clip;
 		audioSource.outputAudioMixerGroup = soundEffectMixer;
-		switch (tag)
+		switch (mixer)
 		{
 			case "Dialog":
 				audioSource.outputAudioMixerGroup = dialogMixer;
