@@ -1,0 +1,26 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial mia" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial mia 2", 
+		    "transition" : "readMia"},
+		    {"line":""}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "TODO 30",
+		"lines": [ { "line" : "TODO 30"}] 
+	},
+	{"inStates":[],
+		"answer": "TODO 31",
+		"lines": [ { "line" : "31"}] },		
+	{"inStates":[],
+		"answer": "32",
+		"lines": [ { "line" : "32"}]},
+		
+		
+	{"inStates":["sentiment"],
+		"answer": "45",
+		"lines": [ { "line" : "45", "transition":"vieuxCouple2"}]}
+    
+    ]
+}

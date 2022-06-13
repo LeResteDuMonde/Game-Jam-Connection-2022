@@ -1,0 +1,26 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial Eli" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial Eli 2", 
+		    "transition" : "readElisabeth"},
+		    {"line":""}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "TODO choice 33",
+		"lines": [ { "line" : "TODO answer 33"}] 
+	},
+	{"inStates":[],
+		"answer": "TODO choice 34",
+		"lines": [ { "line" : "TODO answer 34"}] },		
+	{"inStates":[],
+		"answer": "TODO choice 35",
+		"lines": [ { "line" : "TODO answer 35"}]},
+		
+	{"inStates":["wood"],		
+		"answer": "TODO choice 46",
+		"lines": [ { "line" : "46", "transition":"jeterBaton"}]}
+	
+    
+    ]
+}

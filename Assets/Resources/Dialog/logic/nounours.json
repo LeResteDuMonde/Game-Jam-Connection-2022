@@ -1,0 +1,27 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial nounours" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial nounours 2", 
+		    "transition" : "readNounours"},
+		    {"line":""}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "8",
+		"lines": [ { "line" : "8"}] 
+	},
+	{"inStates":[],
+		"answer": "9",
+		"lines": [ { "line" : "9"}] },		
+	{"inStates":[],
+		"answer": "10",
+		"lines": [ { "line" : "10"}]},
+
+	{"inStates":["colombin"],
+		"answer": "52",
+		"lines": [ { "line" : "52"}]}
+
+		
+    
+    ]
+}

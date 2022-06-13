@@ -1,0 +1,27 @@
+
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial colombin" },
+	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial colombin 2", 
+		    "transition" : "readLemair"},
+		    {"line":""}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "TODO choice 17",
+		"lines": [ { "line" : "TODO answer 17"}] 
+	},
+	{"inStates":[],
+		"answer": "TODO choice 18",
+		"lines": [ { "line" : "TODO answer 18"}] },		
+	{"inStates":[],
+		"answer": "TODO choice 19",
+		"lines": [ { "line" : "TODO answer 19"}]},
+
+	{"inStates":["aFaitCaca"],
+		"answer": "TODO choice 42",
+		"lines": [ { "line" : "TODO answer 42", "transition" : "readCaca" }]}
+		
+    
+    ]
+}

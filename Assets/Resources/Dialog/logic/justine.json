@@ -1,0 +1,20 @@
+{
+    "lines": [
+	    {"line" : "TODO dialogue initial justine" },
+	    {"line" : "TODO dialogue initial justine 2", 
+		    "transition" : "readJustine"}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "TODO choice 36",
+		"lines": [ { "line" : "TODO answer 36","transition":"seenDaughter" }] 
+	},
+	{"inStates":[],
+		"answer": "TODO choice 37",
+		"lines": [ { "line" : "TODO answer 37" }] },		
+	{"inStates":[],
+		"answer": "TODO choice 38",
+		"lines": [ { "line" : "TODO answer 38"}]}
+    
+    ]
+}

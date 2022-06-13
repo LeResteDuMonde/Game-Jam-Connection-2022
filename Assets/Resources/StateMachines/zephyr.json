@@ -4,8 +4,12 @@
 	    {"name" : "initial" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
+	    {"name" : "haveKey"},
 	    {"name" : "initAimeChien"},
 	    {"name" : "aimeChien"},
+	    {"name" : "choque"},
+	    {"name" : "rejectedByZephyr"},
+	    {"name" : "wentInCave"},
 	    {"name" : "inJetee", "location" : "Cemetery", "position" : "left"}
     ],
 
@@ -20,7 +24,19 @@
 
 	    {"name" : "aimeChien",
 	    "origin" : "initAimeChien",
-	    "destination" : "aimeChien" }
+	    "destination" : "aimeChien" },
+
+	    {"name" : "zephyrRejection",
+	    "origin" : "aimeChien",
+	    "destination" : "rejectedByZephyr" },
+
+	    {"name" : "goInCave",
+	    "origin" : "rejectedByZephir",
+	    "destination" : "wentInCave" },
+
+	    {"name" : "giveKey",
+	    "origin" : "haveKey",
+	    "destination" : "choque" }
     ],
 
     "initialStates": ["initial","dialogInit","inJetee","initAimeChien" ]
