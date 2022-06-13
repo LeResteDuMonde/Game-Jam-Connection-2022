@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public enum ScoringConnectionType
@@ -94,7 +95,7 @@ public class Scoring : MonoBehaviour
 		int score = 0;
 		switch (provided, expected)
 		{
-			case (ScoringConnectionType.None, ScoringConnectionType.None): score = 1; break;
+			case (ScoringConnectionType.None, ScoringConnectionType.None): score = 0; break;
 			case (ScoringConnectionType.None, ScoringConnectionType.Love): score = -1; break;
 			case (ScoringConnectionType.None, ScoringConnectionType.Hate): score = -1; break;
 			case (ScoringConnectionType.None, ScoringConnectionType.Shit): score = -2; break;
@@ -140,7 +141,22 @@ public class Scoring : MonoBehaviour
 
 	public int Score() {
 		FillProvidedGraph();
-		return ScoreGraph(providedGraph, expectedGraph);
+		return ScoreGraph(providedGraph, expectedGraph) + 27;
+	}
+
+	[CustomEditor(typeof(Scoring))]
+	public class ScoringEditor : Editor
+	{
+		public override void OnInspectorGUI()
+		{
+			Scoring scoring = (Scoring)target;
+			DrawDefaultInspector();
+
+			if (GUILayout.Button("Get Score"))
+			{
+				Debug.Log(scoring.Score());
+			}
+		}
 	}
 
 }
