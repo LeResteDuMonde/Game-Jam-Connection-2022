@@ -15,8 +15,10 @@ MonoBehaviour:
   characterName: Maryse
   animatorController: {fileID: 9100000, guid: 70c5dc765cc05fd4e8b1a01e67ece3ce, type: 2}
   stateMachine: maryse
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: c6fd382fe5df9d445af58344dce78002, type: 2}
+  - {fileID: 11400000, guid: 99c9d9289ae03cb47acf59e13c6f7222, type: 2}
+  connectionsType: 0000000000000000
   music: {fileID: 8300000, guid: 8fdc9860302301541a6e5e6c4dcafce6, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: dfa209b3854523d4e9b4cd5100f90d4d, type: 3}

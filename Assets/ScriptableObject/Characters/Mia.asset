@@ -15,8 +15,10 @@ MonoBehaviour:
   characterName: Mia
   animatorController: {fileID: 9100000, guid: 9205ead901e545b479e8e11d91110765, type: 2}
   stateMachine: mia
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: 95c3fd0cac6e7ad46914185545a335f1, type: 2}
+  - {fileID: 11400000, guid: 377907e3d017c5443ad35dd2e4477019, type: 2}
+  connectionsType: 0000000000000000
   music: {fileID: 8300000, guid: bb68734cf73e2944a8b701ef535023a5, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: 2049c8d06474b5f4e9f87172f2dd4a22, type: 3}

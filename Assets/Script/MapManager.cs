@@ -35,6 +35,11 @@ public class MapManager : MonoBehaviour
 		return bulletinParent.activeSelf;
 	}
 
+	public bool IsLocationOpen()
+	{
+		return isLocationOpen;
+	}
+
 	public void LoadLocation(string scene)
 	{
 		if (!IsBulletinBoardOpen() && !isLocationOpen)

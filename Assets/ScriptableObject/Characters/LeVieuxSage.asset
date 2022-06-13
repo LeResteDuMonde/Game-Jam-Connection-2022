@@ -15,8 +15,9 @@ MonoBehaviour:
   characterName: Le Vieux Sage
   animatorController: {fileID: 9100000, guid: 47345ab8f183b464f876223d12afe72d, type: 2}
   stateMachine: vieu
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: 9003f876cb6908948af9f1b29a49b189, type: 2}
+  connectionsType: 01000000
   music: {fileID: 8300000, guid: 4e3bb27615d70dd4ea5b48b07988338d, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: a7bc431920f45c34fbe0007b1cc5e4d4, type: 3}

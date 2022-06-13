@@ -15,8 +15,9 @@ MonoBehaviour:
   characterName: Justine
   animatorController: {fileID: 9100000, guid: 5fb15837bb1696047960944f8f3c9903, type: 2}
   stateMachine: justine
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: 895517e721046f04295e6ea603c0ff1b, type: 2}
+  connectionsType: 01000000
   music: {fileID: 8300000, guid: 36c5c769e9910b1479cc6a3eb7f4b37e, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: 2049c8d06474b5f4e9f87172f2dd4a22, type: 3}

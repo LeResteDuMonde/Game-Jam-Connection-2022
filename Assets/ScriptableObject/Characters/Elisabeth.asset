@@ -15,8 +15,11 @@ MonoBehaviour:
   characterName: Elisabeth
   animatorController: {fileID: 9100000, guid: 60a6dabbbeb0fdd43b75cb94d3bdfc09, type: 2}
   stateMachine: elisabeth
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: 95c3fd0cac6e7ad46914185545a335f1, type: 2}
+  - {fileID: 11400000, guid: 377907e3d017c5443ad35dd2e4477019, type: 2}
+  - {fileID: 11400000, guid: 57dc74fee8191564b94d95e92aec2e93, type: 2}
+  connectionsType: 010000000000000000000000
   music: {fileID: 8300000, guid: d880d485e90a058459baa7943c985048, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: 61fe49021ecf7a649b10c615aada777c, type: 3}

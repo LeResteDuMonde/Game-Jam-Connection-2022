@@ -15,8 +15,11 @@ MonoBehaviour:
   characterName: Nounours
   animatorController: {fileID: 9100000, guid: 2e76f84e40d31ff428565df280abb3e2, type: 2}
   stateMachine: nounours
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: 9003f876cb6908948af9f1b29a49b189, type: 2}
+  - {fileID: 11400000, guid: 650e4fe1ccd3b5b45b4c5b87e5f10a6b, type: 2}
+  - {fileID: 11400000, guid: 895517e721046f04295e6ea603c0ff1b, type: 2}
+  connectionsType: 000000000000000001000000
   music: {fileID: 8300000, guid: 449d7967f0e380c4abbfeda18ea5faca, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: a3c44ec00276d2544a4a6f26d1e58a1b, type: 3}

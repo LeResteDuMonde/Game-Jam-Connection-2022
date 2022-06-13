@@ -15,8 +15,11 @@ MonoBehaviour:
   characterName: Dominique
   animatorController: {fileID: 9100000, guid: 2a5f47f9d827adb4d87cf1834e8fe6ae, type: 2}
   stateMachine: dominique
-  connections: []
-  connectionsType: 
+  connections:
+  - {fileID: 11400000, guid: 377907e3d017c5443ad35dd2e4477019, type: 2}
+  - {fileID: 11400000, guid: c6fd382fe5df9d445af58344dce78002, type: 2}
+  - {fileID: 11400000, guid: 61e64f503e0c2ac4e9ee00148ac9d884, type: 2}
+  connectionsType: 010000000000000001000000
   music: {fileID: 8300000, guid: 9bc69d1bc3b0130429676378b7f83480, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: f23cee47ab3c599478d4660cf457c1e9, type: 3}
