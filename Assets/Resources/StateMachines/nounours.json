@@ -1,10 +1,23 @@
 {
     "name": "nounours",
     "states": [
+	    {"name" : "initial" }, 
+	    {"name" : "dialogInit"},
+	    {"name" : "terminal"},
+	    {"name" : "colombin"},
+	    {"name" : "inNounours", "location" : "Nounours House", "position" : "right"}
     ],
 
     "transitions": [
+	    {"name" : "readNounours",
+	    "origin" : "dialogInit",
+	    "destination" : "terminal" },
+
+	    {"name" : "nounours",
+	    "origin" : "initial",
+	    "destination" : "colombin" }
+
     ],
 
-    "initialStates": [ ]
+    "initialStates": ["initial","dialogInit","inNounours" ]
 }

@@ -2,9 +2,12 @@
     "name": "lemair",
     "states": [
 	    {"name" : "initial" }, 
+	    {"name" : "initialCaca" }, 
+	    {"name" : "caca2" }, 
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
-	    {"name" : "seenDaugther"},
+	    {"name" : "seenDaughter"},
+	    {"name" : "aveu"},
 	    {"name" : "inHall", "location" : "City Hall", "position" : "left"},
 	    {"name" : "inCafe", "location" : "Bistrot", "position" : "left"}
     ],
@@ -16,9 +19,18 @@
 
 	    {"name" : "readCaca",
 	    "origin" : "inHall",
-	    "destination" : "inCafe" }
+	    "destination" : "inCafe" },
+
+	    {"name" : "seenDaughter",
+	    "origin" : "initial",
+	    "destination" : "seenDaughter" },
+
+	    {"name" : "readCaca",
+	    "origin" : "initialCaca",
+	    "destination" : "aveu" }
+
 
     ],
 
-    "initialStates": ["initial","dialogInit","inHall" ]
+    "initialStates": ["initial","dialogInit","inHall","initialCaca" ]
 }

@@ -19,8 +19,12 @@
 		
 	{"inStates":["seenDaughter"],
 		"answer": "TODO choice 40",
-		"lines": [ { "line" : "TODO answer 40"}]}
-		
+		"lines": [ { "line" : "TODO answer 40"}]},
+
+	{"inStates":["aveu"],		
+		"answer": "TODO choice 48",
+		"lines": [ { "line" : "48", "transition":"nounours"}]}
+	
     
     ]
 }
