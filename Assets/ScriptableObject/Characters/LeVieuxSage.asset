@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LeVieuxSage
   m_EditorClassIdentifier: 
   characterName: Le Vieux Sage
-  animatorController: {fileID: 9100000, guid: 40efe1bfdd562854cb17167f7960bc9f, type: 2}
+  animatorController: {fileID: 9100000, guid: 47345ab8f183b464f876223d12afe72d, type: 2}
   stateMachine: vieu
   connections: []
   connectionsType: 
