@@ -11,10 +11,16 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "TODO 21",
+		"answer": "Je crois que je vais y aller…",
 		"lines": [
-			{"line" : "TODO choice 21"},
-			{ "line" : "TODO 21", "transition": "aimeChien"}
+			{"line" : "Vous avez raison, qui voudrait me parler ? "},
+			{"line" : "À moi, Zéphyr l’incompris, le malheureux, le damné ?"},
+			{"line" : "La douleur qui se tait n’en est que plus funeste"},
+			{"line" : "Et je cache ma peine, errements manifestes."},
+			{"line" : "Les seuls êtres à même de me comprendre "},
+			{"line" : "Sont ceux de l’engeance canine"},
+			{"line" : "Fidèles et compatisants"},
+			{ "line" : "Épaule amicale, absente des humains.", "transition": "aimeChien"}
 		]
 
 	},

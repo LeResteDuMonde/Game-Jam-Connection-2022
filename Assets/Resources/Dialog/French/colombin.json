@@ -52,8 +52,26 @@
 	},
 
 	{"inStates":["aFaitCaca"],
-		"answer": "TODO choice 42",
-		"lines": [ { "line" : "TODO answer 42", "transition" : "readCaca" }]}
+		"answer": "Le maire m’a dit de m’adresser à vous si j’avais besoin d’aide ! ",
+		"lines": [
+			{"line":"Ahh sacré Monsieur Lemair !"},
+			{"line":"Il a la langue bien pendue, n’est-ce pas ?"},
+			{"line":"(Rire du public)"},
+			{"line":"Tu sais, il est en pleine lutte électorale, en ce moment."},
+			{"line":"Alors forcément, il trouve des soutiens là où il peut."},
+			{"line":"Et qui de mieux que Colombin ?"},
+			{"line":"(Public : COOLOOOOMBIIIIN)"},
+			{"line":"Pour déstabiliser son adversaire électoral pour le poste de maire, il m’a demandé de lui rendre un petit service."},
+			{"line":"Jte jure, c’est House of Shit le truc."},
+			{"line":"(Rire du public)."},
+			{"line":"Tu te rappelles, hein, je joue dans Shitty Place."},
+			{"line":"Bon, eh ben, il m’a demandé de faire ce que je sais faire de mieux…"},
+			{"line":"Devant la maison de Nounours…"},
+			{"line":"Tu sais, cette ZAD pas loin de la mairie…"},
+			{"line":"J’y ai laissé une petite surprise…"},
+			{ "line" : "(Public : arghhhh)", "transition" : "readCaca" }
+		]
+	}
 		
     
     ]
