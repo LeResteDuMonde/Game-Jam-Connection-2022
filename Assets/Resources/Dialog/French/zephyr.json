@@ -41,7 +41,7 @@
 		"lines": [
 			{ "line":"Qu’est-ce que cette clef ? À quel huis pourrais-je l’appliquer ?"},
 			{ "line":"…"},
-			{ "line" : "Un être canin chez Maryse ? Eh bien oui, j’en avais eu vent, sans savoir que cela fût avéré. ","transition":"giveKey"}
+			{ "line" : "Un être canin chez Maryse ? Eh bien oui, j’en avais eu vent, sans savoir que cela fût avéré. ","transition":"giveKey", "terminal": true}
 		]
 	},
     
