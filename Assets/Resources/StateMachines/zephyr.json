@@ -10,7 +10,8 @@
 	    {"name" : "choque"},
 	    {"name" : "rejectedByZephyr"},
 	    {"name" : "wentInCave"},
-	    {"name" : "inJetee", "location" : "Cemetery", "position" : "left"}
+	    {"name" : "inCim", "location" : "Cemetery", "position" : "left"},
+	    {"name" : "inJete", "location" : "Bay", "position" : "left"}
     ],
 
     "transitions": [
@@ -36,8 +37,12 @@
 
 	    {"name" : "giveKey",
 	    "origin" : "haveKey",
-	    "destination" : "choque" }
+	    "destination" : "choque" },
+
+	    {"name" : "giveKey",
+	    "origin" : "inCim",
+	    "destination" : "inJete" }
     ],
 
-    "initialStates": ["initial","dialogInit","inJetee","initAimeChien" ]
+    "initialStates": ["initial","dialogInit","inHome","initAimeChien" ]
 }

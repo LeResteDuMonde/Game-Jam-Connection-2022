@@ -6,7 +6,7 @@
 	    {"inStates":["dialogInit"],"line" : "Tu sais, Shitty Place."}, 
 	    {"inStates":["dialogInit"],"line" : "Eh ba la star, dedans, c’est moi."}, 
 	    {"inStates":["dialogInit"],"line" : "La classe, hein. C’est clair.", 
-		    "transition" : "readLemair"},
+		    "transition" : "readColombin"},
 		    {"line":"Tu voulais me parler ?"}
     ],
     "choices": [

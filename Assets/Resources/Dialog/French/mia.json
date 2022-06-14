@@ -47,15 +47,15 @@
 	{"inStates":["sentiment"],
 		"answer": "Quels sont tes sentiments au sujet de Serge ? ",
 		"lines": [
-			{ "line" : "45", "transition":"Oh, euh… Je ne sais pas quoi dire…"},
-			{ "line" : "45", "transition":"C’est juste un ami, hein !"},
-			{ "line" : "45", "transition":"Oui oui, seulement un ami…"},
-			{ "line" : "45", "transition":"Comment ? Le vieux sage t’a parlé de nous ?"},
-			{ "line" : "45", "transition":"On va pas lui apprendre à faire la grimace, à celui-là."},
-			{ "line" : "45", "transition":"Eh bien, je l’aime, je l’adore, je suis folle de lui !!"},
-			{ "line" : "45", "transition":"Dès que je pense à lui je frémis, et quand je le vois, je brunis…"},
-			{ "line" : "45", "transition":"Tu penses qu’un jour je pourrai toaster avec lui ?"},
-			{ "line" : "45", "transition":"J’ai peur, mais c’est l’objet de tous mes rêves <3"}
+			{ "line":"Oh, euh… Je ne sais pas quoi dire…"},
+			{ "line":"C’est juste un ami, hein !"},
+			{ "line":"Oui oui, seulement un ami…"},
+			{ "line":"Comment ? Le vieux sage t’a parlé de nous ?"},
+			{ "line":"On va pas lui apprendre à faire la grimace, à celui-là."},
+			{ "line":"Eh bien, je l’aime, je l’adore, je suis folle de lui !!"},
+			{ "line":"Dès que je pense à lui je frémis, et quand je le vois, je brunis…"},
+			{ "line":"Tu penses qu’un jour je pourrai toaster avec lui ?"},
+			{ "transition" : "vieuxCouple2", "line":"J’ai peur, mais c’est l’objet de tous mes rêves <3"}
 		]
 	}
     

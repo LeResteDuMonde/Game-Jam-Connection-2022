@@ -35,11 +35,11 @@
 	{"inStates":[],
 		"answer": "Je suis encore un peu perdue à Vie-Lhaj…",
 		"lines": [
-			{ "line" : "TODO answer 5", "transition":"Oh, mais ne vous inquiétez pas ! Tout le monde est très accueillant ici." },
-			{ "line" : "TODO answer 5", "transition":"Vous ferez très rapidement vos marques." },
-			{ "line" : "TODO answer 5", "transition":"Si vous avez besoin d’un coup de main, n’hésitez pas à aller voir Colombin !! " },
-			{ "line" : "TODO answer 5", "transition":"Il est très serviable. Pour ma part, il m’a été bien utile." },
-			{ "line" : "TODO answer 5", "transition":"C’est cool." }
+			{ "line":"Oh, mais ne vous inquiétez pas ! Tout le monde est très accueillant ici." },
+			{ "line":"Vous ferez très rapidement vos marques." },
+			{ "line":"Si vous avez besoin d’un coup de main, n’hésitez pas à aller voir Colombin !! " },
+			{ "line":"Il est très serviable. Pour ma part, il m’a été bien utile." },
+			{ "transition" : "faireCaca", "line":"C’est cool." }
 		]
 	},		
 	{"inStates":[],
@@ -79,14 +79,14 @@
 	{"inStates":["aveu"],		
 		"answer": "Vous avez donc engagé Colombin ?",
 		"lines": [
-			{ "line" : "48", "transition":"Eh bien… Comment dire…"},
-			{ "line" : "48", "transition":"AHAHAHAHAHAHAH"},
-			{ "line" : "48", "transition":"Sacré farce, qu’on lui a faite, à ce gros Nounours !"},
-			{ "line" : "48", "transition":"Il n’est pas le bienvenue, j’espère qu’il a compris ça."},
-			{ "line" : "48", "transition":"Comment ?"},
-			{ "line" : "48", "transition":"Il en a fait du compost !"},
-			{ "line" : "48", "transition":"Ça alors, encore raté…"},
-			{ "line" : "48", "transition":"C’est vraiment pas cool..."}
+			{ "line":"Eh bien… Comment dire…"},
+			{ "line":"AHAHAHAHAHAHAH"},
+			{ "line":"Sacré farce, qu’on lui a faite, à ce gros Nounours !"},
+			{ "line":"Il n’est pas le bienvenue, j’espère qu’il a compris ça."},
+			{ "line":"Comment ?"},
+			{ "line":"Il en a fait du compost !"},
+			{ "line":"Ça alors, encore raté…"},
+			{ "transition" : "nounours", "line":"C’est vraiment pas cool..."}
 		]
 	}
 	

@@ -1,26 +1,31 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial Eli" },
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial Eli 2", 
+	    {"inStates":["dialogInit"],"line" : "..." },
+	    {"inStates":["dialogInit"],"line" : "..." ,
 		    "transition" : "readElisabeth"},
-		    {"line":""}
+		    {"line":"..."}
     ],
-    "choices": [
+"choices": [
 	{"inStates":[],
-		"answer": "TODO choice 33",
-		"lines": [ { "line" : "TODO answer 33"}] 
+		"answer": "Euh... Bonjour... ",
+		"lines": [ { "line" : "..."}] 
 	},
 	{"inStates":[],
-		"answer": "TODO choice 34",
-		"lines": [ { "line" : "TODO answer 34"}] },		
+		"answer": "Comment se passe la coloc avec Serge et Zéphyr ?",
+		"lines": [ { "line" : "..."}]
+	},		
 	{"inStates":[],
-		"answer": "TODO choice 35",
-		"lines": [ { "line" : "TODO answer 35"}]},
+		"answer": "Quels beaux tatouages ! ",
+		"lines": [ { "line" : "..."}]},
 		
 	{"inStates":["wood"],		
-		"answer": "TODO choice 46",
-		"lines": [ { "line" : "46", "transition":"jeterBaton"}]}
+		"answer": "jeter le baton",
+		"lines": [ { "line" : "", "transition":"jeterBaton"}]},
 	
+	{"inStates":[],
+		"answer": "...",
+		"lines": [ { "line" : "..."}] 
+	}
     
     ]
 }

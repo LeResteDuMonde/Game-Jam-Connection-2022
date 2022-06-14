@@ -1,21 +1,29 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial nounours" },
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial nounours 2", 
+	    {"inStates":["dialogInit"],"line" : "Bonjour chère concitoyenne, je suis Nounours représentant des travailleurs de notre village. J’ai appris par mes informateurs que vous veniez d’aménager. Je suis enchanté de vous rencontrer.",
 		    "transition" : "readNounours"},
-		    {"line":""}
+		    {"line":"Puis-je vous offrir une tasse de café ?"}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "8",
-		"lines": [ { "line" : "8"}] 
+		"answer": "Vous comptez vous présenter aux élections ? ",
+		"lines": [
+			{ "line" : "Bien sur que je me présente. Ce n’est pas cet incompétent de maire qui va faire avancer notre beau village ma p’tite dame. Voyez-vous je suis la République moi madame et je sais ce que veulent nos concitoyen.nes. Je les écoute et leur promets de tout changer, de redorer ces terres pour qu’elles deviennent une grande nation."}
+		]
+
 	},
 	{"inStates":[],
-		"answer": "9",
-		"lines": [ { "line" : "9"}] },		
+		"answer": "Vous avez des informateurs dans le village ?",
+		"lines": [
+			{ "line" : "Bien sûr, en réalité c’est moi qui tire en secret les ficelles dans ce village. Vous l’avez peut-être déjà rencontré mais si vous allez à la place du village vous pourrez parler à notre doyen. Monsieur Lemair me jalouse à ce propos, car oui, il se trouve que monsieur grand sage me conseille sur nos prochaines élections. Ces paroles sont d’une grande sagesse. "}
+		]
+	},		
 	{"inStates":[],
-		"answer": "10",
-		"lines": [ { "line" : "10"}]},
+		"answer": "Vous êtes très mignon en tout cas. ",
+		"lines": [
+			{ "line" : "Colombin ? Bien sur, j’adore ce mec. Grâce à lui mes fleurs se portent comme un charme. C’est fou ce que ses selles sont nutritives, depuis on prend souvent des café clopes pour mes plantes."}
+		]
+	},
 
 	{"inStates":["colombin"],
 		"answer": "52",

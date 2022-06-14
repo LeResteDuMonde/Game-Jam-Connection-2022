@@ -1,29 +1,59 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial zephir" },
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial zephir 2", 
+	    {"inStates":["dialogInit"],"line" : "..." },
+	    {"inStates":["dialogInit"],"line" : "..." },
+	    {"inStates":["dialogInit"],"line" : "..." },
+	    {"inStates":["dialogInit"],"line" : "Salut..." },
+	    {"inStates":["dialogInit"],"line" : "Mon nom, bien que cela te soit indifférent, comme à tous les villageois de cet obscur endroit, est Zéphyr." },
+	    {"inStates":["dialogInit"],"line" : "Perdu comme le vent, j’ère dans ces lieux que je rejoindrai un jour ou l’autre.", 
 		    "transition" : "readZephyr"},
-		    {"line":""}
+		    {"line":"..."}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "TODO 21",
-		"lines": [ { "line" : "TODO 21", "transition": "aimeChien"}] 
+		"answer": "Vous allez bien ?",
+		"lines": [
+			{"line" : "TODO choice 21"},
+			{ "line" : "TODO 21", "transition": "aimeChien"}
+		]
+
 	},
 	{"inStates":[],
-		"answer": "TODO 22",
-		"lines": [ { "line" : "22"}] },		
+		"answer": "ous allez bien ? ",
+		"lines": [
+			{ "line" : "Aller bien ?"},
+			{ "line" : "J’ai oublié la signification de ce verbe depuis bien longtemps…"},
+			{ "line" : "Depuis ce jour où, enfant, j’ai vécu l’expérience la plus traumatisante que l’on puisse vivre en trois vies."},
+			{ "line" : "L’aube se levait, les oiseaux chantaient, je me réveillais."},
+			{ "line" : "e me levais."},
+			{ "line" : "Et… je me suis cogné le petit orteil de pied dans ce meuble, cette armoire, donnée par ma grand-mère le jour de son départ à la retraite."},
+			{ "line" : "J’avais mal, une douleur phénoménale, celle qui annonce la mort et le désespoir."},
+			{ "line" : "Voilà mon histoire."}
+		]
+	},		
 	{"inStates":[],
-		"answer": "23",
-		"lines": [ { "line" : "23"}]},
+		"answer": "Vous avez perdu un proche ? ",
+		"lines": [ { "line" : "Je les ai tous perdus, car n’en ai jamais eus."}]},
 		
 		
 	{"inStates":["haveKey", "aimeChien"],
-		"answer": "43",
-		"lines": [ { "line" : "43","transition":"giveKey"}]},
+		"answer": "Donner la clef",
+		"lines": [
+			{ "line":"Qu’est-ce que cette clef ? À quel huis pourrais-je l’appliquer ?"},
+			{ "line":"…"},
+			{ "line" : "Un être canin chez Maryse ? Eh bien oui, j’en avais eu vent, sans savoir que cela fût avéré. ","transition":"giveKey"}
+		]
+	},
     
 	{"inStates":["choque"],
-		"answer": "49",
-		"lines": [ { "line" : "49","transition":"zephyrRejection"}]}
+		"answer": "Zéphyr, ne vous jetez pas à la mer !",
+		"lines": [
+			{"line" : "Vous vous trompez sur mes intentions."},
+			{"line" : "La mort ne serait qu’une piètre consolation à mes maux."},
+			{"line" : "Non, si je suis ici, face à la mer, c’est que j’ai vu ce que je ne croyais jamais voir en cinq vies"},
+			{"line" : "La rumeur aquatique et l’éclat de l’écume viennent ici m’appaiser."},
+			{ "line" : "Dire que je croyais voir un être canin...","transition":"zephyrRejection"}
+		]
+	}
     ]
 }

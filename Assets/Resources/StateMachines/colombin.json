@@ -11,7 +11,7 @@
     ],
 
     "transitions": [
-	    {"name" : "readColonbin",
+	    {"name" : "readColombin",
 	    "origin" : "dialogInit",
 	    "destination" : "terminal" },
 
