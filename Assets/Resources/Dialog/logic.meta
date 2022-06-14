@@ -1,7 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Assets/Resources/Dialog/logic.meta
 guid: 9d3b7b3850c04154cb22dce8d8b63694
 folderAsset: yes
 DefaultImporter:
+========
+guid: ab55dca3151b1c3c4a9b42b26289023a
+TextScriptImporter:
+>>>>>>>> Stashed changes:Assets/Resources/Dialog/logic/colombin.json.meta
+=======
+guid: ec9f31c3670d1ebdd9547d3e32639182
+folderAsset: yes
+DefaultImporter:
+>>>>>>> Stashed changes
   externalObjects: {}
   userData: 
   assetBundleName: 

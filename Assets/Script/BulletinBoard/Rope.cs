@@ -13,10 +13,11 @@ public class Rope : MonoBehaviour
 	public Sprite arrow;
 
 	[Header("rigidity Settings")]
-	[SerializeField] private float maxDist = 0.1f;
-	[SerializeField] private float maxDistSecondRopeMultiplier = 0.8f;
-	[SerializeField] private float mag = 1f;
-	[SerializeField] private float magSecondRopeMultiplier = 0.5f;
+	private float maxDist = 0.1f;
+	private float maxDistSecondRopeMultiplier = 1f;
+	private float cstSecondRope = 4f;
+	private float mag = 1f;
+	private float magSecondRopeMultiplier = 1f;
 	public Rope (){
 		nodes  = new List<Vector3>();
 		nodesOld  = new List<Vector3>();
@@ -59,14 +60,14 @@ public class Rope : MonoBehaviour
 		
 	}
    }
-   
+	private float cst = 1f; 
    public void forceLength(Vector3 m){
 		m.z = 0;
 		origine.z = 0;
 		while (removeNode());
 	//Debug.Log("magnitude");
 	//Debug.Log(m.magnitude);
-	while((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
+	while((m-origine).magnitude - 2.3f*nbnode*maxDist + cst > nodeMini*maxDist){
 		addNode();
 		}
 	for (int i=0;i<100;i++){
@@ -79,6 +80,7 @@ public class Rope : MonoBehaviour
    public void setSecondRope(){
 	   mag *= magSecondRopeMultiplier; 
 	   maxDist *= maxDistSecondRopeMultiplier;
+	   cst *= cstSecondRope;
    }
 	public void setRope(Vector3 m)
 	{
@@ -86,7 +88,7 @@ public class Rope : MonoBehaviour
 		m.z = 0;
 		origine.z = 0;
 	    //Debug.Log(m - origine);
-	if ((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
+	if ((m-origine).magnitude - 2.3f*nbnode*maxDist + cst> nodeMini*maxDist){
 		addNode();
 		vkill =0f;
 	}
