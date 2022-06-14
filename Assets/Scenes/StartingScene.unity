@@ -1171,6 +1171,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2987687811586978170, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
+      propertyPath: mapMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 391820f44bea34045a3eae9b64b9586c, type: 3}
+    - target: {fileID: 2987687811586978170, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
+      propertyPath: dialogMixer
+      value: 
+      objectReference: {fileID: 7708777388924039007, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
+    - target: {fileID: 2987687811586978170, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
       propertyPath: currentMusic
       value: 
       objectReference: {fileID: 8300000, guid: 391820f44bea34045a3eae9b64b9586c, type: 3}
