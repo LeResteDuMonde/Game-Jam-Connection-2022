@@ -1,29 +1,94 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial lemair" },
-	    {"inStates":["dialogInit"],"line" : "TODO dialogue initial lemair 2", 
+	    {"inStates":["dialogInit"],"line" : "Hey la sis ! " },
+	    {"inStates":["dialogInit"],"line" : "Como va ?"}, 
+	    {"inStates":["dialogInit"],"line" : "Ça baigne ?"}, 
+	    {"inStates":["dialogInit"],"line" : "Allez vous froissez pas, j’essaye juste de briser la glace, tu vois."}, 
+	    {"inStates":["dialogInit"],"line" : "Je suis le maire, monsieur Lemair, enchanté ! Votre arrivée s’est bien passée ? Pas de souce ? "}, 
+	    {"inStates":["dialogInit"],"line" : "Trop COOOOOL sis !"}, 
+	    {"inStates":["dialogInit"],"line" : "Je compte sur vous pour vous souvenir de mon aide le jour des élections ;) "}, 
+	    {"inStates":["dialogInit"],"line" : "C’est cool."}, 
+	    {"inStates":["dialogInit"],"line" : ";)", 
 		    "transition" : "readLemair"},
-		    {"line":""}
+		    {"line":"Vous vouliez me dire quelque chose ?"}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "TODO choice 6",
-		"lines": [ { "line" : "TODO answer 6"}] 
+		"answer": "Pourriez-vous m’en dire un peu plus sur vous ? ",
+		"lines": [ 
+			{ "line" : "Mais bien sûr chère madame !"},
+			{ "line" : "C’est pas tous les jours qu’on me pose cette question."},
+			{ "line" : "Faut dire, tout le monde me connaît ici."},
+			{ "line" : "Je suis un peu sous les projos, tu vois ?"},
+			{ "line" : "C’est cool."},
+			{ "line" : "Ça fait maintenant 17 ans que je vis à Vie-Lhaj. En 84, oui."},
+			{ "line" : "La même année que d’ailleurs !"},
+			{ "line" : "Je suis crypto-banquier, tu vois."},
+			{ "line" : "Les crypto-monnaies, c’est mon dada."},
+			{ "line" : "Je touche ma bille là-dedans. De quoi perdre la boule ! vous ne vous imaginez pas."},
+			{ "line" : "Et les NFT, j’adore, le kiff."},
+			{ "line" : "Chanmé."},
+			{ "line" : "Actuellement, j’en ai entre 567 et 568. Vous désirez en voir ? Non ? Vraiment ? Bon, pas de souce, sis."},
+			{ "line" : "J’en ai un sur le visage…"}
+		] 
 	},
 	{"inStates":[],
-		"answer": "TODO choice 5",
-		"lines": [ { "line" : "TODO answer 5", "transition":"faireCaca" }] },		
+		"answer": "Je suis encore un peu perdue à Vie-Lhaj…",
+		"lines": [
+			{ "line" : "TODO answer 5", "transition":"Oh, mais ne vous inquiétez pas ! Tout le monde est très accueillant ici." },
+			{ "line" : "TODO answer 5", "transition":"Vous ferez très rapidement vos marques." },
+			{ "line" : "TODO answer 5", "transition":"Si vous avez besoin d’un coup de main, n’hésitez pas à aller voir Colombin !! " },
+			{ "line" : "TODO answer 5", "transition":"Il est très serviable. Pour ma part, il m’a été bien utile." },
+			{ "line" : "TODO answer 5", "transition":"C’est cool." }
+		]
+	},		
 	{"inStates":[],
-		"answer": "TODO choice 7",
-		"lines": [ { "line" : "TODO answer 7"}]},
+		"answer": "Des élections ? Mais je n’ai même pas ma carte d’électrice !! Oh non ! ",
+		"lines": [
+			{ "line" : "NOOOOOON."},
+			{ "line" : "Nan jdec’."},
+			{ "line" : "Pas de souce chère madame, monsieur Lemair s’occupe de vos galères."},
+			{ "line" : "C’est cool."},
+			{ "line" : "J’ai l’âme d’un maire."},
+			{ "line" : "Vous n’avez qu’à revenir à la mairie demain, on règlera ça, avec mes cons’."},
+			{ "line" : "Mes cons’ ?"},
+			{ "line" : "Tu connais pas les cons’ ?"},
+			{ "line" : "Mes conseillers et conseillères, banane."},
+			{ "line" : "Restera plus qu’à voter pour moi ;) "},
+			{ "line" : "Pas pour Nounours, c’est ok ? Tout sauf ce pignouf !"}
+		]},
 		
 	{"inStates":["seenDaughter"],
-		"answer": "TODO choice 40",
-		"lines": [ { "line" : "TODO answer 40"}]},
+		"answer": "Vous m’avez dit être maire… sans me dire que vous étiez père !!! ",
+		"lines": [
+			{ "line" : "Ah, vous avez rencontré Justine !"},
+			{ "line" : "C’est cool."},
+			{ "line" : "C’est ma fille, cette gamine. Elle adore la k-pop, j’avoue ne pas trop comprendre. "},
+			{ "line" : "GNAN GNAN GANGNAM STYLE !!"},
+			{ "line" : "C’est pas de tout repos. Mais je l’aime beaucoup."},
+			{ "line" : "TODO answer 40"},
+			{ "line" : "Vous pensez que je suis trop envahissant pour elle ? Elle me dit toujours de lui lâcher la grappe"},
+			{ "line" : "Oui, je vais faire ça."},
+			{ "line" : "Mais bon, elle a pas encore l’âge de partir. Quelle perte ça serait !"},
+			{ "line" : "Vous vous imaginez, vous ? Tous ces dessins, disparus ! "},
+			{ "line" : "Oui, j’utilise ses dessins en NFT, ça me rapporte tellement !"},
+			{ "line" : "Enfin, ça rapporte, ça rapporte, d’accord, mais à la marie ! C’est tout ce qui compte, n’est-ce pas ? /gêné/"}
+		]
+	},
 
 	{"inStates":["aveu"],		
-		"answer": "TODO choice 48",
-		"lines": [ { "line" : "48", "transition":"nounours"}]}
+		"answer": "Vous avez donc engagé Colombin ?",
+		"lines": [
+			{ "line" : "48", "transition":"Eh bien… Comment dire…"},
+			{ "line" : "48", "transition":"AHAHAHAHAHAHAH"},
+			{ "line" : "48", "transition":"Sacré farce, qu’on lui a faite, à ce gros Nounours !"},
+			{ "line" : "48", "transition":"Il n’est pas le bienvenue, j’espère qu’il a compris ça."},
+			{ "line" : "48", "transition":"Comment ?"},
+			{ "line" : "48", "transition":"Il en a fait du compost !"},
+			{ "line" : "48", "transition":"Ça alors, encore raté…"},
+			{ "line" : "48", "transition":"C’est vraiment pas cool..."}
+		]
+	}
 	
     
     ]
