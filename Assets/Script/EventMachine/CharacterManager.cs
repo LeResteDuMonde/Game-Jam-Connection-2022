@@ -72,4 +72,17 @@ public class CharacterManager : MonoBehaviour
 		UnloadCharacters();
 		LoadLocationCharacters(LocationManager.instance.GetCurrentLcation().locationName);
 	}
+
+	public void EnableInteraction(bool enable)
+	{
+		Debug.Log(enable? "enable" : "disable" + " interactions");
+		foreach (var character in characters)
+		{
+			character.TryGetComponent(out PolygonCollider2D polygonCollider2D);
+			character.TryGetComponent(out BoxCollider2D boxCollider2D);
+
+			if(polygonCollider2D != null) { polygonCollider2D.enabled = enable; }
+			if (boxCollider2D != null) { boxCollider2D.enabled = enable; }
+		}
+	}
 }

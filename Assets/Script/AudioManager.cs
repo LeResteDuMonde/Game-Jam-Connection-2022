@@ -4,7 +4,6 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-	[SerializeField] private AudioClip currentMusic;
 	[SerializeField] private AudioClip mapMusic;
 
 	[SerializeField] private AudioSource musicAudioSource;
@@ -36,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
 	private void Start()
 	{
-		musicAudioSource.clip = currentMusic;
+		musicAudioSource.clip = mapMusic;
 		musicAudioSource.Play();
 	}
 

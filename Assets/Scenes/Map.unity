@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.36
+      value: -5.31
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -182,6 +182,10 @@ PrefabInstance:
     - target: {fileID: 2802362454321377002, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
       propertyPath: m_Name
       value: LeVieuSage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802362454321377002, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377003, guid: dd081ffa9ba8ab14ab5aef9e4afc04bc, type: 3}
       propertyPath: locationBackgroundPosition
@@ -1438,11 +1442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: bdc92065f55af474584cfa85d8915e31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.183824
+      value: -14.25
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: bdc92065f55af474584cfa85d8915e31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3618667
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2802362454321377000, guid: bdc92065f55af474584cfa85d8915e31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2548,9 +2552,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2987687811586978170, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
+      propertyPath: mapMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 363855c901b9a024484f1b0ee2a37719, type: 3}
+    - target: {fileID: 2987687811586978170, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
       propertyPath: dialogMixer
       value: 
       objectReference: {fileID: 7708777388924039007, guid: 58fc757dc91b1f748ab3b74e279e3b66, type: 2}
+    - target: {fileID: 2987687811586978170, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
+      propertyPath: currentMusic
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2987687811586978171, guid: d8fcdcf78ec316240bd976ab4e8bd867, type: 3}
       propertyPath: m_Name
       value: AudioManager

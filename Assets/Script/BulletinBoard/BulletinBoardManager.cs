@@ -73,6 +73,9 @@ public class BulletinBoardManager : MonoBehaviour
 	}
 
 	private void OnEnable() {
+
+		CharacterManager.instance.EnableInteraction(false);
+
 		foreach(var b in bulletins) {
 			if(b.activeSelf) continue;
 
@@ -86,6 +89,7 @@ public class BulletinBoardManager : MonoBehaviour
 	private void OnDisable()
 	{
 		enableAfterAnimation.SetActive(false);
+		CharacterManager.instance.EnableInteraction(true);
 	}
 
 	public List<GameObject> GetBulletins() {
