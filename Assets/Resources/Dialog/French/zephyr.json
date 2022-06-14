@@ -11,7 +11,7 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Vous allez bien ?",
+		"answer": "TODO 21",
 		"lines": [
 			{"line" : "TODO choice 21"},
 			{ "line" : "TODO 21", "transition": "aimeChien"}
