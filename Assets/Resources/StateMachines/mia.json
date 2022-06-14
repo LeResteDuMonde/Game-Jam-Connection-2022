@@ -5,6 +5,7 @@
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
 	    {"name" : "sentiment"},
+	    {"name" : "inStore", "location" : "Video Store", "position" : "left"},
 	    {"name" : "inMarise", "location" : "Maryse House", "position" : "right"}
     ],
 
@@ -15,9 +16,13 @@
 
 	    {"name" : "vieuxCoulpe",
 	    "origin" : "initial",
-	    "destination" : "sentiment" }
+	    "destination" : "sentiment" }, 
+
+	    {"name" : "vieuxCoulpe",
+	    "origin" : "inStore",
+	    "destination" : "inMarise" }
 
     ],
 
-    "initialStates": ["initial","dialogInit","inMarise" ]
+    "initialStates": ["initial","dialogInit","inStore" ]
 }

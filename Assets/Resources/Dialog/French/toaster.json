@@ -1,8 +1,8 @@
 {
     "lines": [
 	    {"inStates":["dialogInit"],"line" : "Salut !" },
-	    {"inStates":["dialogInit"],"line" : "Salut !" },
-	    {"inStates":["dialogInit"],"line" : "Salut !" },
+	    {"inStates":["dialogInit"],"line" : "Salut !!" },
+	    {"inStates":["dialogInit"],"line" : "Salut !!!" },
 	    {"inStates":["dialogInit"],"line" : "Ça va ?" },
 	    {"inStates":["dialogInit"],"line" : "Moi ça va !" },
 	    {"inStates":["dialogInit"],"line" : "Super !!", 

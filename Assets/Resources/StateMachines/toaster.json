@@ -5,7 +5,8 @@
 	    {"name" : "dialogInit"},
 	    {"name" : "terminal"},
 	    {"name" : "sentiment"},
-	    {"name" : "inCafe", "location" : "Bistrot", "position" : "right"}
+	    {"name" : "inCafe", "location" : "Bistrot", "position" : "right"},
+	    {"name" : "inColoc", "location" : "Flatsharing", "position" : "right"}
     ],
 
     "transitions": [
@@ -15,9 +16,12 @@
 
 	    {"name" : "vieuxCouple2",
 	    "origin" : "initial",
-	    "destination" : "sentiment" }
+	    "destination" : "sentiment" },
 
+	    {"name" : "vieuxCouple2",
+	    "origin" : "inColoc",
+	    "destination" : "inCafe" }
     ],
 
-    "initialStates": ["initial","dialogInit","inCafe" ]
+    "initialStates": ["initial","dialogInit","inColoc" ]
 }
