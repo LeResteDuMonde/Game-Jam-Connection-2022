@@ -19,7 +19,7 @@
 
 	},
 	{"inStates":[],
-		"answer": "ous allez bien ? ",
+		"answer": "Vous allez bien ? ",
 		"lines": [
 			{ "line" : "Aller bien ?"},
 			{ "line" : "J’ai oublié la signification de ce verbe depuis bien longtemps…"},

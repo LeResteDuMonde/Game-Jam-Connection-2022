@@ -44,5 +44,5 @@
 	    "destination" : "inJete" }
     ],
 
-    "initialStates": ["initial","dialogInit","inHome","initAimeChien" ]
+    "initialStates": ["initial","dialogInit","inCim","initAimeChien" ]
 }
