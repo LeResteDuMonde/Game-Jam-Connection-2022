@@ -9,9 +9,9 @@
     ],
 
     "transitions": [
-        { "name": "saidOSEF",
-          "origin": "initial",
-          "destination": "flecheOSEF" }
+        { "name": "readBaron",
+          "origin": "dialogInit",
+          "destination": "terminal" }
     ],
 
     "initialStates": [ "initial", "inWoods" , "dialogInit"]
