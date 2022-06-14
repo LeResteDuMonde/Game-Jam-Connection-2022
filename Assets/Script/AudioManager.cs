@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -16,7 +15,7 @@ public class AudioManager : MonoBehaviour
 	[SerializeField] private AudioMixerGroup soundEffectMixer;
 	[SerializeField] private AudioMixerGroup dialogMixer;
 
-	[SerializeField] private AudioClip testMusic;
+	public AudioClip testMusic;
 	private float fadeVolume = -80;
 	[SerializeField] private float musicDefaultVolume = 0;
 	private float musicVolume = 0;
@@ -95,20 +94,5 @@ public class AudioManager : MonoBehaviour
 	private void SetMusicVolume(float volume)
 	{
 		mainMixer.SetFloat("MusicVolume", volume);
-	}
-
-	[CustomEditor(typeof(AudioManager))]
-	public class AudioManagerEditor : Editor
-	{
-		public override void OnInspectorGUI()
-		{
-			AudioManager audioManager = (AudioManager)target;
-			DrawDefaultInspector();
-
-			if (GUILayout.Button("Change Music"))
-			{
-				audioManager.ChangeMusic(audioManager.testMusic);
-			}
-		}
 	}
 }

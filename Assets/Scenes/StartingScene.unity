@@ -515,6 +515,14 @@ PrefabInstance:
       propertyPath: hoverSprite
       value: 
       objectReference: {fileID: 21300000, guid: 6dbc9c2d155deae4fab9530320db864b, type: 3}
+    - target: {fileID: 4729975813733206844, guid: e683442d70b4d9744a6e5d38ed7a87cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 773080181}
+    - target: {fileID: 4729975813733206844, guid: e683442d70b4d9744a6e5d38ed7a87cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 4729975814470693451, guid: e683442d70b4d9744a6e5d38ed7a87cb, type: 3}
       propertyPath: m_Sprite
       value: 

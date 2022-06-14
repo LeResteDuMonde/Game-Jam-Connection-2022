@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
 
 public class FinishButton : Button, IClicked, IHovered
 {
@@ -46,15 +45,5 @@ public class FinishButton : Button, IClicked, IHovered
 		if (sprite != null) { sprite.sprite = baseSprite; }
 
 		mC.CursorHoverAnimation(false);
-	}
-}
-
-[CustomEditor(typeof(FinishButton))]
-public class FinishButtonEditor : Editor
-{
-	public override void OnInspectorGUI()
-	{
-		FinishButton finishButton = (FinishButton)target;
-		DrawDefaultInspector();
 	}
 }

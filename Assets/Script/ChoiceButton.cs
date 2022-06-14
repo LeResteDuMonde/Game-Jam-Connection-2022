@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
-using UnityEditor;
 
 public class ChoiceButton : Button
 {
@@ -41,15 +40,5 @@ public class ChoiceButton : Button
         if (sprite != null) { sprite.sprite = baseSprite; }
 
         mC.CursorHoverAnimation(false);
-    }
-}
-
-[CustomEditor(typeof(ChoiceButton))]
-public class MenuButtonEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        ChoiceButton choiceButton = (ChoiceButton)target;
-        DrawDefaultInspector();
     }
 }
