@@ -19,7 +19,9 @@ public class Dialog {
 public class DialogLine {
     public string[] inStates;
     public string line;
+#nullable enable
     public string? transition;
+#nullable disable
     public bool terminal;
 
     public override String ToString() { return line; }

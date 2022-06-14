@@ -8,7 +8,7 @@ public class bulletinParent : MonoBehaviour
 	void Start()
 	{
 		MapManager.instance.bulletinParent = gameObject;
-		gameObject.active = false;
+		gameObject.SetActive(false);
 	}
 
 	// Update is called once per frame

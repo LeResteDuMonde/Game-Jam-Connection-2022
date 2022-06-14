@@ -4,12 +4,20 @@ public class RopePart : MonoBehaviour
 {
 	SpriteRenderer sp;
 
-	void Start()
+	private void Awake()
 	{
 		sp = GetComponent<SpriteRenderer>();
-		SetColor();
+	}
+	void Start()
+	{
+		//SetColor();
 		Vector3 p = transform.position;
 		transform.position = new Vector3(p.x,p.y,0);
+	}
+
+	private void Update()
+	{
+		//SetColor();
 	}
 	float offset = 0;
 	public void setCoord(Vector3 start, Vector3 end){
@@ -56,6 +64,6 @@ public class RopePart : MonoBehaviour
 	
 	public void SetColor()
 	{
-		sp.color = BulletinBoardManager.instance.currentColor;
+		sp.color = BulletinBoardManager.instance.GetColor();
 	}
 }

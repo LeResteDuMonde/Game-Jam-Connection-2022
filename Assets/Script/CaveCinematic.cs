@@ -24,10 +24,14 @@ public class CaveCinematic : MonoBehaviour
 
 	private IEnumerator EnterCave()
 	{
+		InputController.instance.DisableInputs();
+
 		caveBackground.SetActive(true);
 		CameraManager.instance.MoveCamera(caveBackground.transform.position);
 		yield return new WaitForSeconds(caveTime);
 		CameraManager.instance.ResetCamera();
 		caveBackground.SetActive(false);
+
+		InputController.instance.EnableInputs();
 	}
 }

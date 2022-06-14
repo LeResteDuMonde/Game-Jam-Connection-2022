@@ -110,7 +110,7 @@ public class DialogBox : MonoBehaviour
 
 		GameObject character = CharacterManager.instance.GetCurrentCharacter();
 		Debug.Log("character choice "+character.GetComponent<Character>().GetData().name );
-		if (CharacterManager.instance.getCharacter("Elisabeth").GetMachine().CheckState("batonJete")
+		if (CharacterManager.instance.GetCurrentCharacter().GetComponent<Character>().GetMachine().CheckState("batonJete")
 			)
 		{
 			Debug.Log("elisabeth got the stick throwned at her");

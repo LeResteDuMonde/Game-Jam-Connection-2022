@@ -34,7 +34,6 @@ public class FinishButton : Button, IClicked, IHovered
 
 	public void onHover()
 	{
-		Debug.Log("hover");
 		if (text != null) { text.color = base.colors.highlightedColor; }
 		if (sprite != null) { sprite.sprite = hoverSprite; }
 

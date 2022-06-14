@@ -52,7 +52,7 @@ public class BulletinBoardManager : MonoBehaviour
 	[SerializeField] private Sprite loveSprite, hateSprite, shitSprite;
 	[SerializeField] private SpriteRenderer currentConnetionSprite;
 	[SerializeField] private Color loveColor, hateColor, shitColor;
-	[HideInInspector] public Color currentColor;
+	private Color currentColor;
 
 	#region instance
 
@@ -112,7 +112,6 @@ public class BulletinBoardManager : MonoBehaviour
 		if (hoveredItem != null && hoveredItem != currentBulletin)
 		{
 			currentBulletin.TryGetComponent(out Bulletin bulletin);
-			bulletin?.DebugBulletin();
 			Connection newConnection = new Connection(hoveredItem, currentConnectionType, rope);
 			bulletin?.AddConnection(newConnection);
 		}else{
@@ -156,6 +155,10 @@ public class BulletinBoardManager : MonoBehaviour
 			default:
 				break;
 		}
-		Debug.Log(currentConnectionType);
+	}
+
+	public Color GetColor()
+	{
+		return currentColor;
 	}
 }

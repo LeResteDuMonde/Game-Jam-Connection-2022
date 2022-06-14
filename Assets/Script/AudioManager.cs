@@ -53,9 +53,9 @@ public class AudioManager : MonoBehaviour
 	public AudioSource PlayClip(AudioClip clip, string mixer = "Sound", Vector3 pos = default(Vector3))
 	{
 		GameObject tempGO = new GameObject("TempAudio");
-		tempGO.tag = "Sound";
+		//tempGO.tag = "Sound";
 		tempGO.transform.position = pos;
-		
+		tempGO.transform.SetParent(gameObject.transform);
 		AudioSource audioSource = tempGO.AddComponent<AudioSource>();
 		audioSource.clip = clip;
 		audioSource.outputAudioMixerGroup = soundEffectMixer;

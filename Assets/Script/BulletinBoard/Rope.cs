@@ -10,6 +10,13 @@ public class Rope : MonoBehaviour
 	private List<RopePart> rp;
 	private int nodeMini = 3;
 	private int nbnode =0;
+	public Sprite arrow;
+
+	[Header("rigidity Settings")]
+	[SerializeField] private float maxDist = 0.1f;
+	[SerializeField] private float maxDistSecondRopeMultiplier = 0.8f;
+	[SerializeField] private float mag = 1f;
+	[SerializeField] private float magSecondRopeMultiplier = 0.5f;
 	public Rope (){
 		nodes  = new List<Vector3>();
 		nodesOld  = new List<Vector3>();
@@ -37,7 +44,6 @@ public class Rope : MonoBehaviour
 		return false;
 	}
 
-	float maxDist = 0.1f;
 	float vkill = 0f;
 	Vector3 origine = Vector3.zero;
    public void setOrigine(Vector3 origine){
@@ -53,7 +59,7 @@ public class Rope : MonoBehaviour
 		
 	}
    }
-   public Sprite arrow;
+   
    public void forceLength(Vector3 m){
 		m.z = 0;
 		origine.z = 0;
@@ -66,23 +72,20 @@ public class Rope : MonoBehaviour
 	for (int i=0;i<100;i++){
 		setRope(m);
 	}
-	//put the arrow
-	SpriteRenderer sr = rp[(int)nbnode/2].gameObject.GetComponent<SpriteRenderer>();
-	sr.sprite = arrow;
-	sr.drawMode = SpriteDrawMode.Simple;
-	Vector3 s = sr.gameObject.transform.localScale;
-	sr.gameObject.transform.localScale = new Vector3(s.x,s.x,s.z);
+		//put the arrow
+		AddArrow();
    }
-   private float mag = 1f;
+   
    public void setSecondRope(){
-	   mag = 0.5f; 
-	   maxDist *= 0.8f;
+	   mag *= magSecondRopeMultiplier; 
+	   maxDist *= maxDistSecondRopeMultiplier;
    }
 	public void setRope(Vector3 m)
 	{
+		UpdateColor();
 		m.z = 0;
 		origine.z = 0;
-	    Debug.Log(m - origine);
+	    //Debug.Log(m - origine);
 	if ((m-origine).magnitude - 2.3f*nbnode*maxDist > nodeMini*maxDist){
 		addNode();
 		vkill =0f;
@@ -125,6 +128,31 @@ public class Rope : MonoBehaviour
 
 		Destroy(rp[i].gameObject);
 		}
+	}
+
+	private void UpdateColor()
+	{
+		foreach (RopePart ropePart in rp)
+		{
+			ropePart.SetColor();
+		}
+	}
+
+	private void AddArrow()
+	{
+		/*
+		SpriteRenderer sr = rp[(int)nbnode / 2].gameObject.GetComponent<SpriteRenderer>();
+		sr.sprite = arrow;
+		sr.drawMode = SpriteDrawMode.Simple;
+		Vector3 s = sr.gameObject.transform.localScale;
+		sr.gameObject.transform.localScale = new Vector3(s.x, s.x, s.z);*/
+
+		SpriteRenderer sr = rp[(int)nbnode / 2].gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+		sr.enabled = true;
+		sr.drawMode = SpriteDrawMode.Simple;
+		sr.color = BulletinBoardManager.instance.GetColor();
+		Vector3 s = sr.gameObject.transform.localScale;
+		sr.gameObject.transform.localScale = new Vector3(s.x, s.x, s.z);
 	}
 
 }

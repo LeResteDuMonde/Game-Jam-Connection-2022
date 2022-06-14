@@ -28,6 +28,16 @@ public class InputController : MonoBehaviour
 
 	public void OnEnable()
 	{
+		EnableInputs();
+	}
+
+	public void OnDisable()
+	{
+		DisableInputs();
+	}
+
+	public void EnableInputs()
+	{
 		quit.Enable();
 		quit.performed += Quit;
 
@@ -46,8 +56,7 @@ public class InputController : MonoBehaviour
 		swapConnectionType.Enable();
 		swapConnectionType.performed += SwapConncetion;
 	}
-
-	public void OnDisable()
+	public void DisableInputs()
 	{
 		confirm.performed -= Confirm;
 		confirm.Disable();

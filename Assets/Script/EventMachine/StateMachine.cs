@@ -4,8 +4,10 @@ using UnityEngine;
 [Serializable]
 public class State {
     public string name;
+#nullable enable
     public string? location;
     public string? position;
+#nullable disable
 }
 
 [Serializable]
