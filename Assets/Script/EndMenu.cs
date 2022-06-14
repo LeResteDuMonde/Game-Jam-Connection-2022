@@ -5,7 +5,7 @@ public class EndMenu : MonoBehaviour
 {
     private Camera mainCamera;
     public void OnClickedQuit() {
-        SceneManager.LoadScene("StartingScene");
+        SceneManager.LoadScene("Credits");
     }
 
     public void OnClickedContinue() {

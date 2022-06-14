@@ -128,6 +128,7 @@ public class DialogBox : MonoBehaviour
 	public void CloseDialog() {
 		if (IsOpen())
 		{
+			CharacterManager.instance.ReloadCharacters();
 			HideChoices();
 			textPanel.SetActive(false);
 			currentChara.GetAnimator().SetBool("Talking", false);

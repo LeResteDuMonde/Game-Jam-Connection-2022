@@ -579,7 +579,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2679244821402592219, guid: 55d645e77d8acfba1a61aee3c8959d7b, type: 3}
       propertyPath: m_Name
-      value: ActorManager
+      value: CharacterManager
       objectReference: {fileID: 0}
     - target: {fileID: 2679244821402592220, guid: 55d645e77d8acfba1a61aee3c8959d7b, type: 3}
       propertyPath: characters.Array.data[0]
@@ -2553,7 +2553,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

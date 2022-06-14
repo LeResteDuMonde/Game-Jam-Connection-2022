@@ -66,4 +66,10 @@ public class CharacterManager : MonoBehaviour
 	{
 		return currentCharacter;
 	}
+
+	public void ReloadCharacters()
+	{
+		UnloadCharacters();
+		LoadLocationCharacters(LocationManager.instance.GetCurrentLcation().locationName);
+	}
 }
