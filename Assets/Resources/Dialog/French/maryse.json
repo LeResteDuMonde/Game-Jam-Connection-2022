@@ -1,6 +1,60 @@
 {
     "lines": [
+	    {"inStates":["dialogInit"],"line" : "Tiens, bonjour ma petite. Bienvenue chez moi." },
+	    {"inStates":["dialogInit"],"line" : "Je m’appelle Maryse. " },
+	    {"inStates":["dialogInit"],"line" : "Oh oh oh ^-^" },
+	    {"inStates":["dialogInit"],"line" : "Mets-toi à l’aise, ce n’est pas bien grand, dans ma maison, mais c’est convivial." },
+	    {"inStates":["dialogInit"],"line" : "Et depuis que j’ai aménagé ma cave, nous avons quand même plus de place.", 
+		    "transition" : "readMaryse"},
+		    {"line":"Tu veux un petit sablé ?"}
     ],
     "choices": [
+	{"inStates":[],
+		"answer": "Vous vivez dans votre cave ? ",
+		"lines": [
+			{ "line" : "Oh oh oh ^-^"},
+			{ "line" : "Non, pas du tout !"},
+			{ "line" : "Pas du tout."},
+			{ "line" : "J’ai beau être vieille, je n’ai pas encore perdu toute ma tête."},
+			{ "line" : "Il se trouve que je garde un petit chien, dans la cave."},
+			{ "line" : "Il est tout mignon, même s’il n’est pas tout à fait obéissant !"},
+			{ "line" : "Maintenant, il a un espace rien qu’à lui, où il peut jouer à sa guise."}
+		]
+
+	},
+	{"inStates":[],
+		"answer": "Vous avez dit « nous » ? Vous ne vivez pas seule ? ",
+		"lines": [
+			{ "line" : "Oh oh oh ^-^"},
+			{ "line" : "Non, pas du tout !"},
+			{ "line" : "Pas du tout."},
+			{ "line" : "Mia demeure avec moi depuis quelques mois, je l’ai accueillie pour lui rendre service."},
+			{ "line" : "Mais elle est si gentille ! Elle m’aide dans tout ce que je fais."},
+			{ "line" : "Elle m’apporte souvent de beaux DVDs de son vidéo-club."},
+			{ "line" : "Je me demande pourquoi elle y va si souvent, d’ailleurs ^-^"},
+			{ "line" : "C’est vraiment une chouette crème, cette biscotte."}
+		]
+	},		
+	{"inStates":[],
+		"answer": "Que faisiez-vous durant votre prime jeunesse ?",
+		"lines": [
+			{ "line" : "Oh oh oh ^-^"},
+			{ "line" : "Non, pas du tout !"},
+			{ "line" : "Pas du tout."},
+			{ "line" : "Tu sais, j’ai connu la guerre moi. Les ennemis étaient arrivés aux portes de Vie-Lhaj."},
+			{ "line" : "Nous nous étions tous réunis à la mairie, qu’on avait baricadée, fortifiée même."},
+			{ "line" : "Un vrai château."},
+			{ "line" : "Pour vous dire, même le baron Gunter Von Geberg nous avait rejoints. "},
+			{ "line" : "Avec le vieux sage, on s’était armés jusqu’aux dents ; lui, trois AK47 bien vénères ; moi, je maniais le fouet."},
+			{ "line" : "Oui, oui, le fouet, je suis plutôt adroite dans son maniement."},
+			{ "line" : "Si vous êtes intéressée, je vous montrerai, un jour."},
+			{ "line" : "Bref, tout espoir était perdu, et nous prîmes la décision de faire une percée."},
+			{ "line" : "« BANZAIIIII », avais-je crié. Ma foi, j’avais la voix qui portait, à l’époque."},
+			{ "line" : "Et vlan, et bam, et vlam, on leur a mis une jolie raclée, à ces trépanés !"},
+			{ "line" : "C’était la bérézina, pour eux. Et j’vous dis pas des menteries."},
+			{ "line" : "Ah la la, c’était la bonne époque..."}
+		]
+	}
+		
     ]
 }
