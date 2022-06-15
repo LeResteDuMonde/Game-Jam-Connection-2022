@@ -1,51 +1,51 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "Hm hm hm" },
-	    {"inStates":["dialogInit"],"line" : "Salutations, jeune branche !" },
-	    {"inStates":["dialogInit"],"line" : "Je suis le vieux sage du village, mais tout le monde me connaît sous le nom de…" },
-	    {"inStates":["dialogInit"],"line" : "Vieux sage." },
+	    {"inStates":["dialogInit"],"line" : "I hate him, I hate him." },
+	    {"inStates":["dialogInit"],"line" : "Greeting, young fella !" },
+	    {"inStates":["dialogInit"],"line" : "I’m the old sage of this village, but everybody knows me as…" },
+	    {"inStates":["dialogInit"],"line" : "The old sage." },
 	    {"inStates":["dialogInit"],"line" : "Hmm hm !" },
-	    {"inStates":["dialogInit"],"line" : "Tu m’as l’air d’avoir une vive intelligence !" },
-	    {"inStates":["dialogInit"],"line" : "Je te prédis un bel avenir au Vie-Lhaj !", 
+	    {"inStates":["dialogInit"],"line" : "You seem to be so witty !" },
+	    {"inStates":["dialogInit"],"line" : "I sense you’ll have a great future in Vie-Lhaj !", 
 		    "transition" : "readVieu"},
-		    {"line":"Que souhaites-tu savoir, jeune coccinelle ?"}
+		    {"line":"What would you want to know, my ladybug ?"}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Monsieur, est-il vrai que vous êtes le doyen du village ?",
+		"answer": "Sir, is it true that you’re the oldest soul in this village ? ",
 		"lines": [
-			{"line":"Hmmm, c’est… exact !"},
-			{"line":"Oui, en effet, c’est moi la plus vieille âme de Vie-Lhaj."},
-			{"line":"J’ai tout vu, tout entendu de ce qu’il s’y est passé ces cents dernières années."},
-			{"line":"Vous n’y croyez pas vos oreilles ? Votre incrédulité est sans borne, petit papillon, vous ne croyez que ce que vous sentez."},
-			{"line":"Je vais te dire quelque chose, pour la peine."},
-			{"line":"Un secret que moi seul connais. En exclusivité."},
-			{"line":"Tu connais Mia ? Et Serge ?"},
-			{"line":"Eh bien ces deux-là s’aiment comme des petits lapins."},
-			{"line":"Je les vois toujours se regarder du coin de la fesse, l’une au vidéo-club, l’autre au bistrot."},
-			{ "line" : "Rond de bois, rond de fer, wallah c’est vrai.","transition" : "vieuxCoulpe" }
+			{"line":"Hmmm, that’s… correct !"},
+			{"line":"Yes indeed, I’m the oldest man in Vie-Lhaj."},
+			{"line":"I saw everything, I heard everything, ever since I was born, a hundred years ago."},
+			{"line":"You believe it ? Your incredulity is stupendous, young butterfly, you do not believe what you don’t smell."},
+			{"line":"I’m gonna tell you something, my girl."},
+			{"line":"A secret, that only I know. "},
+			{"line":"Do you know Mia ? And Serge ?"},
+			{"line":"Well, these two young souls love each other, like little rabbits."},
+			{"line":"I always see them looking at each other’s ass. She in the video club, he in the bar."},
+			{ "line" : "I swear it is truth.","transition" : "vieuxCoulpe" }
 		]
 
 	},
 	{"inStates":[],
-		"answer": "Monsieur, pourquoi vous appelle-t-on le vieux sage ? ",
+		"answer": "Sir, why do they call you the old sage ?",
 		"lines": [
-			{ "line" : "Et alors, à ton avis ? C’est évident non ?"},
-			{ "line" : "Je ne suis pas jeune, je ne suis pas sot, je suis le vieux sage."},
+			{ "line" : "You really don’t know ? Isn’t it obvious ?"},
+			{ "line" : "I’m not young, nor a fool, therefore I’m the old sage."},
 			{ "line" : "Hmmm…"},
-			{ "line" : "Tous ces jeunes sont bêtes maintenant. Personne qui ne vaille vraiment, dans ce village. "},
-			{ "line" : "Ce n’est pas que je ne les aime pas, mais ils me sont complètement indifférents."},
-			{ "line" : "J’espère que tu relèveras le niveau ! "},
+			{ "line" : "All these younglings… They’re getting on my nerves. No one is worthy of my attention in this village."},
+			{ "line" : "It’s not that I don’t like them ; I just don’t care."},
+			{ "line" : "I hope you’ll be different !"},
 			{ "line" : "Hm hm."}
 		]
 	},		
 	{"inStates":[],
-		"answer": "Monsieur, un chien a déposé sa crotte au bas de votre arbre… ",
+		"answer": "Sir, I think some dog took a… break… under your tree…",
 		"lines": [
-			{ "line" : "Ce n’est pas un chien qui a fait ça, regarde bien."},
-			{ "line" : "Cette moulure gracieuse et ordonnée, respectant harmonieusement les proportions que j’ai déclaré être les meilleures."},
-			{ "line" : "C’est l’œuvre d’un homme aux cheveux blonds ! "},
-			{ "line" : "Je le hais du plus profond de son cœur.Je le hais du plus profond de son cœur."}
+			{ "line" : "HMMM HM HM"},
+			{ "line" : "That is not a dog that did that. Do watch more carefully."},
+			{ "line" : "This divine shape, gracious in its order, that follows in harmony the proportions I declared the best."},
+			{ "line" : "That is the art of a fair man !"}
 		]
 	}
 		

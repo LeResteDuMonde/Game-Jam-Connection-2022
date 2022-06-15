@@ -1,24 +1,24 @@
 {
     "lines": [
 	    {"inStates":["dialogInit"],"line" : "Guten Tag klein. " },
-	    {"inStates":["dialogInit"],"line" : "Je suis le respecté Baron Gunter Von Gerberg, tu as forcément dû entendre parler de ma divine personne. \nBeaucoup jalousent ma richesse, comme un certain Bürgermeister vous savez. Mais je ne vous ai jamais vue par ici, est-vous une fan de royauté, sachez que je ne fais pas de visite de mon manoir. ", 
+	    {"inStates":["dialogInit"],"line" : "I’m the revered Duke Gunter Von Gerberg, you must have heard of my divine self in the past.\nMany envy my wealth, like this Bürgermeister, you know. I never saw you down here, are you keen on monarchy ? Please note that you cannot visit my manor.", 
 		    "transition" : "readBaron"},
-		{"line":"a richesse vous éblouie-t-elle tant que ça… Haj les pauvres."}
+		{"line":"Is it my wealth that dazzles you ? hoi polloi…"}
     ],
     "choices": [
 	{"inStates":[],
 		"answer": "Bürgermeister ?",
-		"lines": [ { "line" : "Oui, le bürgermeister, cet homme ne pense qu’a ses NFP en oubliant ses concitoyens, il n’est pas digne de diriger notre stadt. J’ai bien plus d’éducation et de charisme. Il serait incapable d’identifier une truffe d’un pauvre champignon. Bon de toute façon, je vaux plus que ça das ist mir Wurst (C’est de la saucisse pour moi). L’époque de la monarchie me manque, c’était la bonne époque."}] 
+		"lines": [ { "line" : "Yes, the bürgermeister, this man that doesn’t care of anything except his NFP, letting down his fellow citizens, he does not deserve to be the head of our stadt. I’m so much more educated and charismatic. He wouldn’t be able to distinguish a truffle from a mushroom ! Anyway, I deserve more than this, das ist mir Wurst (that’s sausage for me). I miss the era of monarchy, the good old days…"}] 
 	},
 	{"inStates":[],
 		"answer": "Vous habitez ici depuis longtemps ? ",
 		"lines": [
-			{ "line" : "Bien évidemment, je suis né sur ces terres, je viens d’une illustre famille de la noblesse Jawohl qui se transmet le titre de Baron de père en fils. Ma famille est très connue dans la région vous savez. Vous verrez bien par vous-même, beaucoup souhaitent lécher mon illustre portrait." }
+			{ "line" : "Well of course, I was born in this land, I am the descendant of an illustrious noble family, Jawohl, the fathers giving the duke title to the sons. You know, my family is renowned in this country. You will see it by yourself : many want to lick my glorious portrait." }
 		]
 	},		
 	{"inStates":[],
 		"answer": "Je viens d’aménager.",
-		"lines": [ { "line" : "Ich glaub mien Schwein pfeift (Je crois que mon cochon siffle). Oui bien sûr, vous êtes venu me voler plutôt. Je connais les personnes dans votre genre gnädige Frau. Sachez que JE NE VOUS FAIS PAS CONFIANCE."}]}
+		"lines": [ { "line" : "Ich glaub mein Schwein pfeift (I think a swine whistles).Yes of course. I’m sure you came here to steal from me. I know people like you, Frau. Please note that I DO NOT TRUST YOU."}]}
     
     ]
 }

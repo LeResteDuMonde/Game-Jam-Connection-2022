@@ -1,25 +1,24 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "Bonjour Madame, vous venez d’arriver ? Je vous souhaite la bienvenue. Je suis Dominique Von Gerberg le professeur de français de vilaj." ,
+	    {"inStates":["dialogInit"],"line" : "Good morning madam, did you just move in ? Allow me to wish you willkomen. I’m Dominique Von Gerberg, french teacher in Vie-Lhaj." ,
 		    "transition" : "readDominique"},
-	    {"line" : "Une question de français ?:"},
-		    {"line" : ""}
+	    {"line" : "Any grammar question ?"}
 		
 
 
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Vous l’avez eu où ce collier ? Il est très beau.",
-		"lines": [ { "line" : "Ha… heu…ça, une broutille…bref." }] 
+		"answer": "Von Gerberg ? Do you have blood ties with the Duke ? ",
+		"lines": [ { "line" : "whispers) … I shouldn’t have told my name… " }] 
 	},
 	{"inStates":[],
-		"answer": "Vous êtes le seul prof de ce village ?",
-		"lines": [ { "line" : "Écoutez en terme d’éducation nous avons du mal à joindre les deux bout. Et puis pour ce qu’il y a à éduquer… (chuchote) ça vole pas bien haut.\nMais en tout cas si vous avez la moindre question de grammaire je suis votre homme, j’adore la syntaxes et les juxtapositions, c’est un peu mon dada.", "transition": "createKey"}] },		
+		"answer": "You’re the only teacher of this village ? 1",
+		"lines": [ { "line" : "Kind of, but anyway, it doesn’t matter, do not associate me with this person, (whispers) this swine.", "transition": "createKey"}] },		
 	{"inStates":[],
-		"answer": "VonGerberg ? Vous avez des lien de parentés avec le Baron ?",
-		"lines": [ {"line" : "(chuchote) … J’aurais pas du dire mon nom… "},
-			{ "line" : "En quelques sortes mais bref, ce n’ai pas ce qui importe, ne m’associez pas à cette personne (chuchote) cette ordure. ", "transition": "createKey"}]}
+		"answer": "Where did you get this necklace ? It’s very beautiful.",
+		"lines": [ {"line" : "Listen, in terms of education, we struggle to make ends meet. But if you saw the students… (whispers) nothing really worth it. Anyway, if you have any grammar question, don’t hesitate, I love syntaxis and juxtapositions, it’s my passion."},
+			{ "line" : "h… well…this is nothing… Anyway…", "transition": "createKey"}]}
     ]
 }
 

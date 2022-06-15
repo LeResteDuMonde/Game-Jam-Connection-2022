@@ -7,15 +7,15 @@
     ],
 "choices": [
 	{"inStates":[],
-		"answer": "Euh... Bonjour... ",
+		"answer": "Well… Hello… ",
 		"lines": [ { "line" : "..."}] 
 	},
 	{"inStates":[],
-		"answer": "Comment se passe la coloc avec Serge et Zéphyr ?",
+		"answer": "How is it going with Serge and Zephyr ? You live together, right ?",
 		"lines": [ { "line" : "..."}]
 	},		
 	{"inStates":[],
-		"answer": "Quels beaux tatouages ! ",
+		"answer": "Such nice tattoos ! ",
 		"lines": [ { "line" : "..."}]},
 		
 	{"inStates":["wood"],		

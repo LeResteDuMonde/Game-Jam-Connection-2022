@@ -1,74 +1,74 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "Salut !" },
-	    {"inStates":["dialogInit"],"line" : "Salut !!" },
-	    {"inStates":["dialogInit"],"line" : "Salut !!!" },
-	    {"inStates":["dialogInit"],"line" : "Ça va ?" },
-	    {"inStates":["dialogInit"],"line" : "Moi ça va !" },
-	    {"inStates":["dialogInit"],"line" : "Super !!", 
+	    {"inStates":["dialogInit"],"line" : "Hey !" },
+	    {"inStates":["dialogInit"],"line" : "Hey !" },
+	    {"inStates":["dialogInit"],"line" : "Hey !" },
+	    {"inStates":["dialogInit"],"line" : "You good ?" },
+	    {"inStates":["dialogInit"],"line" : "I’m great !" },
+	    {"inStates":["dialogInit"],"line" : "Amazing !!", 
 		    "transition" : "readToaster"},
-		    {"line":"Ça gaz ?"}
+		    {"line":"How d’you do ?"}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Quelle belle journée ! ",
+		"answer": "Such a beautiful day ! ",
 		"lines": [
-			{ "line" : "Ah ça oui ! J’adore quand il fait beau."},
-			{ "line" : "Ça me rappelle la fois où j’avais voulu faire un pique-nique un jour de canicule."},
-			{ "line" : "Il faisait si chaud que Nounours en avait perdu tous ses poils !"},
-			{ "line" : "Et t’aurais vu la tête de Colombin !! Il était tout mou."}
+			{ "line" : "Yes ! I’m loving it when it’s sunny."},
+			{ "line" : "It reminds me that day when I wanted to eat outside, with intense heat."},
+			{ "line" : "It was so hot that Teddy had lost all his fur !"},
+			{ "line" : "If you saw Poppy !! He was melting."}
 		]
 
 	},
 	{"inStates":[],
-		"answer": "Tu débordes d’énergie ! ",
+		"answer": "You have so much energy !",
 		"lines": [
-			{ "line" : "Je pète le feu !"},
-			{ "line" : "C’est que je reste branché toute la journée, donc forcément."},
-			{ "line" : "Tant que je pète pas un cable !"},
-			{ "line" : "Eh oui, tu rigoles, mais ça m’est déjà arrivé !"},
-			{ "line" : "Ça remonte à l’époque où je vivais au skate-park. "},
-			{ "line" : "Je n’avais pas grand chose pour me chauffer, pour me nourrir ; c’était un dur moment."},
-			{ "line" : "Oui, j’ai plus ou moins tout vu, tu sais."},
-			{ "line" : "Eh bien, un jour, que j’étais au skate-park, donc, un inconnu m’apporta de quoi me réchauffer."},
-			{ "line" : "C’était une batterie portative universelle, 200V sur branchage direct, rien que ça."},
-			{ "line" : "Bref, tu imagines bien ce qui s’est passé : moi, frigorifié, à plat, je vois cette grosse prise bien chargée, alors…"},
-			{ "line" : "Direct je me suis branché, et bam !!"},
-			{ "line" : "Claquement de plombs, batterie surchargée, court-circuit."},
-			{ "line" : "Heureusement que j’avais un disjoncteur, sinon, je ne serais pas là pour en parler."}
+			{ "line" : "I can’t stay still !"},
+			{ "line" : "Well, I’m plugged in all day long, so…"},
+			{ "line" : "Let’s hope I don’t lose it !"},
+			{ "line" : "I see you’re laughing, but it already happened to me, once !"},
+			{ "line" : "During that time when I lived in the skate-park."},
+			{ "line" : "I didn’t have what to warm me up, nor did I have food ; painful memories."},
+			{ "line" : "I pretty much experienced everything, you know."},
+			{ "line" : "Well, one day that I was in the skate-park, someone I never saw brang me something to warm me up."},
+			{ "line" : "It was a universal battery, 200V : what a thing !"},
+			{ "line" : "I think you know what happened : I was cold, I was down, then I see this huge plug…"},
+			{ "line" : "Immediately I plugged me in !! Wooof !"},
+			{ "line" : "Short circuit."},
+			{ "line" : "Luckily I had a circuit breaker, otherwise I wouldn’t be here talking to you."}
 		]
 	},		
 	{"inStates":[],
-		"answer": "Où habites-tu ?",
+		"answer": "Where do you live ?  ",
 		"lines": [
-			{ "line" : "Je vis en coloc avec Zéphyr et Élisabeth !"},
-			{ "line" : "J’en ai vu de belles, là-bas…"},
-			{ "line" : "Je devrais pas en parler… mais bon, tu ne vas pas le répéter n’est-ce pas ?"},
-			{ "line" : "Un soir, on avait organisé une soirée, il y avait presque tout le village, c’était n’im-por-te-quoi."},
-			{ "line" : "C’est là que j’ai rencontré Mia pour la première fois."},
-			{ "line" : "Elle n’était pas très populaire à l’époque (c’est le moins qu’on puisse dire)."},
-			{ "line" : "Mais j’étais sur le cul quand j’ai vu Dominique l’approcher !!"},
-			{ "line" : "Un Von Geberg, séduire comme ça, devant tout le monde ! La honte pour le papa, j’te dis pas."},
-			{ "line" : "Ils sont allés dans la chambre de Zéphyr (je peux le dire, j’étais juste à côté)..."},
-			{ "line" : "Et toute la nuit j’ai pas arrêté d’entendre des craquements."},
-			{ "line" : "Crac !"},
-			{ "line" : "Crac !"}
+			{ "line" : "I live with Zephyr and Elisabeth ! We’re flatmates."},
+			{ "line" : "I saw pretty big things there…"},
+			{ "line" : "I shouldn’t talk ‘bout it… But I’m sure you won’t repeat, right ? "},
+			{ "line" : "One day, we organized a party at home, we invited all the village : oh my god ’t’was a such a mess."},
+			{ "line" : "That night I saw Mia for the first time."},
+			{ "line" : "She wasn’t quite the popular girl, at the time."},
+			{ "line" : "But what was my surprise when I saw that Dominique was flirting with her !!"},
+			{ "line" : "To see a Von Gegerb, in the middle of the seduction act, in front of everyone ! What a shame for the daddy !"},
+			{ "line" : "During the party they went into Zephyr’s bedroom (I can tell, I saw them like I see you now)."},
+			{ "line" : "All night long there were cracs."},
+			{ "line" : "Crunch !"},
+			{ "line" : "Crunch !"}
 		]
 	},
 		
 		
 	{"inStates":["sentiment"],
-		"answer": "Quels sont tes sentiments au sujet de Mia ? ",
+		"answer": "What do you feel for Mia ? ",
 		"lines": [
+			{ "line" : "The morning, when I saw her, she wasn’t the same !!"},
+			{ "line" : "You won’t tell her, right ?"},
 			{ "line" : "Mia ? Mia ? Mia ?"},
-			{ "line" : "Je vois que certains ont la langue bien pendue au Vie-Lhaj…"},
-			{ "line" : "Eh bien oui, c’est vrai, tout est vrai."},
-			{ "line" : "Je l’aime, elle m’aime, nous nous aimons."},
-			{ "line" : "Mais c’est un secret, d’accord ? Ne le répète pas !"},
-			{ "line" : "Ça me rappelle la fois où…"},
-			{ "line" : "Comment ?"},
-			{ "line" : "Tu ne veux plus entendre mes histoires ?"},
-			{ "line" : "C’est pour la prochaine fois alors !"}
+			{ "line" : "I suppose somebody couldn’t keep a secret, right ?"},
+			{ "line" : "Well yes, it’s true, everything."},
+			{ "line" : "I love her, she loves me, we love each other."},
+			{ "line" : "But that’s a secret, please don’t tell anybody !"},
+			{ "line" : "It reminds me the day when…"},
+			{ "line" : "Next time, I suppose ?"}
 		]
 	}
     

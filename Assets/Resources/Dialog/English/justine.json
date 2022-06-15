@@ -5,57 +5,57 @@
 	    {"inStates":["dialogInit"],"line" : "we go low ow ow ow" },
 	    {"inStates":["dialogInit"],"line" : "wo wo " },
 	    {"inStates":["dialogInit"],"line" : "WOOOO?! " },
-	    {"inStates":["dialogInit"],"line" : "mais tfq là ?" },
-	    {"inStates":["dialogInit"],"line" : "on t’as jamais dit que ça se fait trop pas d’espionner les gens ??" },
-	    {"inStates":["dialogInit"],"line" : "pas moy d’être trql 3 secondes quoi " },
-	    {"inStates":["dialogInit"],"line" : "(Toi) Je voulais pas déranger.. " },
-	    {"inStates":["dialogInit"],"line" : "nia nia nia je voulais pas déranger ET BEIN MOI JE VOULAIS PAS ME FAIRE DÉRANGER TU VOIS ??" },
-	    {"inStates":["dialogInit"],"line" : "dsl je suis trop sur les nerfs là..." },
-	    {"inStates":["dialogInit"],"line" : "c’est le brevet j’angoisse de ouf " },
-	    {"inStates":["dialogInit"],"line" : "mon père me met grave la pression...  " },
-	    {"inStates":["dialogInit"],"line" : "mais bref ", 
+	    {"inStates":["dialogInit"],"line" : "wtf d’you do here ?" },
+	    {"inStates":["dialogInit"],"line" : "you never heard that it’s rude to spy on ppl ??" },
+	    {"inStates":["dialogInit"],"line" : "can’t even chill for 3 seconds…" },
+	    {"inStates":["dialogInit"],"line" : "(You) I didn’t mean to interrupt…" },
+	    {"inStates":["dialogInit"],"line" : "nia nia nia i didn’t mean to interrupt WELL I DIDN’T WANT TO BE INTERRUPTED YOU SEE ??" },
+	    {"inStates":["dialogInit"],"line" : "sry, i’m on my nerves…" },
+	    {"inStates":["dialogInit"],"line" : "middle school exams, you know, so stressful…" },
+	    {"inStates":["dialogInit"],"line" : "my dad pushes me…" },
+	    {"inStates":["dialogInit"],"line" : "anyway", 
 		    "transition" : "readJustine"},
-		    {"line":"qu’est ce que tu veux ?"}
+		    {"line":"what d’you want ?"}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "ça va bien se passer, je suis sûre que tu vas l’avoir ce brevet ! tu délires meuf vraiment ",
+		"answer": "You come here to relax, isn’t it ? ",
 		"lines":[ 
-			{ "line" : "déjà j’ai un prof" },
-			{ "line" : "UN SEUL" },
-			{ "line" : "et ce bolosse il me fait cours une fois par mois" },
-			{ "line" : "la plupart du temps il est absent..." }
+			{ "line" : "no no, workin right now" },
+			{ "line" : "oh my gosh i just learned a wow thing" },
+			{ "line" : "Poppy, you see ?" },
+			{ "line" : "the handsome guy in Shitty Place ?" }
 		]
 	},		
 	{"inStates":[],
-		"answer": "Tu dirais que ta relation avec ton père est plutôt bonne, mauvaise ou caca ??",
+		"answer": "How would you describe your relationship with your father : good, bad or shitty ??",
 		"lines": [
-			{ "line" : "non mais m’en parle pas"},
-			{ "line" : "ça me donne envie de mourir"},
-			{ "line" : "déjà c’est le maire de ce village éclaté"},
-			{ "line" : "ce bolosse a fait fuir tous les habitants"},
-			{ "line" : "tu te rends compte"},
-			{ "line" : "y a des groupes de k-pop où ils sont plus nombreux que dans ce village"},
-			{ "line" : "et tellement plus beau hihi","transition":"seenDaughter" }
+			{ "line" : "hihihi"},
+			{ "line" : "here, this man on my phone’s wallpaper"},
+			{ "line" : "he lives here"},
+			{ "line" : "i know you can’t believe it"},
+			{ "line" : "nobody knows, but I recognized him in one of his stories"},
+			{ "line" : "so i stay here until he comes to finally meet here, acting natural"},
+			{ "line" : "i’ll be there","transition":"seenDaughter" }
 		]
 
 	},
 	{"inStates":[],
-		"answer": "Tu viens ici pour te relaxer, c’est ça ? ",
+		"answer": "It’s going to be all right, I’m sure you’ll pass this middle school exam !",
 		"lines": [
-			{ "line" : "nan nan je suis en plein travail là"},
-			{ "line" : "je viens d’apprendre un truc de ouf"},
-			{ "line" : "Colombin tu vois ?"},
-			{ "line" : "Le mec trop beau dans Shitty Place ?"},
-			{ "line" : "hihihi"},
-			{ "line" : "à le mec sur mon fond d’écran"},
-			{ "line" : "il vit ici"},
-			{ "line" : "nan mais improbable je sais"},
-			{ "line" : "personne ne sais mais moi j’ai reconnu la jetée dans une de ces story"},
-			{ "line" : "et donc je campe ici en attendant de le rencontrer comme ça, l’air de rien"},
-			{ "line" : "je serai là"},
-			{ "line" : "les cheveux dans le vent"},
-			{ "line" : "le teint shiny en pleine golden hour"}
+			{ "line" : "wind in my hair"},
+			{ "line" : "shiny skin with golden hour"},
+			{ "line" : "don’t talk to me about him"},
+			{ "line" : "gives me the heebie jeebies"},
+			{ "line" : "one, he’s the mayor this bore - i mean this village"},
+			{ "line" : "two, this loser made all the people move"},
+			{ "line" : "d’you realize that ?"},
+			{ "line" : "in some k pop groups, there more singers than people in this village"},
+			{ "line" : "and sooo much more handsome hihi"},
+			{ "line" : "you dunno what your talkin about sis"},
+			{ "line" : "i have only one teacher"},
+			{ "line" : "ONE"},
+			{ "line" : "otherwise he’s absent..."}
 		]
 	}
     

@@ -1,33 +1,33 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "Bonjour chère concitoyenne, je suis Nounours représentant des travailleurs de notre village. J’ai appris par mes informateurs que vous veniez d’aménager. Je suis enchanté de vous rencontrer.",
+	    {"inStates":["dialogInit"],"line" : "Dear fellow citizen, I salute you ! I’m Teddy, and I represent the workers of this village. I’ve heard from my associates that you would move in Vie-Lhaj. I’m so glad to meet you.",
 		    "transition" : "readNounours"},
-		    {"line":"Puis-je vous offrir une tasse de café ?"}
+		    {"line":"Would you like a cup of coffee ?"}
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Vous comptez vous présenter aux élections ? ",
+		"answer": "Do you intend to run in the local elections ? ",
 		"lines": [
-			{ "line" : "Bien sur que je me présente. Ce n’est pas cet incompétent de maire qui va faire avancer notre beau village ma p’tite dame. Voyez-vous je suis la République moi madame et je sais ce que veulent nos concitoyen.nes. Je les écoute et leur promets de tout changer, de redorer ces terres pour qu’elles deviennent une grande nation."}
+			{ "line" : "Of course I’m running. Do you really thing this useless mayor would help our beautiful village, m’lady ? You see, I am the Republic, madam, and I know what is it that citizens want. I hear them, and I promise I will change everything, I will make these lands great again, I will create a great nation !"}
 		]
 
 	},
 	{"inStates":[],
-		"answer": "Vous avez des informateurs dans le village ?",
+		"answer": "Who are your associates ?",
 		"lines": [
-			{ "line" : "Bien sûr, en réalité c’est moi qui tire en secret les ficelles dans ce village. Vous l’avez peut-être déjà rencontré mais si vous allez à la place du village vous pourrez parler à notre doyen. Monsieur Lemair me jalouse à ce propos, car oui, il se trouve que monsieur grand sage me conseille sur nos prochaines élections. Ces paroles sont d’une grande sagesse. "}
+			{ "line" : "Well, of course I pull the string. Maybe you already met him, but if you go to the main square, you can talk to the oldest soul around here. Mister Mayor is jealous of me, because this oldest soul, the old sage, supports me for the next elections : he provides wise advices."}
 		]
 	},		
 	{"inStates":[],
-		"answer": "Vous êtes très mignon en tout cas. ",
+		"answer": "I wanted to say that I find you very cute.",
 		"lines": [
-			{ "line" : "Colombin ? Bien sur, j’adore ce mec. Grâce à lui mes fleurs se portent comme un charme. C’est fou ce que ses selles sont nutritives, depuis on prend souvent des café clopes pour mes plantes."}
+			{ "line" : "Madam, you can’t say that ! I won’t permit it ! Do not reduce me to my cuteness, and stop looking at me this way !"}
 		]
 	},
 
 	{"inStates":["colombin"],
-		"answer": "52",
-		"lines": [ { "line" : "52"}]}
+		"answer": "Do you know Poppy ?",
+		"lines": [ { "line" : "Poppy ? Of course I know him. I love this gay. Thanks to me, my flowers have regained their youth. It’s incredible how his feces are full of nutriments ! Since he came, we often take coffee and cigarette together ; my plants are very grateful."}]}
 
 		
     
