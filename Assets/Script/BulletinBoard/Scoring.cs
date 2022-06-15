@@ -131,6 +131,6 @@ public class Scoring : MonoBehaviour
 
 	public int Score() {
 		FillProvidedGraph();
-		return ScoreGraph(providedGraph, expectedGraph) + 27;
+		return ScoreGraph(providedGraph, expectedGraph) + 25;
 	}
 }

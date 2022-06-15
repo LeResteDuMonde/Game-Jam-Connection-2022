@@ -19,7 +19,7 @@
 		"lines": [ { "line" : "..."}]},
 		
 	{"inStates":["wood"],		
-		"answer": "jeter le baton",
+		"answer": "Jeter le baton",
 		"lines": [ { "line" : "", "transition":"jeterBaton"}]},
 	
 	{"inStates":[],

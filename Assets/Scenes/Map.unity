@@ -1097,8 +1097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -602.96, y: -440.05}
-  m_SizeDelta: {x: 614.0901, y: 99.52539}
+  m_AnchoredPosition: {x: -559.98236, y: -440.05}
+  m_SizeDelta: {x: 700.0447, y: 99.52539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152360111
 MonoBehaviour:
@@ -1544,7 +1544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 398, y: -2.000061}
+  m_AnchoredPosition: {x: 398, y: -2}
   m_SizeDelta: {x: 600, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322250920
@@ -1710,7 +1710,7 @@ MonoBehaviour:
 
     Enter - Confirm
 
-    Escape - Continue Playing'
+    Right Click - Continue Playing'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da4559b22beae7947ae03299d8a836f4, type: 2}
   m_sharedMaterial: {fileID: 8618985693504580141, guid: da4559b22beae7947ae03299d8a836f4, type: 2}
@@ -2205,14 +2205,6 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 11be5608-2ed6-4268-9e6f-d9ace5cce106
       m_Path: <Keyboard>/escape
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Quit
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 6dc285d6-d878-4aba-b3f7-b111a57d3981
-      m_Path: <Keyboard>/shift
       m_Interactions: 
       m_Processors: 
       m_Groups: 

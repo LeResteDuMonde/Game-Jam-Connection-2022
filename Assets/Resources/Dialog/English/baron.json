@@ -11,13 +11,13 @@
 		"lines": [ { "line" : "Yes, the bürgermeister, this man that doesn’t care of anything except his NFP, letting down his fellow citizens, he does not deserve to be the head of our stadt. I’m so much more educated and charismatic. He wouldn’t be able to distinguish a truffle from a mushroom ! Anyway, I deserve more than this, das ist mir Wurst (that’s sausage for me). I miss the era of monarchy, the good old days…"}] 
 	},
 	{"inStates":[],
-		"answer": "Vous habitez ici depuis longtemps ? ",
+		"answer": "You've been living here for a while?",
 		"lines": [
 			{ "line" : "Well of course, I was born in this land, I am the descendant of an illustrious noble family, Jawohl, the fathers giving the duke title to the sons. You know, my family is renowned in this country. You will see it by yourself : many want to lick my glorious portrait." }
 		]
 	},		
 	{"inStates":[],
-		"answer": "Je viens d’aménager.",
+		"answer": "I just moved in here.",
 		"lines": [ { "line" : "Ich glaub mein Schwein pfeift (I think a swine whistles).Yes of course. I’m sure you came here to steal from me. I know people like you, Frau. Please note that I DO NOT TRUST YOU."}]}
     
     ]

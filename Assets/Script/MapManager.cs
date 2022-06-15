@@ -25,7 +25,7 @@ public class MapManager : MonoBehaviour
 	public void ToggleBulletinBoard()
 	{
 		bulletinParent.SetActive(!bulletinParent.activeSelf);
-		locationsParent.SetActive(!bulletinParent.activeSelf);
+		EnableLocationChange(!bulletinParent.activeSelf);
 		Camera mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		bulletinParent.transform.position = 
 			new Vector3 (mainCamera.transform.position.x, mainCamera.transform.position.y,transform.position.z);
@@ -67,5 +67,10 @@ public class MapManager : MonoBehaviour
 	public LocationData GetLocation()
 	{
 		return location;
+	}
+
+	public void EnableLocationChange(bool enable)
+	{
+		locationsParent.SetActive(enable);
 	}
 }

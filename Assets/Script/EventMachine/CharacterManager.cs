@@ -75,7 +75,7 @@ public class CharacterManager : MonoBehaviour
 
 	public void EnableInteraction(bool enable)
 	{
-		Debug.Log(enable? "enable" : "disable" + " interactions");
+		//Debug.Log(enable? "enable" : "disable" + " interactions");
 		foreach (var character in characters)
 		{
 			character.TryGetComponent(out PolygonCollider2D polygonCollider2D);

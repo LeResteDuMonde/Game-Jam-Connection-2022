@@ -15,7 +15,7 @@
     "choices": [
 	{"inStates":[],
 		"answer": "Could you tell me a little bit more about you ?",
-",		"lines": [ 
+		"lines": [ 
 			{ "line" : "For sure, dear lady !"},
 			{ "line" : "They don’t often ask me that, here. "},
 			{ "line" : "Well, everyone knows me, so... "},
@@ -29,7 +29,7 @@
 			{ "line" : "And I realy love NFT too. "},
 			{ "line" : "Madness."},
 			{ "line" : "Today, I have 567 of them, maybe 568. Would to like to see some of them ? No ? No problem, sis."},
-			{ "line" : "I have one on my face.."}
+			{ "line" : "I have one on my face..."}
 		] 
 	},
 	{"inStates":[],
@@ -59,7 +59,7 @@
 		]},
 		
 	{"inStates":["seenDaughter"],
-		"answer": "You told me you were the mayor… without telling me you were a father too !!",
+		"answer": "You told me you were the mayor... without telling me you were a father too !!",
 		"lines": [
 			{ "line" : "Not for Teddy, this yokel !"},
 			{ "line" : "Ah, you just met Justine !"},
@@ -76,10 +76,10 @@
 	},
 
 	{"inStates":["aveu"],		
-		"answer": "Vous avez donc engagé Colombin ?",
+		"answer": "So you hired Colombin ?",
 		"lines": [
-			{ "line":"Well, it gives money, to the city, of course ! Of course… (embarrassed)"},
-			{ "line":"Well… How to say it..."},
+			{ "line":"Well, it gives money, to the city, of course ! Of course... (embarrassed)"},
+			{ "line":"Well... How to say it..."},
 			{ "line":"AHAHAHAHAHAHAH"},
 			{ "line":"What a joke we did to this big Teddy !"},
 			{ "line":"He’s not welcome here, I hope he gets it now."},

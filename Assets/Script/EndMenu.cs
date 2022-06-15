@@ -14,5 +14,6 @@ public class EndMenu : MonoBehaviour
         SceneManager.UnloadSceneAsync("EndingScene");
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         mainCamera.transform.position = new Vector3(0, 0, mainCamera.transform.position.z);
+        MapManager.instance.EnableLocationChange(true);
     }
 }

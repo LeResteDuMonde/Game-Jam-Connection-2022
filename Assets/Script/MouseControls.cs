@@ -101,8 +101,12 @@ public class MouseControls : MonoBehaviour
 			GameObject go = hit2D.collider.gameObject;
 			if (IsActive() && go.TryGetComponent(out IHovered hover))
 			{
-				if (hoveredItem == null) hover.onHover();
-				hoveredItem = go;
+				if (hoveredItem != go)
+				{
+					hover.onHover();
+					UnHoverOldItem();
+					hoveredItem = go;
+				}
 			}
 			else
 			{
@@ -116,7 +120,7 @@ public class MouseControls : MonoBehaviour
 	}
 	private void UnHoverOldItem()
 	{
-		if (hoveredItem != null && hoveredItem.TryGetComponent<IHovered>(out IHovered oldHover)) {
+		if (hoveredItem != null && hoveredItem.TryGetComponent(out IHovered oldHover)) {
 			oldHover.onUnhover();
 		};
 		if (hoveredItem != null) //ChangeCursor(cursor);

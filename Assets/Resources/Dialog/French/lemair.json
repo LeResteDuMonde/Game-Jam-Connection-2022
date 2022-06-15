@@ -29,11 +29,11 @@
 			{ "line" : "Et les NFT, j’adore, le kiff."},
 			{ "line" : "Chanmé."},
 			{ "line" : "Actuellement, j’en ai entre 567 et 568. Vous désirez en voir ? Non ? Vraiment ? Bon, pas de souce, sis."},
-			{ "line" : "J’en ai un sur le visage…"}
+			{ "line" : "J’en ai un sur le visage..."}
 		] 
 	},
 	{"inStates":[],
-		"answer": "Je suis encore un peu perdue à Vie-Lhaj…",
+		"answer": "Je suis encore un peu perdue à Vie-Lhaj...",
 		"lines": [
 			{ "line":"Oh, mais ne vous inquiétez pas ! Tout le monde est très accueillant ici." },
 			{ "line":"Vous ferez très rapidement vos marques." },
@@ -59,7 +59,7 @@
 		]},
 		
 	{"inStates":["seenDaughter"],
-		"answer": "Vous m’avez dit être maire… sans me dire que vous étiez père !!! ",
+		"answer": "Vous m’avez dit être maire... sans me dire que vous étiez père !!! ",
 		"lines": [
 			{ "line" : "Ah, vous avez rencontré Justine !"},
 			{ "line" : "C’est cool."},
@@ -78,13 +78,13 @@
 	{"inStates":["aveu"],		
 		"answer": "Vous avez donc engagé Colombin ?",
 		"lines": [
-			{ "line":"Eh bien… Comment dire…"},
+			{ "line":"Eh bien... Comment dire..."},
 			{ "line":"AHAHAHAHAHAHAH"},
 			{ "line":"Sacré farce, qu’on lui a faite, à ce gros Nounours !"},
 			{ "line":"Il n’est pas le bienvenue, j’espère qu’il a compris ça."},
 			{ "line":"Comment ?"},
 			{ "line":"Il en a fait du compost !"},
-			{ "line":"Ça alors, encore raté…"},
+			{ "line":"Ça alors, encore raté..."},
 			{ "transition" : "nounours", "line":"C’est vraiment pas cool..."}
 		]
 	}

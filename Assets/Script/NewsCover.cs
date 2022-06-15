@@ -6,6 +6,7 @@ public class NewsCover : MonoBehaviour
 	private SpriteRenderer spriteRenderer;
 	[SerializeField] private Sprite[] covers;
 	[SerializeField] private int[] thresholds;
+	[SerializeField] private TextMeshPro scoreIntText;
 	[SerializeField] private TextMeshPro scoreText;
 	void Start()
 	{
@@ -30,6 +31,7 @@ public class NewsCover : MonoBehaviour
 
 	private void SetScore(int score)
 	{
-		scoreText.text = score.ToString();
+		if(score == 69) { scoreText.text = "PERFECT"; }
+		scoreIntText.text = score.ToString();
 	}
 }

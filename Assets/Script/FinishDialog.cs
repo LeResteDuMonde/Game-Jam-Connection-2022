@@ -3,23 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class FinishDialog : MonoBehaviour
 {
-    private GameObject finishButton;
-    private GameObject confirm;
+    [SerializeField] private GameObject finishButton;
+    [SerializeField] private GameObject confirm;
+    [SerializeField] private GameObject yes;
     private Camera mainCamera;
     [SerializeField] private Transform endSceneBackgroundPosition;
-    void Start() {
-        finishButton = transform.Find("FinishButton").gameObject;
-        confirm = transform.Find("Confirm").gameObject;
-    }
 
     void OnEnable() {
-        if(finishButton) finishButton.SetActive(true);
-        if(confirm) confirm.SetActive(false);
+        finishButton.SetActive(true);
+        confirm.SetActive(false);
     }
 
     public void OnClickedFinish() {
         finishButton.SetActive(false);
         confirm.SetActive(true);
+        yes.SetActive(false); yes.SetActive(true); // dont ask why.. don t work correctly otherwise
     }
 
     public void OnClickedNo() {
