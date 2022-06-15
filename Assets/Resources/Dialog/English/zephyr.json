@@ -11,39 +11,39 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Je crois que je vais y aller…",
+		"answer": "think I’ll leave... ",
 		"lines": [
-			{"line" : "Feel well ?"},
-			{"line" : "I forgot the meaning of this many years ago…"},
-			{"line" : "Since that day when, as a child, I experienced the most traumatizing thing a man can live in three lives."},
-			{"line" : "The sun was rising, the birds were singing, I was waking up."},
-			{"line" : "I stood up."},
-			{"line" : "And… I hurt my toe, crashing it onto this furniture, this wardrobe my grandmother gave me when she retired."},
-			{"line" : "My toe hurt, a huge suffering, the one that announce despair and death."},
-			{ "line" : "You know my story.", "transition": "aimeChien"}
+			{"line" : "You are right, why talk to me ?"},
+			{"line" : "To me, Zephyr the misunderstood ?"},
+			{"line" : "Pain that doesn’t talk shows itself even more,"},
+			{"line" : "But I hide mine, hurtful mistake."},
+			{"line" : "The only ones that understand me"},
+			{"line" : "Are dogs"},
+			{"line" : "The faithful spirits"},
+			{ "line" : "Of the most kind species mother Nature has ever conceived. ", "transition": "aimeChien"}
 		]
 
 	},
 	{"inStates":[],
-		"answer": "Vous allez bien ? ",
+		"answer": "Do you feel well ?",
 		"lines": [
-			{ "line" : "You are right, why talk to me ?"},
-			{ "line" : "To me, Zephyr the misunderstood ?"},
-			{ "line" : "Pain that doesn’t talk shows itself even more,"},
-			{ "line" : "But I hide mine, hurtful mistake."},
-			{ "line" : "The only ones that understand me"},
-			{ "line" : "Are dogs"},
-			{ "line" : "The faithful spirits"},
-			{ "line" : "Of the most kind species mother Nature has ever conceived. "}
+			{ "line" : "I lost every one, because I never had one."},
+			{ "line" : "Feel well ?"},
+			{ "line" : "I forgot the meaning of this many years ago…"},
+			{ "line" : "Since that day when, as a child, I experienced the most traumatizing thing a man can live in three lives."},
+			{ "line" : "The sun was rising, the birds were singing, I was waking up."},
+			{ "line" : "I stood up."},
+			{ "line" : "And… I hurt my toe, crashing it onto this furniture, this wardrobe my grandmother gave me when she retired."},
+			{ "line" : "My toe hurt, a huge suffering, the one that announce despair and death."}
 		]
 	},		
 	{"inStates":[],
-		"answer": "Vous avez perdu un proche ? ",
-		"lines": [ { "line" : "I lost every one, because I never had one."}]},
+		"answer": "Did you lost someone you knew ?",
+		"lines": [ { "line" : "You know my story."}]},
 		
 		
 	{"inStates":["haveKey", "aimeChien"],
-		"answer": "Donner la clef",
+		"answer": "Give the key",
 		"lines": [
 			{ "line":"What is this key ? To which door will I apply it ?"},
 			{ "line":"..."},
@@ -52,7 +52,7 @@
 	},
     
 	{"inStates":["choque"],
-		"answer": "Zéphyr, ne vous jetez pas à la mer !",
+		"answer": "Zephyr, don’t jump in the sea !",
 		"lines": [
 			{"line" : "I do thank you, and I’ll check on that, if Fate allows it."},
 			{"line" : "Do not be mistaken about my intentions."},
