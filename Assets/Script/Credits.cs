@@ -21,7 +21,7 @@ public class Credits : MonoBehaviour
 
 	private void Start()
 	{
-		StartCoroutine(CreditsRoll());
+		//StartCoroutine(CreditsRoll());
 	}
 
 	private IEnumerator CreditsRoll()

@@ -15,11 +15,12 @@ public class CollectibleIcon : MonoBehaviour
 		GameObject alternateSprite = GameObject.Find("AlternativeSprite");
 		Image image = alternateSprite.GetComponent<Image>();
 
-		if (data.alternativeSprite != null)
+		Sprite inventorySprite = LocalizationManager.instance.GetLanguage() == "French" ? data.frenchSprite : data.englishSprite;
+		if (inventorySprite != null)
 		{
 			
 			image.enabled = true;
-			image.sprite = data.alternativeSprite;
+			image.sprite = inventorySprite;
 			alternateSprite.SetActive(true);
 		}
 		else

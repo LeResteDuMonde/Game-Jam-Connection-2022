@@ -328,4 +328,12 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Confirm
       m_Flags: 0
+    - m_Name: 
+      m_Id: a858d1ff-58ed-4b96-b321-9073ce88e720
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Confirm
+      m_Flags: 0
     m_Flags: 0

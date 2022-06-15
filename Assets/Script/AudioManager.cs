@@ -94,4 +94,9 @@ public class AudioManager : MonoBehaviour
 	{
 		mainMixer.SetFloat("MusicVolume", volume);
 	}
+
+	public void ResetMusic()
+	{
+		ChangeMusic(mapMusic);
+	}
 }

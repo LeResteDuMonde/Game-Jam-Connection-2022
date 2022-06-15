@@ -29,5 +29,8 @@ public class LocalizationManager : MonoBehaviour
 		}
 	}
 
-	
+	public string GetLanguage()
+	{
+		return PlayerPrefs.GetString("language", "French");
+	}
 }

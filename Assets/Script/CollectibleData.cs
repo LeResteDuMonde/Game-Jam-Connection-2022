@@ -5,7 +5,8 @@ public class CollectibleData : ScriptableObject
 {
 	public string collectibleName;
 	public Sprite sprite;
-	public Sprite alternativeSprite;
+	public Sprite frenchSprite;
+	public Sprite englishSprite;
 	public Vector2 position;
 	public Vector2 scale;
 	public string transition;

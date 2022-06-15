@@ -29,8 +29,6 @@ public class DialogBox : MonoBehaviour
 
 	private List<GameObject> buttons;
 
-	[SerializeField] private AudioClip mapMusic;
-
 	// Start is called before the first frame update
 	void Start() {
 		textPanel = transform.Find("TextPanel").gameObject;
@@ -132,7 +130,7 @@ public class DialogBox : MonoBehaviour
 			HideChoices();
 			textPanel.SetActive(false);
 			currentChara.GetAnimator().SetBool("Talking", false);
-			AudioManager.instance.ChangeMusic(mapMusic);
+			AudioManager.instance.ResetMusic();
 		}
 		
 		//MouseControls.instance.OnEnable();
