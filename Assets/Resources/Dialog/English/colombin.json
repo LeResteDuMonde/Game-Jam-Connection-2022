@@ -1,0 +1,78 @@
+
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "Heyheyhey" },
+	    {"inStates":["dialogInit"],"line" : "Moi c’est Colombin, tu as dû entendre parler de moi, non ?"}, 
+	    {"inStates":["dialogInit"],"line" : "Tu sais, Shitty Place."}, 
+	    {"inStates":["dialogInit"],"line" : "Eh ba la star, dedans, c’est moi."}, 
+	    {"inStates":["dialogInit"],"line" : "La classe, hein. C’est clair.", 
+		    "transition" : "readColombin"},
+		    {"line":"Tu voulais me parler ?"}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "C’est quoi, Shitty Place ? ",
+		"lines": [ 
+			{ "line" : "Ba enfin, c’est LA sitcom à regarder !"},
+			{ "line" : "Jte raconte l’histoire : "},
+			{ "line" : "En fait c’est moi, Colombin, qui vit dans une ville de merde."},
+			{ "line" : "Personne ne s’aime, tout le monde se déteste !"},
+			{ "line" : "Trop drôle nan ?"},
+			{ "line" : "(Rire du public)"},
+			{ "line" : "Imagine c’était comme ça, à Vie-Lhaj !"}
+		] 
+	},
+	{"inStates":[],
+		"answer": "Tu fais du skate ?",
+		"lines": [ 
+			{ "line" : "Oui"},
+			{ "line" : "Tu sais, dans Shitty Place, on me voit en faire."},
+			{ "line" : "Maryse vient quelquefois en faire, aussi."}
+		] 
+	},		
+	{"inStates":[],
+		"answer": "Tu as pas des sorties à me conseiller à Vie-Lhaj ? ",
+		"lines": [
+			{ "line" : "T’inquiète, je suis l’homme de la situation. Je connais la ville comme ma poche."},
+			{ "line" : "En fait, je suis un peu la star ici, vu que j’ai joué dans Shitty Place, donc on m’a dit tous les coins sympas où se promener."},
+			{ "line" : "Tu as la plage, déjà, elle est magnifyque. "},
+			{ "line" : "Elle a pas toujours été comme ça, d’ailleurs."},
+			{ "line" : "Quand je suis arrivé, elle était ravagée, toute dégueue, avec des déchets partout."},
+			{ "line" : "Tu t’imagines bien que je pouvais pas supporter ça."},
+			{ "line" : "(Rire du public)"},
+			{ "line" : "C’était encore plus moche que Shitty Beach dans Shitty Place !"},
+			{ "line" : "(Rire du public)"},
+			{ "line" : "Donc j’ai fait tout nettoyer, et maintenant tout le monde y va. "},
+			{ "line" : "Merci Colombin !"},
+			{ "line" : "(Public : Meeerciii Cooolooombiiin)"},
+			{ "line" : "Bon, et après la plage, tu peux aller faire un tour à la grand-place."},
+			{ "line" : "J’affectionne particulièrement ce lieu de rencontre."},
+			{ "line" : "J’y ai laissé une petite surprise...J’y ai laissé une petite surprise..."}
+		]
+	},
+
+	{"inStates":["aFaitCaca"],
+		"answer": "Le maire m’a dit de m’adresser à vous si j’avais besoin d’aide ! ",
+		"lines": [
+			{"line":"Ahh sacré Monsieur Lemair !"},
+			{"line":"Il a la langue bien pendue, n’est-ce pas ?"},
+			{"line":"(Rire du public)"},
+			{"line":"Tu sais, il est en pleine lutte électorale, en ce moment."},
+			{"line":"Alors forcément, il trouve des soutiens là où il peut."},
+			{"line":"Et qui de mieux que Colombin ?"},
+			{"line":"(Public : COOLOOOOMBIIIIN)"},
+			{"line":"Pour déstabiliser son adversaire électoral pour le poste de maire, il m’a demandé de lui rendre un petit service."},
+			{"line":"Jte jure, c’est House of Shit le truc."},
+			{"line":"(Rire du public)."},
+			{"line":"Tu te rappelles, hein, je joue dans Shitty Place."},
+			{"line":"Bon, eh ben, il m’a demandé de faire ce que je sais faire de mieux…"},
+			{"line":"Devant la maison de Nounours…"},
+			{"line":"Tu sais, cette ZAD pas loin de la mairie…"},
+			{"line":"J’y ai laissé une petite surprise…"},
+			{ "line" : "(Public : arghhhh)", "transition" : "readCaca" }
+		]
+	}
+		
+    
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "lalalala nnannananna" },
+	    {"inStates":["dialogInit"],"line" : "oh oh oh oh ho" },
+	    {"inStates":["dialogInit"],"line" : "we go low ow ow ow" },
+	    {"inStates":["dialogInit"],"line" : "wo wo " },
+	    {"inStates":["dialogInit"],"line" : "WOOOO?! " },
+	    {"inStates":["dialogInit"],"line" : "mais tfq là ?" },
+	    {"inStates":["dialogInit"],"line" : "on t’as jamais dit que ça se fait trop pas d’espionner les gens ??" },
+	    {"inStates":["dialogInit"],"line" : "pas moy d’être trql 3 secondes quoi " },
+	    {"inStates":["dialogInit"],"line" : "(Toi) Je voulais pas déranger.. " },
+	    {"inStates":["dialogInit"],"line" : "nia nia nia je voulais pas déranger ET BEIN MOI JE VOULAIS PAS ME FAIRE DÉRANGER TU VOIS ??" },
+	    {"inStates":["dialogInit"],"line" : "dsl je suis trop sur les nerfs là..." },
+	    {"inStates":["dialogInit"],"line" : "c’est le brevet j’angoisse de ouf " },
+	    {"inStates":["dialogInit"],"line" : "mon père me met grave la pression...  " },
+	    {"inStates":["dialogInit"],"line" : "mais bref ", 
+		    "transition" : "readJustine"},
+		    {"line":"qu’est ce que tu veux ?"}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "ça va bien se passer, je suis sûre que tu vas l’avoir ce brevet ! tu délires meuf vraiment ",
+		"lines":[ 
+			{ "line" : "déjà j’ai un prof" },
+			{ "line" : "UN SEUL" },
+			{ "line" : "et ce bolosse il me fait cours une fois par mois" },
+			{ "line" : "la plupart du temps il est absent..." }
+		]
+	},		
+	{"inStates":[],
+		"answer": "Tu dirais que ta relation avec ton père est plutôt bonne, mauvaise ou caca ??",
+		"lines": [
+			{ "line" : "non mais m’en parle pas"},
+			{ "line" : "ça me donne envie de mourir"},
+			{ "line" : "déjà c’est le maire de ce village éclaté"},
+			{ "line" : "ce bolosse a fait fuir tous les habitants"},
+			{ "line" : "tu te rends compte"},
+			{ "line" : "y a des groupes de k-pop où ils sont plus nombreux que dans ce village"},
+			{ "line" : "et tellement plus beau hihi","transition":"seenDaughter" }
+		]
+
+	},
+	{"inStates":[],
+		"answer": "Tu viens ici pour te relaxer, c’est ça ? ",
+		"lines": [
+			{ "line" : "nan nan je suis en plein travail là"},
+			{ "line" : "je viens d’apprendre un truc de ouf"},
+			{ "line" : "Colombin tu vois ?"},
+			{ "line" : "Le mec trop beau dans Shitty Place ?"},
+			{ "line" : "hihihi"},
+			{ "line" : "à le mec sur mon fond d’écran"},
+			{ "line" : "il vit ici"},
+			{ "line" : "nan mais improbable je sais"},
+			{ "line" : "personne ne sais mais moi j’ai reconnu la jetée dans une de ces story"},
+			{ "line" : "et donc je campe ici en attendant de le rencontrer comme ça, l’air de rien"},
+			{ "line" : "je serai là"},
+			{ "line" : "les cheveux dans le vent"},
+			{ "line" : "le teint shiny en pleine golden hour"}
+		]
+	}
+    
+    ]
+}

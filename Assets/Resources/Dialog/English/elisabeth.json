@@ -1,0 +1,31 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "..." },
+	    {"inStates":["dialogInit"],"line" : "..." ,
+		    "transition" : "readElisabeth"},
+		    {"line":"..."}
+    ],
+"choices": [
+	{"inStates":[],
+		"answer": "Euh... Bonjour... ",
+		"lines": [ { "line" : "..."}] 
+	},
+	{"inStates":[],
+		"answer": "Comment se passe la coloc avec Serge et Zéphyr ?",
+		"lines": [ { "line" : "..."}]
+	},		
+	{"inStates":[],
+		"answer": "Quels beaux tatouages ! ",
+		"lines": [ { "line" : "..."}]},
+		
+	{"inStates":["wood"],		
+		"answer": "jeter le baton",
+		"lines": [ { "line" : "", "transition":"jeterBaton"}]},
+	
+	{"inStates":[],
+		"answer": "...",
+		"lines": [ { "line" : "..."}] 
+	}
+    
+    ]
+}

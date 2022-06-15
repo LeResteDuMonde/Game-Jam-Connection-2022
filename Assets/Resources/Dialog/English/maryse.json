@@ -1,0 +1,60 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "Well hello, little girl. Welcome to my house." },
+	    {"inStates":["dialogInit"],"line" : "My name is Maryse." },
+	    {"inStates":["dialogInit"],"line" : "Oh oh oh ^-^" },
+	    {"inStates":["dialogInit"],"line" : "Come on, make yourself at home. It’s not that spacious around here, but quite cheerful." },
+	    {"inStates":["dialogInit"],"line" : "Still, since I’ve rearranged my cave, we have more space.", 
+		    "transition" : "readMaryse"},
+		    {"line":"Do you want a cookie ?"}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "You live in your cave ?",
+		"lines": [
+			{ "line" : "Oh oh oh ^-^"},
+			{ "line" : "No, Not at all !"},
+			{ "line" : "Not at all."},
+			{ "line" : "Even if I’m old, I’m still in my right mind."},
+			{ "line" : "A little dog lives with me, in the cave."},
+			{ "line" : "He’s very cute. Well, sometimes he might disobey !"},
+			{ "line" : "Now that he has a room just for him, he can play all he wants."}
+		]
+
+	},
+	{"inStates":[],
+		"answer": "You said « we » ? You live with someone ?",
+		"lines": [
+			{ "line" : "Oh oh oh ^-^"},
+			{ "line" : "No, Not at all !"},
+			{ "line" : "Not at all."},
+			{ "line" : "Mia has lived with me for a few months now. I welcomed her here, in my house."},
+			{ "line" : "She’s so nice ! She helps me in everything I do."},
+			{ "line" : "Every week she brings me a new DVD from the video club."},
+			{ "line" : "I wonder why she goes there so much, by the way ^-^"},
+			{ "line" : "She’s really as cool as a cream, this little crispbread."}
+		]
+	},		
+	{"inStates":[],
+		"answer": "What did you do when you were young ?",
+		"lines": [
+			{ "line" : "Oh oh oh ^-^"},
+			{ "line" : "No, Not at all !"},
+			{ "line" : "Not at all."},
+			{ "line" : "You know, I experienced war myself. The enemy was here, in Vie-Lhaj."},
+			{ "line" : "We all gathered in the city hall, that we had previously fortified."},
+			{ "line" : "A real bastion."},
+			{ "line" : "Well, even duke Gunter Von Geberg had joined us !"},
+			{ "line" : "With the old sage, we found arms ; he had three AK47, I had a whip."},
+			{ "line" : "Yes, a whip. I know to use that tool."},
+			{ "line" : "If you’re interested, I might show you, one day."},
+			{ "line" : "Anyway, there was no hope anymore, but we decided to get out."},
+			{ "line" : "« WAAAAAAR » I cried. I had quite a voice, in the old days."},
+			{ "line" : "Vlam, bam, vlam, what a defeat they had ! "},
+			{ "line" : "I swear to God, a wipeout for them."},
+			{ "line" : "The good ol’ days..."}
+		]
+	}
+		
+    ]
+}

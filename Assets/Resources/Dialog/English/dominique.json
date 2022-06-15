@@ -1,0 +1,25 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "Bonjour Madame, vous venez d’arriver ? Je vous souhaite la bienvenue. Je suis Dominique Von Gerberg le professeur de français de vilaj." ,
+		    "transition" : "readDominique"},
+	    {"line" : "Une question de français ?:"},
+		    {"line" : ""}
+		
+
+
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "Vous l’avez eu où ce collier ? Il est très beau.",
+		"lines": [ { "line" : "Ha… heu…ça, une broutille…bref." }] 
+	},
+	{"inStates":[],
+		"answer": "Vous êtes le seul prof de ce village ?",
+		"lines": [ { "line" : "Écoutez en terme d’éducation nous avons du mal à joindre les deux bout. Et puis pour ce qu’il y a à éduquer… (chuchote) ça vole pas bien haut.\nMais en tout cas si vous avez la moindre question de grammaire je suis votre homme, j’adore la syntaxes et les juxtapositions, c’est un peu mon dada.", "transition": "createKey"}] },		
+	{"inStates":[],
+		"answer": "VonGerberg ? Vous avez des lien de parentés avec le Baron ?",
+		"lines": [ {"line" : "(chuchote) … J’aurais pas du dire mon nom… "},
+			{ "line" : "En quelques sortes mais bref, ce n’ai pas ce qui importe, ne m’associez pas à cette personne (chuchote) cette ordure. ", "transition": "createKey"}]}
+    ]
+}
+

@@ -1,0 +1,63 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "Hello you !" },
+	    {"inStates":["dialogInit"],"line" : "My name is Mia ! And you ?" },
+	    {"inStates":["dialogInit"],"line" : "Nice to meet you !", 
+		    "transition" : "readMia"},
+		    {"line":"Can I help you ?"}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "You poor thing, what happened to your ear ?",
+		"lines": [
+			{ "line" : "Oh ! That..."},
+			{ "line" : "Don’t worry about it, it’s not cancer."},
+			{ "line" : "It happened a week ago, during a boozy night."},
+			{ "line" : "I was with someone..."},
+			{ "line" : "I fell for this crunchy boy !"},
+			{ "line" : "If only I could meet him again <3"}
+		]
+
+	},
+	{"inStates":[],
+		"answer": "Do you live here ?",
+		"lines": [
+			{ "line" : "Yes, I live in this house with Maryse !"},
+			{ "line" : "It’s my best friend !"},
+			{ "line" : "Well, the only one I have actually..."},
+			{ "line" : "It’s a really nice lady. She got rid of every person who would be mean to me."},
+			{ "line" : "Ever since she took me under her wing, I’m a free crispbread, I can take walks wherever I want in Vie-Lhaj."},
+			{ "line" : "I don’t give a shit anymore"},
+			{ "line" : "For example, I like to go to the video club !! I really like the idea."},
+			{ "line" : "Serge told me about it and he was so right ..."}
+		]
+	},		
+	{"inStates":[],
+		"answer": "When did you arrive in Vie-Lhaj ?",
+		"lines": [
+			{ "line" : "I moved here five years ago now. I am quite new here."},
+			{ "line" : "But now that you arrived, I’m not the newbie ^^"},
+			{ "line" : "I really like this village. It’s quiet and convivial."},
+			{ "line" : "Even if, sometimes, there is some animosity...."},
+			{ "line" : "Serge told me someone didn’t like him..."}
+		]
+	},
+		
+		
+	{"inStates":["sentiment"],
+		"answer": "What are your feelings about Serge",
+		"lines": [
+			{ "line":"Oh, hum... I don’t really know what to say ?"},
+			{ "line":"It’s just a friend, yeah !"},
+			{ "line":"Yes, yes, just a friend..."},
+			{ "line":"What ? Old sage told you about us ?"},
+			{ "line":"You can't teach an old dog new tricks..."},
+			{ "line":"Well, I like him, I really like him, I’m crazy about him !!"},
+			{ "line":"As soon as I think about him, I’m shaking, and when I see him, I’m browning..."},
+			{ "line":"Do you think one day I could have a toast with him ?"},
+			{ "transition" : "vieuxCouple2", "line":"I’m scared, but he is the subject of all my dreams <3"}
+		]
+	}
+    
+    ]
+}

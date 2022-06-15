@@ -1,0 +1,94 @@
+{
+    "lines": [
+	    {"inStates":["dialogInit"],"line" : "Hey sis ! " },
+	    {"inStates":["dialogInit"],"line" : "Como va ?"}, 
+	    {"inStates":["dialogInit"],"line" : "You cool ?"}, 
+	    {"inStates":["dialogInit"],"line" : "C’mon, I’m just trying to be cool."}, 
+	    {"inStates":["dialogInit"],"line" : "I’m the mayor, mister Mayor, nice to meet you ! Did you move well ? "}, 
+	    {"inStates":["dialogInit"],"line" : "It’s COOOOOL sis !"}, 
+	    {"inStates":["dialogInit"],"line" : "I’m counting on you to vote for me during election day ;)"}, 
+	    {"inStates":["dialogInit"],"line" : "So cool."}, 
+	    {"inStates":["dialogInit"],"line" : ";)", 
+		    "transition" : "readLemair"},
+		    {"line":"You wanted to tell me something ?"}
+    ],
+    "choices": [
+	{"inStates":[],
+		"answer": "Could you tell me a little bit more about you ?",
+",		"lines": [ 
+			{ "line" : "For sure, dear lady !"},
+			{ "line" : "They don’t often ask me that, here. "},
+			{ "line" : "Well, everyone knows me, so... "},
+			{ "line" : "I’m something of a star myself, you know ;)"},
+			{ "line" : "So cool."},
+			{ "line" : "It’s been 17 years that I live in Vie-Lhaj. I think it was in 84, yes."},
+			{ "line" : "The same year as Serge, in fact."},
+			{ "line" : "I’m a cryptobanker, you see."},
+			{ "line" : "I know everything about Cryptocurrency."},
+			{ "line" : "Realy everyting. TODO."},
+			{ "line" : "And I realy love NFT too. "},
+			{ "line" : "Madness."},
+			{ "line" : "Today, I have 567 of them, maybe 568. Would to like to see some of them ? No ? No problem, sis."},
+			{ "line" : "I have one on my face.."}
+		] 
+	},
+	{"inStates":[],
+		"answer": "I’m still kind of lost in Vie-Lhaj...",
+		"lines": [
+			{ "line":"NOOOOOO." },
+			{ "line":"But don’t worry my dear ! Everyone is very welcoming here." },
+			{ "line":"Very soon, you will know this place like you lived here for years !" },
+			{ "line":"If you need a hand, don’t hesitate to come to Colombin’s place !!" },
+			{ "transition" : "faireCaca", "line":"He’s very helpful : many times he helped me." }
+		]
+	},		
+	{"inStates":[],
+		"answer": "Elections ? But I don’t have my elector card yet !! Oh no !",
+		"lines": [
+			{ "line" : "So cool."},
+			{ "line" : "Sooo sad."},
+			{ "line" : "Just joking, sis."},
+			{ "line" : "No worries, dear lady, mister Mayor is here to help you."},
+			{ "line" : "So cool."},
+			{ "line" : "I was born to be a mayor."},
+			{ "line" : "Just come back to city hall tomorow, we will take care of that, with my T."},
+			{ "line" : "My T ?"},
+			{ "line" : "You don’t know my T ?"},
+			{ "line" : "My Team, you fool !!"},
+			{ "line" : "Then, you’ll just have to vote for me ;)"}
+		]},
+		
+	{"inStates":["seenDaughter"],
+		"answer": "You told me you were the mayor… without telling me you were a father too !!",
+		"lines": [
+			{ "line" : "Not for Teddy, this yokel !"},
+			{ "line" : "Ah, you just met Justine !"},
+			{ "line" : "So cool."},
+			{ "line" : "She’s my daughty, this little girl. She loves k-pop, quite inexplicably."},
+			{ "line" : "GNAN GNAN GANGNAM STYLE !!"},
+			{ "line" : "Exhausting. But I love her very much."},
+			{ "line" : "Do you thing I’m being too intrusive with her ? She always tell me to get off…"},
+			{ "line" : "Yes, I’ll do that."},
+			{ "line" : "Still, she’s not 18 yet. What a lost it would be !"},
+			{ "line" : "Do you imagine, all these drawings, disappeared ? "},
+			{ "line" : "Yes, I use her dawings as NFT : it gives me so much money  !"}
+		]
+	},
+
+	{"inStates":["aveu"],		
+		"answer": "Vous avez donc engagé Colombin ?",
+		"lines": [
+			{ "line":"Well, it gives money, to the city, of course ! Of course… (embarrassed)"},
+			{ "line":"Well… How to say it..."},
+			{ "line":"AHAHAHAHAHAHAH"},
+			{ "line":"What a joke we did to this big Teddy !"},
+			{ "line":"He’s not welcome here, I hope he gets it now."},
+			{ "line":"Sorry ?"},
+			{ "line":"He made compost with it !"},
+			{ "transition" : "nounours", "line":"Sooo not cool… "}
+		]
+	}
+	
+    
+    ]
+}
