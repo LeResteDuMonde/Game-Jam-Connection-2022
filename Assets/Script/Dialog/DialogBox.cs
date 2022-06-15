@@ -126,6 +126,7 @@ public class DialogBox : MonoBehaviour
 	public void CloseDialog() {
 		if (IsOpen())
 		{
+			endTypeWriterEffect = true;
 			CharacterManager.instance.ReloadCharacters();
 			HideChoices();
 			textPanel.SetActive(false);
