@@ -14,6 +14,7 @@ public class Quitting : MonoBehaviour
 	public void TogglePanel()
 	{
 		quittingPanel.SetActive(!quittingPanel.activeSelf);
+		MapManager.instance.EnableLocationChange(!quittingPanel.activeSelf);
 	}
 
 	public bool isQuitting()
