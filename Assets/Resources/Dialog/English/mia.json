@@ -15,14 +15,14 @@
 			{ "line" : "It happened a week ago, during a boozy night."},
 			{ "line" : "I was with someone..."},
 			{ "line" : "I fell for this crunchy boy !"},
-			{ "line" : "If only I could meet him again <3"}
+			{ "line" : "But he left me this very night… I do think he loved me, but I don’t know, he just left. Anyway, I don’t care anymore !"}
 		]
 
 	},
 	{"inStates":[],
 		"answer": "Do you live here ?",
 		"lines": [
-			{ "line" : "Yes, I live in this house with Maryse !"},
+			{ "line" : "I live in Maryse’s house !"},
 			{ "line" : "It’s my best friend !"},
 			{ "line" : "Well, the only one I have actually..."},
 			{ "line" : "It’s a really nice lady. She got rid of every person who would be mean to me."},
@@ -39,7 +39,7 @@
 			{ "line" : "But now that you arrived, I’m not the newbie ^^"},
 			{ "line" : "I really like this village. It’s quiet and convivial."},
 			{ "line" : "Even if, sometimes, there is some animosity...."},
-			{ "line" : "Serge told me someone didn’t like him..."}
+			{ "line" : "Serge told me Elisabeth didn’t like him… Apparently, he’s too talkative."}
 		]
 	},
 		

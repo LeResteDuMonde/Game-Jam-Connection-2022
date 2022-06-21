@@ -12,17 +12,17 @@
 		"lines": [
 			{ "line" : "Oh ! ça… "},
 			{ "line" : "Ne t’inquiète pas, ce n’est pas un cancer."},
-			{ "line" : "C’était il y a quelques semaines, au cours d’une soirée bien arosée."},
+			{ "line" : "C’était il y a quelques semaines, au cours d’une soirée bien arrosée."},
 			{ "line" : "J’y étais allée accompagnée…"},
 			{ "line" : "Oh la la, il m’a fait cruncher !"},
-			{ "line" : "Si seulement je pouvais le retrouver <3"}
+			{ "line" : "Mais ensuite, il m’a plantée comme une madelaine ! Pourtant, je crois bien qu’il m’aimait. Bref, maintenant, je m’en fiche de lui, il m’est complètement indifférent."}
 		]
 
 	},
 	{"inStates":[],
 		"answer": "Tu habites ici ? ",
 		"lines": [
-			{ "line" : "Oui, j’habite dans cette maison, avec Maryse !"},
+			{ "line" : "J’habite dans la maison de Maryse !"},
 			{ "line" : "C’est ma meilleure amie !"},
 			{ "line" : "En fait, la seule…"},
 			{ "line" : "C’est vraiment une gentille personne. Tous ceux qui me faisaient du mal, elle s’en est chargée."},
@@ -39,7 +39,7 @@
 			{ "line" : "Mais maintenant que tu es là, je ne suis plus la dernière ^^"},
 			{ "line" : "J’aime beaucoup, ici, c’est calme et convivial."},
 			{ "line" : "Même si parfois, il y a un peu d’animosité ! "},
-			{ "line" : "Serge m’avait dit que quelqu’un ne l’aimait pas..."}
+			{ "line" : "Serge m’avait dit qu'Élisabeth ne l’aimait pas… Soit disant, il serait trop bavard."}
 		]
 	},
 		
