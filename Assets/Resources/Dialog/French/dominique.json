@@ -1,5 +1,6 @@
 {
     "lines": [
+	    {"inStates":["dialogInit"],"line" : ""},
 	    {"inStates":["dialogInit"],"line" : "Bonjour Madame, vous venez d’arriver ? Je vous souhaite la bienvenue. Je suis Dominique Von Geberg le professeur de français de Vie-Lhaj." ,
 		    "transition" : "readDominique"},
 	    {"line" : "Une question de français ?"}

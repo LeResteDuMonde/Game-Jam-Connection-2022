@@ -1,5 +1,6 @@
 {
     "lines": [
+	    {"inStates":["dialogInit"],"line" : ""},
 	    {"inStates":["dialogInit"],"line" : "Good morning madam, did you just move in ? Allow me to wish you willkomen. I’m Dominique Von Geberg, french teacher in Vie-Lhaj." ,
 		    "transition" : "readDominique"},
 	    {"line" : "Any grammar question ?"}
