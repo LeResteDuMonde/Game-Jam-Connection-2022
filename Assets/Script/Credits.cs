@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Credits : MonoBehaviour
 {
 	[SerializeField] private InputAction confirm;
-
+	[SerializeField] private float creditTime;
 	private void OnEnable()
 	{
 		confirm.Enable();
@@ -21,12 +21,12 @@ public class Credits : MonoBehaviour
 
 	private void Start()
 	{
-		//StartCoroutine(CreditsRoll());
+		StartCoroutine(CreditsRoll());
 	}
 
 	private IEnumerator CreditsRoll()
 	{
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(creditTime);
 		SceneManager.LoadScene("StartingScene");
 	}
 

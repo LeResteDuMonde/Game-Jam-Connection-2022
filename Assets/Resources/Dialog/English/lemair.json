@@ -35,7 +35,6 @@
 	{"inStates":[],
 		"answer": "I’m still kind of lost in Vie-Lhaj...",
 		"lines": [
-			{ "line":"NOOOOOO." },
 			{ "line":"But don’t worry my dear ! Everyone is very welcoming here." },
 			{ "line":"Very soon, you will know this place like you lived here for years !" },
 			{ "line":"If you need a hand, don’t hesitate to come to Colombin’s place !!" },
@@ -45,8 +44,7 @@
 	{"inStates":[],
 		"answer": "Elections ? But I don’t have my elector card yet !! Oh no !",
 		"lines": [
-			{ "line" : "So cool."},
-			{ "line" : "Sooo sad."},
+			{ "line" : "NOOOOOO."},
 			{ "line" : "Just joking, sis."},
 			{ "line" : "No worries, dear lady, mister Mayor is here to help you."},
 			{ "line" : "So cool."},
@@ -55,13 +53,13 @@
 			{ "line" : "My T ?"},
 			{ "line" : "You don’t know my T ?"},
 			{ "line" : "My Team, you fool !!"},
-			{ "line" : "Then, you’ll just have to vote for me ;)"}
+			{ "line" : "Then, you’ll just have to vote for me ;)"},
+			{ "line" : "Not for Teddy, this yokel !"}
 		]},
 		
 	{"inStates":["seenDaughter"],
 		"answer": "You told me you were the mayor... without telling me you were a father too !!",
 		"lines": [
-			{ "line" : "Not for Teddy, this yokel !"},
 			{ "line" : "Ah, you just met Justine !"},
 			{ "line" : "So cool."},
 			{ "line" : "She’s my daughty, this little girl. She loves k-pop, quite inexplicably."},
@@ -71,20 +69,21 @@
 			{ "line" : "Yes, I’ll do that."},
 			{ "line" : "Still, she’s not 18 yet. What a lost it would be !"},
 			{ "line" : "Do you imagine, all these drawings, disappeared ? "},
-			{ "line" : "Yes, I use her dawings as NFT : it gives me so much money  !"}
+			{ "line" : "Yes, I use her dawings as NFT : it gives me so much money  !"},
+			{ "line" : "Well, it gives money, to the city, of course ! Of course... (embarrassed)"}
 		]
 	},
 
 	{"inStates":["aveu"],		
 		"answer": "So you hired Colombin ?",
 		"lines": [
-			{ "line":"Well, it gives money, to the city, of course ! Of course... (embarrassed)"},
 			{ "line":"Well... How to say it..."},
 			{ "line":"AHAHAHAHAHAHAH"},
 			{ "line":"What a joke we did to this big Teddy !"},
 			{ "line":"He’s not welcome here, I hope he gets it now."},
 			{ "line":"Sorry ?"},
 			{ "line":"He made compost with it !"},
+			{ "line":"Shit !"},
 			{ "transition" : "nounours", "line":"Sooo not cool... "}
 		]
 	}

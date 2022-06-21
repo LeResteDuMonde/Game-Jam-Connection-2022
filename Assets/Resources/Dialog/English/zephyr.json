@@ -11,7 +11,7 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "think I’ll leave... ",
+		"answer": "I think I’ll leave... ",
 		"lines": [
 			{"line" : "You are right, why talk to me ?"},
 			{"line" : "To me, Zephyr the misunderstood ?"},
@@ -27,19 +27,19 @@
 	{"inStates":[],
 		"answer": "Do you feel well ?",
 		"lines": [
-			{ "line" : "I lost every one, because I never had one."},
 			{ "line" : "Feel well ?"},
 			{ "line" : "I forgot the meaning of this many years ago…"},
 			{ "line" : "Since that day when, as a child, I experienced the most traumatizing thing a man can live in three lives."},
 			{ "line" : "The sun was rising, the birds were singing, I was waking up."},
 			{ "line" : "I stood up."},
 			{ "line" : "And… I hurt my toe, crashing it onto this furniture, this wardrobe my grandmother gave me when she retired."},
-			{ "line" : "My toe hurt, a huge suffering, the one that announce despair and death."}
+			{ "line" : "My toe hurt, a huge suffering, the one that announce despair and death."},
+			{ "line" : "You know my story."}
 		]
 	},		
 	{"inStates":[],
 		"answer": "Did you lost someone you knew ?",
-		"lines": [ { "line" : "You know my story."}]},
+		"lines": [ { "line" : "I lost every one, because I never had one."}]},
 		
 		
 	{"inStates":["haveKey", "aimeChien"],
@@ -47,18 +47,18 @@
 		"lines": [
 			{ "line":"What is this key ? To which door will I apply it ?"},
 			{ "line":"..."},
-			{ "line" : "A dog, in Maryse’s hosse ? Well, I heard of it, without knowing it was truth.","transition":"giveKey", "terminal": true}
+			{ "line" : "A dog, in Maryse’s house ? Well, I heard of it, without knowing it was truth."},
+			{"line" : "I do thank you, and I’ll check on that, if Fate allows it.","transition":"giveKey", "terminal": true}
 		]
 	},
     
 	{"inStates":["choque"],
-		"answer": "Zephyr, don’t jump in the sea !",
+		"answer": "Zephyr, don’t jump into the sea !",
 		"lines": [
-			{"line" : "I do thank you, and I’ll check on that, if Fate allows it."},
 			{"line" : "Do not be mistaken about my intentions."},
 			{"line" : "Death wouldn’t sedate my pain nor I."},
 			{"line" : "I’m here, looking at the horizon and the see, because I saw something I couldn’t think of with five lives."},
-			{ "line" : "I thought I would see a dog down there...","transition":"zephyrRejection"}
+			{ "line" : "I thought I would see a dog down there... These people I saw... I just don’t care anymore","transition":"zephyrRejection"}
 		]
 	}
     ]

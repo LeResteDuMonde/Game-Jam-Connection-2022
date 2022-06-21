@@ -1,6 +1,6 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "Good morning madam, did you just move in ? Allow me to wish you willkomen. I’m Dominique Von Gerberg, french teacher in Vie-Lhaj." ,
+	    {"inStates":["dialogInit"],"line" : "Good morning madam, did you just move in ? Allow me to wish you willkomen. I’m Dominique Von Geberg, french teacher in Vie-Lhaj." ,
 		    "transition" : "readDominique"},
 	    {"line" : "Any grammar question ?"}
 		
@@ -9,7 +9,7 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "Von Gerberg ? Do you have blood ties with the Duke ? ",
+		"answer": "Von Geberg ? Do you have blood ties with the Duke ? ",
 		"lines": [ { "line" : "whispers) … I shouldn’t have told my name… " }] 
 	},
 	{"inStates":[],

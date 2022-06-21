@@ -17,7 +17,8 @@ MonoBehaviour:
   stateMachine: justine
   connections:
   - {fileID: 11400000, guid: 895517e721046f04295e6ea603c0ff1b, type: 2}
-  connectionsType: 01000000
+  - {fileID: 11400000, guid: 99c9d9289ae03cb47acf59e13c6f7222, type: 2}
+  connectionsType: 0100000001000000
   music: {fileID: 8300000, guid: 36c5c769e9910b1479cc6a3eb7f4b37e, type: 3}
   dialogueSoundEffect:
   - {fileID: 8300000, guid: 2049c8d06474b5f4e9f87172f2dd4a22, type: 3}

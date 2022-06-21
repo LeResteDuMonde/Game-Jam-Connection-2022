@@ -15,7 +15,7 @@
 	{"inStates":[],
 		"answer": "Who are your associates ?",
 		"lines": [
-			{ "line" : "Well, of course I pull the string. Maybe you already met him, but if you go to the main square, you can talk to the oldest soul around here. Mister Mayor is jealous of me, because this oldest soul, the old sage, supports me for the next elections : he provides wise advices."}
+			{ "line" : "Well, of course I pull the string. Maybe you already met him, but if you go to the main square, you can talk to the oldest soul around here. Mister Mayor is angry at me, because, for the next elections, I’m using the wise precepts of the old sage : his words are very useful for me."}
 		]
 	},		
 	{"inStates":[],
@@ -27,7 +27,7 @@
 
 	{"inStates":["colombin"],
 		"answer": "Do you know Poppy ?",
-		"lines": [ { "line" : "Poppy ? Of course I know him. I love this gay. Thanks to me, my flowers have regained their youth. It’s incredible how his feces are full of nutriments ! Since he came, we often take coffee and cigarette together ; my plants are very grateful."}]}
+		"lines": [ { "line" : "Poppy ? Of course I know him. I love this guy. Thanks to him, my flowers have regained their youth. It’s incredible how his feces are full of nutriments ! Since he came, we often take coffee and cigarette together ; my plants are very grateful."}]}
 
 		
     

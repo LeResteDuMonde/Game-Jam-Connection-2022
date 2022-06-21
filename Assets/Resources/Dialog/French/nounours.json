@@ -1,6 +1,6 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "Bonjour chère concitoyenne, je suis Nounours représentant des travailleurs de notre village. J’ai appris par mes informateurs que vous veniez d’aménager. Je suis enchanté de vous rencontrer.",
+	    {"inStates":["dialogInit"],"line" : "Bonjour chère concitoyenne, je suis Nounours représentant des travailleurs de notre village. J’ai appris par mes informateurs que vous veniez d’amménager. Je suis enchanté de vous rencontrer.",
 		    "transition" : "readNounours"},
 		    {"line":"Puis-je vous offrir une tasse de café ?"}
     ],
@@ -8,26 +8,26 @@
 	{"inStates":[],
 		"answer": "Vous comptez vous présenter aux élections ? ",
 		"lines": [
-			{ "line" : "Bien sur que je me présente. Ce n’est pas cet incompétent de maire qui va faire avancer notre beau village ma p’tite dame. Voyez-vous je suis la République moi madame et je sais ce que veulent nos concitoyen.nes. Je les écoute et leur promets de tout changer, de redorer ces terres pour qu’elles deviennent une grande nation."}
+			{ "line" : "Bien sûr que je me présente. Ce n’est pas cet incompétent de maire qui va faire avancer notre beau village ma p’tite dame. Voyez-vous je suis la République moi madame et je sais ce que veulent nos concitoyen.nes. Je les écoute et leur promets de tout changer, de redorer ces terres pour qu’elles deviennent une grande nation."}
 		]
 
 	},
 	{"inStates":[],
 		"answer": "Vous avez des informateurs dans le village ?",
 		"lines": [
-			{ "line" : "Bien sûr, en réalité c’est moi qui tire en secret les ficelles dans ce village. Vous l’avez peut-être déjà rencontré mais si vous allez à la place du village vous pourrez parler à notre doyen. Monsieur Lemair me jalouse à ce propos, car oui, il se trouve que monsieur grand sage me conseille sur nos prochaines élections. Ces paroles sont d’une grande sagesse. "}
+			{ "line" : "Bien sûr, en réalité c’est moi qui tire en secret les ficelles dans ce village. Vous l’avez peut-être déjà rencontré mais si vous allez à la place du village vous pourrez parler à notre doyen. Monsieur Lemair m’en veut à ce propos, car oui, il se trouve que, pour nos prochaines élections, je mets à profit les préceptes de sagesse de monsieur grand sage : ses paroles me sont personnellement très utiles."}
 		]
 	},		
 	{"inStates":[],
 		"answer": "Vous êtes très mignon en tout cas. ",
 		"lines": [
-			{ "line" : "Colombin ? Bien sur, j’adore ce mec. Grâce à lui mes fleurs se portent comme un charme. C’est fou ce que ses selles sont nutritives, depuis on prend souvent des café clopes pour mes plantes."}
+			{ "line" : "Mais enfin je ne vous permets pas madame. Je suis autre chose que mignon, et arrêtez de me regarder comme ça."}
 		]
 	},
 
 	{"inStates":["colombin"],
-		"answer": "52",
-		"lines": [ { "line" : "52"}]}
+		"answer": "Tu connais Colombin ?",
+		"lines": [ { "line" : "Colombin ? Bien sur, j’adore ce mec. Grâce à lui mes fleurs se portent comme un charme. C’est fou ce que ses selles sont nutritives, depuis on prend souvent des café clopes pour mes plantes."}]}
 
 		
     

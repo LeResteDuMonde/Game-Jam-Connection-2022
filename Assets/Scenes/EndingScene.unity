@@ -397,7 +397,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 19827bc71d1ac4d4886e87759ba4a590, type: 3}
   - {fileID: 21300000, guid: 3f3b0e9f84f121747a1ecd7dd279482b, type: 3}
   - {fileID: 21300000, guid: 617047c530503254eb8d4415f3dfcc06, type: 3}
-  thresholds: fbffffff190000002800000037000000
+  thresholds: feffffff190000002d0000003c000000
   scoreIntText: {fileID: 1687238974}
   scoreText: {fileID: 1713530544}
 --- !u!1 &787018583
