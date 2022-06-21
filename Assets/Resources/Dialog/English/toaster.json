@@ -52,7 +52,9 @@
 			{ "line" : "During the party they went into Zephyr’s bedroom (I can tell, I saw them like I see you now)."},
 			{ "line" : "All night long there were cracs."},
 			{ "line" : "Crunch !"},
-			{ "line" : "Crunch !"}
+			{ "line" : "Crunch !"},
+			{ "line" : "The morning, when I saw her, she wasn’t the same !!"},
+			{ "line" : "You won’t tell her, right ?"}
 		]
 	},
 		
@@ -60,8 +62,6 @@
 	{"inStates":["sentiment"],
 		"answer": "What do you feel for Mia ? ",
 		"lines": [
-			{ "line" : "The morning, when I saw her, she wasn’t the same !!"},
-			{ "line" : "You won’t tell her, right ?"},
 			{ "line" : "Mia ? Mia ? Mia ?"},
 			{ "line" : "I suppose somebody couldn’t keep a secret, right ?"},
 			{ "line" : "Well yes, it’s true, everything."},

@@ -19,43 +19,43 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "You come here to relax, isn’t it ? ",
+		"answer": "It’s going to be all right, I’m sure you’ll pass this middle school exam !",
 		"lines":[ 
-			{ "line" : "no no, workin right now" },
-			{ "line" : "oh my gosh i just learned a wow thing" },
-			{ "line" : "Poppy, you see ?" },
-			{ "line" : "the handsome guy in Shitty Place ?" }
+			{ "line" : "you dunno what your talkin about sis" },
+			{ "line" : "i have only one teacher" },
+			{ "line" : "ONE" },
+			{ "line" : "and this loser comes by only once a month !" },
+			{ "line" : "otherwise he’s absent..." }
 		]
 	},		
 	{"inStates":[],
 		"answer": "How would you describe your relationship with your father : good, bad or shitty ??",
 		"lines": [
-			{ "line" : "hihihi"},
-			{ "line" : "here, this man on my phone’s wallpaper"},
-			{ "line" : "he lives here"},
-			{ "line" : "i know you can’t believe it"},
-			{ "line" : "nobody knows, but I recognized him in one of his stories"},
-			{ "line" : "so i stay here until he comes to finally meet here, acting natural"},
-			{ "line" : "i’ll be there","transition":"seenDaughter" }
-		]
-
-	},
-	{"inStates":[],
-		"answer": "It’s going to be all right, I’m sure you’ll pass this middle school exam !",
-		"lines": [
-			{ "line" : "wind in my hair"},
-			{ "line" : "shiny skin with golden hour"},
 			{ "line" : "don’t talk to me about him"},
 			{ "line" : "gives me the heebie jeebies"},
 			{ "line" : "one, he’s the mayor this bore - i mean this village"},
 			{ "line" : "two, this loser made all the people move"},
 			{ "line" : "d’you realize that ?"},
 			{ "line" : "in some k pop groups, there more singers than people in this village"},
-			{ "line" : "and sooo much more handsome hihi"},
-			{ "line" : "you dunno what your talkin about sis"},
-			{ "line" : "i have only one teacher"},
-			{ "line" : "ONE"},
-			{ "line" : "otherwise he’s absent..."}
+			{ "line" : "and sooo much more handsome hihi","transition":"seenDaughter" }
+		]
+
+	},
+	{"inStates":[],
+		"answer": "You come here to relax, isn’t it ?",
+		"lines": [
+			{ "line" : "no no, workin right now"},
+			{ "line" : "oh my gosh i just learned a wow thing"},
+			{ "line" : "Poppy, you see ?"},
+			{ "line" : "hihihi"},
+			{ "line" : "here, this man on my phone’s wallpaper"},
+			{ "line" : "he lives here"},
+			{ "line" : "i know you can’t believe it"},
+			{ "line" : "nobody knows, but I recognized him in one of his stories"},
+			{ "line" : "so i stay here until he comes to finally meet here, acting natural"},
+			{ "line" : "i’ll be there"},
+			{ "line" : "wind in my hair"},
+			{ "line" : "shiny skin with golden hour"}
 		]
 	}
     

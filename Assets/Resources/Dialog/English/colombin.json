@@ -27,7 +27,8 @@
 		"lines": [ 
 			{ "line" : "Yes I do."},
 			{ "line" : "You know, in Shitty Place, I do skate."},
-			{ "line" : "Sometimes Maryse comes here, and she skates too."}
+			{ "line" : "Sometimes Maryse comes here, and she skates too."},
+			{ "line" : "But I know for a fact that Mia won’t come again ! Last time I saw her, I pranked her..."}
 		] 
 	},		
 	{"inStates":[],
@@ -67,7 +68,7 @@
 			{"line":"You remember, right, I play in Shitty Place."},
 			{"line":"So he asked me, well, to do what I knew best..."},
 			{"line":"On Teddy’s lawn..."},
-			{"line":"You know, this sauvage place near the city hall.."},
+			{"line":"You know, this wild place near the city hall..."},
 			{"line":"I dropped off a little surprise there..."},
 			{ "line" : "(Public : arghhhh)", "transition" : "readCaca" }
 		]

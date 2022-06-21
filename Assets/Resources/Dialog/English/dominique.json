@@ -11,15 +11,15 @@
     "choices": [
 	{"inStates":[],
 		"answer": "Von Geberg ? Do you have blood ties with the Duke ? ",
-		"lines": [ { "line" : "whispers) … I shouldn’t have told my name… " }] 
+		"lines": [ { "line" : "whispers) … I shouldn’t have told my name… " },
+		{ "line" : "Kind of, but anyway, it doesn’t matter, do not associate me with this person, (whispers) this swine."}] 
 	},
 	{"inStates":[],
 		"answer": "You’re the only teacher of this village ? 1",
-		"lines": [ { "line" : "Kind of, but anyway, it doesn’t matter, do not associate me with this person, (whispers) this swine.", "transition": "createKey"}] },		
+		"lines": [ { "line" : "Listen, in terms of education, we struggle to make ends meet. But if you saw the students… (whispers) nothing really worth it. Anyway, if you have any grammar question, don’t hesitate, I love syntaxis and juxtapositions, it’s my passion."}]},		
 	{"inStates":[],
 		"answer": "Where did you get this necklace ? It’s very beautiful.",
-		"lines": [ {"line" : "Listen, in terms of education, we struggle to make ends meet. But if you saw the students… (whispers) nothing really worth it. Anyway, if you have any grammar question, don’t hesitate, I love syntaxis and juxtapositions, it’s my passion."},
-			{ "line" : "h… well…this is nothing… Anyway…", "transition": "createKey"}]}
+		"lines": [ { "line" : "h… well… this is nothing… Anyway… (whispers) I hate the person that gave it to me", "transition": "createKey"}]}
     ]
 }
 

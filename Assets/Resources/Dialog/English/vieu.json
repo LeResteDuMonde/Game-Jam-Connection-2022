@@ -1,6 +1,5 @@
 {
     "lines": [
-	    {"inStates":["dialogInit"],"line" : "I hate him, I hate him." },
 	    {"inStates":["dialogInit"],"line" : "Greeting, young fella !" },
 	    {"inStates":["dialogInit"],"line" : "I’m the old sage of this village, but everybody knows me as…" },
 	    {"inStates":["dialogInit"],"line" : "The old sage." },
@@ -45,7 +44,8 @@
 			{ "line" : "HMMM HM HM"},
 			{ "line" : "That is not a dog that did that. Do watch more carefully."},
 			{ "line" : "This divine shape, gracious in its order, that follows in harmony the proportions I declared the best."},
-			{ "line" : "That is the art of a fair man !"}
+			{ "line" : "That is the art of a fair man !"},
+			{ "line" : "I hate him, I hate him."}
 		]
 	}
 		

@@ -11,15 +11,15 @@
     "choices": [
 	{"inStates":[],
 		"answer": "Vous l’avez eu où ce collier ? Il est très beau.",
-		"lines": [ { "line" : "Ha… heu…ça, une broutille…bref." }] 
+		"lines": [ { "line" : "Ha… heu… ça, une broutille… bref. (chuchotte) Funeste présent d’une personne que je hais…" , "transition": "createKey"}] 
 	},
 	{"inStates":[],
 		"answer": "Vous êtes le seul prof de ce village ?",
-		"lines": [ { "line" : "Écoutez en terme d’éducation nous avons du mal à joindre les deux bouts. Et puis pour ce qu’il y a à éduquer… (chuchote) ça vole pas bien haut.\nMais en tout cas si vous avez la moindre question de grammaire je suis votre homme, j’adore la syntaxes et les juxtapositions, c’est un peu mon dada.", "transition": "createKey"}] },		
+		"lines": [ { "line" : "Écoutez en terme d’éducation nous avons du mal à joindre les deux bouts. Et puis pour ce qu’il y a à éduquer… (chuchote) ça vole pas bien haut.\nMais en tout cas si vous avez la moindre question de grammaire je suis votre homme, j’adore la syntaxes et les juxtapositions, c’est un peu mon dada."}]},		
 	{"inStates":[],
 		"answer": "VonGeberg ? Vous avez des liens de parenté avec le Baron ?",
 		"lines": [ {"line" : "(chuchote) … J’aurais pas du dire mon nom… "},
-			{ "line" : "En quelques sortes mais bref, ce n’ai pas ce qui importe, ne m’associez pas à cette personne (chuchote) cette ordure. ", "transition": "createKey"}]}
+			{ "line" : "En quelques sortes mais bref, ce n’ai pas ce qui importe, ne m’associez pas à cette personne (chuchote) cette ordure. "}]}
     ]
 }
 

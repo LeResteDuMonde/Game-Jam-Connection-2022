@@ -1,7 +1,7 @@
 {
     "lines": [
 	    {"inStates":["dialogInit"],"line" : "Guten Tag klein. " },
-	    {"inStates":["dialogInit"],"line" : "I’m the revered Duke Gunter Von Gerberg, you must have heard of my divine self in the past.\nMany envy my wealth, like this Bürgermeister, you know. I never saw you down here, are you keen on monarchy ? Please note that you cannot visit my manor.", 
+	    {"inStates":["dialogInit"],"line" : "I’m the revered Duke Gunter Von Geberg, you must have heard of my divine self in the past.\nMany envy my wealth, like this Bürgermeister, you know. I never saw you down here, are you keen on monarchy ? Please note that you cannot visit my manor.", 
 		    "transition" : "readBaron"},
 		{"line":"Is it my wealth that dazzles you ? hoi polloi…"}
     ],
@@ -18,7 +18,7 @@
 	},		
 	{"inStates":[],
 		"answer": "I just moved in here.",
-		"lines": [ { "line" : "Ich glaub mein Schwein pfeift (I think a swine whistles).Yes of course. I’m sure you came here to steal from me. I know people like you, Frau. Please note that I DO NOT TRUST YOU."}]}
+		"lines": [ { "line" : "Ich glaub mein Schwein pfeift (I think a swine whistles).Yes of course. I’m sure you came here to steal from me! I know people like you, Frau. Please note that I DO NOT TRUST YOU!"}]}
     
     ]
 }

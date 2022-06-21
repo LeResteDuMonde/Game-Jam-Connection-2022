@@ -1,14 +1,14 @@
 {
     "lines": [
 	    {"inStates":["dialogInit"],"line" : "Guten Tag klein. " },
-	    {"inStates":["dialogInit"],"line" : "Je suis le respecté Baron Gunter Von Gerberg, tu as forcément dû entendre parler de ma divine personne. \nBeaucoup jalousent ma richesse, comme un certain Bürgermeister vous savez. Mais je ne vous ai jamais vue par ici, est-vous une fan de royauté, sachez que je ne fais pas de visite de mon manoir. ", 
+	    {"inStates":["dialogInit"],"line" : "Je suis le respecté Baron Gunter Von Geberg, tu as forcément dû entendre parler de ma divine personne. \nBeaucoup jalousent ma richesse, comme un certain Bürgermeister vous savez. Mais je ne vous ai jamais vue par ici, est-vous une fan de royauté, sachez que je ne fais pas de visite de mon manoir. ", 
 		    "transition" : "readBaron"},
-		{"line":"a richesse vous éblouie-t-elle tant que ça… Haj les pauvres."}
+		{"line":"Ma richesse vous éblouit-elle tant que ça… Haj les pauvres."}
     ],
     "choices": [
 	{"inStates":[],
 		"answer": "Bürgermeister ?",
-		"lines": [ { "line" : "Oui, le bürgermeister, cet homme ne pense qu’a ses NFP en oubliant ses concitoyens, il n’est pas digne de diriger notre stadt. J’ai bien plus d’éducation et de charisme. Il serait incapable d’identifier une truffe d’un pauvre champignon. Bon de toute façon, je vaux plus que ça das ist mir Wurst (C’est de la saucisse pour moi). L’époque de la monarchie me manque, c’était la bonne époque."}] 
+		"lines": [ { "line" : "Oui, le bürgermeister, cet homme ne pense qu’à ses NFP en oubliant ses concitoyens, il n’est pas digne de diriger notre stadt. J’ai bien plus d’éducation et de charisme. Il serait incapable d’identifier une truffe d’un pauvre champignon. Bon de toute façon, je vaux plus que ça das ist mir Wurst (C’est de la saucisse pour moi). L’époque de la monarchie me manque, c’était la bonne époque."}] 
 	},
 	{"inStates":[],
 		"answer": "Vous habitez ici depuis longtemps ? ",
@@ -18,7 +18,7 @@
 	},		
 	{"inStates":[],
 		"answer": "Je viens d’aménager.",
-		"lines": [ { "line" : "Ich glaub mien Schwein pfeift (Je crois que mon cochon siffle). Oui bien sûr, vous êtes venu me voler plutôt. Je connais les personnes dans votre genre gnädige Frau. Sachez que JE NE VOUS FAIS PAS CONFIANCE."}]}
+		"lines": [ { "line" : "Ich glaub mien Schwein pfeift (Je crois que mon cochon siffle). Oui bien sûr, vous êtes venu me voler plutôt! Je connais les personnes dans votre genre gnädige Frau. Sachez que JE NE VOUS FAIS PAS CONFIANCE!"}]}
     
     ]
 }

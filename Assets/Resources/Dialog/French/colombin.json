@@ -27,7 +27,8 @@
 		"lines": [ 
 			{ "line" : "Oui"},
 			{ "line" : "Tu sais, dans Shitty Place, on me voit en faire."},
-			{ "line" : "Maryse vient quelquefois en faire, aussi."}
+			{ "line" : "Maryse vient quelquefois en faire, aussi."},
+			{ "line" : "Ce qui est sûr, c’est que Mia ne viendra jamais ! Après la surprise que je lui ai fait..."}
 		] 
 	},		
 	{"inStates":[],
@@ -47,7 +48,7 @@
 			{ "line" : "(Public : Meeerciii Cooolooombiiin)"},
 			{ "line" : "Bon, et après la plage, tu peux aller faire un tour à la grand-place."},
 			{ "line" : "J’affectionne particulièrement ce lieu de rencontre."},
-			{ "line" : "J’y ai laissé une petite surprise...J’y ai laissé une petite surprise..."}
+			{ "line" : "J’y ai laissé une petite surprise..."}
 		]
 	},
 
