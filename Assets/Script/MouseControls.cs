@@ -14,6 +14,8 @@ public class MouseControls : MonoBehaviour
 	[SerializeField] private float hotSpotXEnumarator = 2;
 	[SerializeField] private float hotSpotYEnumarator = 6;
 
+	private bool isHovering;
+
 	[SerializeField]
 	private Texture2D cursor;
 	[SerializeField]
@@ -22,7 +24,7 @@ public class MouseControls : MonoBehaviour
 	#region instance
 
 	public static MouseControls instance;
-
+	
 	void Awake()
 	{
 		instance = this;
@@ -83,12 +85,12 @@ public class MouseControls : MonoBehaviour
 			}
 			else
 			{
-				ChangeCursor(cursor);
+				if(hoveredItem == null) ChangeCursor(cursor);
 			}
 		}
 		else
 		{
-			ChangeCursor(cursor);
+			if (hoveredItem == null) ChangeCursor(cursor);
 		}
 	}
 	private void HoverCheck()
@@ -160,12 +162,18 @@ public class MouseControls : MonoBehaviour
 	}
 	public void CursorHoverAnimation(bool hover)
 	{
-		ChangeCursor(hover ? cursorHover : cursor) ;
+		Debug.Log(hover ? "hover" : "unhover");
+		ChangeCursor(hover ? cursorHover : cursor);
+		isHovering = hover;
 	}
 
 	private void ChangeCursor(Texture2D cursorType)
 	{
-		Vector2 hotspot = new Vector2(cursorType.width / hotSpotXEnumarator, cursorType.height / hotSpotYEnumarator);
-		Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
+		if (!isHovering)
+		{
+			Debug.Log(cursorType.name);
+			Vector2 hotspot = new Vector2(cursorType.width / hotSpotXEnumarator, cursorType.height / hotSpotYEnumarator);
+			Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
+		}
 	}
 }

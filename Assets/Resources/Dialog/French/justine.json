@@ -19,8 +19,9 @@
     ],
     "choices": [
 	{"inStates":[],
-		"answer": "ça va bien se passer, je suis sûre que tu vas l’avoir ce brevet ! tu délires meuf vraiment ",
+		"answer": "ça va bien se passer, je suis sûre que tu vas l’avoir ce brevet !",
 		"lines":[ 
+			{ "line" : "tu délires meuf vraiment" },
 			{ "line" : "déjà j’ai un prof" },
 			{ "line" : "UN SEUL" },
 			{ "line" : "et ce bolosse il me fait cours une fois par mois" },
