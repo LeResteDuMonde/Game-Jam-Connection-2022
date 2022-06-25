@@ -70,7 +70,7 @@
 			{"line":"On Teddy’s lawn..."},
 			{"line":"You know, this wild place near the city hall..."},
 			{"line":"I dropped off a little surprise there..."},
-			{ "line" : "(Public : arghhhh)", "transition" : "readCaca" }
+			{ "line" : "(Public : arghhhh)", "transition" : "nounours" }
 		]
 	}
 		

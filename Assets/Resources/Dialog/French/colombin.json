@@ -70,7 +70,7 @@
 			{"line":"Devant la maison de Nounours…"},
 			{"line":"Tu sais, cette ZAD pas loin de la mairie…"},
 			{"line":"J’y ai laissé une petite surprise…"},
-			{ "line" : "(Public : arghhhh)", "transition" : "readCaca" }
+			{ "line" : "(Public : arghhhh)", "transition" : "nounours" }
 		]
 	}
 		

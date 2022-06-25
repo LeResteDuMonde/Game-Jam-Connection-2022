@@ -27,7 +27,7 @@
 
 	{"inStates":["colombin"],
 		"answer": "Tu connais Colombin ?",
-		"lines": [ { "line" : "Colombin ? Bien sur, j’adore ce mec. Grâce à lui mes fleurs se portent comme un charme. C’est fou ce que ses selles sont nutritives, depuis on prend souvent des café clopes pour mes plantes."}]}
+		"lines": [ { "line" : "Colombin ? Bien sur, j’adore ce mec. Grâce à lui mes fleurs se portent comme un charme. C’est fou ce que ses selles sont nutritives, depuis on prend souvent des café clopes pour mes plantes.", "transition":"readCaca"}]}
 
 		
     
