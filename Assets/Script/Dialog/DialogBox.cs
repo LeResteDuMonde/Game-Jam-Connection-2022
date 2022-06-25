@@ -29,6 +29,9 @@ public class DialogBox : MonoBehaviour
 
 	private List<GameObject> buttons;
 
+	private Character currentChara;
+	private bool dialogStarted;
+
 	// Start is called before the first frame update
 	void Start() {
 		textPanel = transform.Find("TextPanel").gameObject;
@@ -118,6 +121,7 @@ public class DialogBox : MonoBehaviour
 	}
 
 	private void OpenDialog() {
+		endTypeWriterEffect = false;
 		textPanel.SetActive(true);
 		currentChara.GetAnimator().SetBool("Talking", true);
 		//MouseControls.instance.OnDisable();
@@ -132,6 +136,7 @@ public class DialogBox : MonoBehaviour
 			textPanel.SetActive(false);
 			currentChara.GetAnimator().SetBool("Talking", false);
 			AudioManager.instance.ResetMusic();
+			dialogStarted = false;
 		}
 		
 		//MouseControls.instance.OnEnable();
@@ -140,8 +145,6 @@ public class DialogBox : MonoBehaviour
 	public bool IsOpen() {
 		return textPanel.activeSelf;
 	}
-
-	private Character currentChara;
 
 	public void ShowNewDialog(Dialog dialog, Character chara) {
 		currentDialog = dialog;
@@ -206,7 +209,7 @@ public class DialogBox : MonoBehaviour
 
 	private IEnumerator TypeWriter(TextMeshProUGUI textMesh, string text)
 	{
-		Debug.Log(CharacterManager.instance.GetCurrentCharacter());
+		Debug.Log(text);
 		CharacterData characterData = CharacterManager.instance.GetCurrentCharacter().GetComponent<Character>().GetData();
 		typing = true;
 
@@ -219,14 +222,17 @@ public class DialogBox : MonoBehaviour
 			AudioManager.instance.PlayClip(characterData.dialogueSoundEffect[0], "Dialog");
 			textMesh.SetText(text.Substring(0,i+1));
 			yield return new WaitForSeconds(typeWriterDelay);
+			dialogStarted = true;
 		}
 
 		currentChara.GetAnimator().SetBool("Talking", false);
 		endTypeWriterEffect = false;
 		typing = false;
+		if (text == "") { NextLine(); }
 	}
 
 	public void AdvanceDialog(InputAction.CallbackContext _) {
-		if(IsOpen()) NextLine();
+		Debug.Log(dialogStarted ? "Dialog started" : "Dialog not Started");
+		if(IsOpen() && dialogStarted) NextLine();
 	}
 }

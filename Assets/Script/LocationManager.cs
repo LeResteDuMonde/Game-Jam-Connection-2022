@@ -48,7 +48,7 @@ public class LocationManager : MonoBehaviour
 	{
 		if (data.collectible != null && !inventory.IsInInventory(gameObject))
 		{
-			Debug.Log(data.collectible.collectibleName);
+			//Debug.Log(data.collectible.collectibleName);
 			if (data.collectible.collectibleName == "Key" && !CharacterManager.instance.getCharacter("Colombin").GetMachine().CheckState("keyCreated")){
 				//Debug.Log("abord spawn");
 				return ;

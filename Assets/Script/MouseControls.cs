@@ -162,7 +162,7 @@ public class MouseControls : MonoBehaviour
 	}
 	public void CursorHoverAnimation(bool hover)
 	{
-		Debug.Log(hover ? "hover" : "unhover");
+		//Debug.Log(hover ? "hover" : "unhover");
 		ChangeCursor(hover ? cursorHover : cursor);
 		isHovering = hover;
 	}
@@ -171,7 +171,7 @@ public class MouseControls : MonoBehaviour
 	{
 		if (!isHovering)
 		{
-			Debug.Log(cursorType.name);
+			//Debug.Log(cursorType.name);
 			Vector2 hotspot = new Vector2(cursorType.width / hotSpotXEnumarator, cursorType.height / hotSpotYEnumarator);
 			Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
 		}

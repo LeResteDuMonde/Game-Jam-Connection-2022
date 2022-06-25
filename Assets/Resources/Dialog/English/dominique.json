@@ -1,7 +1,7 @@
 {
     "lines": [
 	    {"inStates":["dialogInit"],"line" : ""},
-	    {"inStates":["dialogInit"],"line" : "Good morning madam, did you just move in ? Allow me to wish you willkomen. I’m Dominique Von Geberg, french teacher in Vie-Lhaj." ,
+	    {"inStates":["dialogInit"],"line" : "Oh ! Good morning madam, did you just move in ? Allow me to wish you willkomen. I’m Dominique Von Geberg, french teacher in Vie-Lhaj." ,
 		    "transition" : "readDominique"},
 	    {"line" : "Any grammar question ?"}
 		
@@ -15,7 +15,7 @@
 		{ "line" : "Kind of, but anyway, it doesn’t matter, do not associate me with this person, (whispers) this swine."}] 
 	},
 	{"inStates":[],
-		"answer": "You’re the only teacher of this village ? 1",
+		"answer": "You’re the only teacher of this village ?",
 		"lines": [ { "line" : "Listen, in terms of education, we struggle to make ends meet. But if you saw the students… (whispers) nothing really worth it. Anyway, if you have any grammar question, don’t hesitate, I love syntaxis and juxtapositions, it’s my passion."}]},		
 	{"inStates":[],
 		"answer": "Where did you get this necklace ? It’s very beautiful.",

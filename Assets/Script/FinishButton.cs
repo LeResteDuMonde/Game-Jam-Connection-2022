@@ -20,7 +20,7 @@ public class FinishButton : Button, IClicked, IHovered
 		gameObject.transform.GetChild(0).TryGetComponent(out SpriteRenderer spriteRenderer);
 		text = textMesh;
 		sprite = spriteRenderer;
-		if (sprite != null) { baseSprite = sprite.sprite; Debug.Log("sprite button"); }
+		if (sprite != null) { baseSprite = sprite.sprite; }
 		if (text != null) { baseColor = text.color; }
 	}
 
